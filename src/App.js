@@ -2,6 +2,7 @@ import './styles/App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './views/Home';
 import Footer from './components/footer';
+import injectContext from "./store/appContext"
 
 function App() {
   return (
@@ -17,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default injectContext(App);
