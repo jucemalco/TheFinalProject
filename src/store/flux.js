@@ -1,48 +1,41 @@
-const getState = ({ getstore, setStore, getActions }) => {
+const getState = ({ getStore, setStore, getActions }) => {
     return {
         store: {
-            products: [
-                {
-                    title:"El señor de los Anillos",
-                    editorial:"Minotauro",
-                    autor:"J. R. R. Tolkien"
+            products: null,
+            product: {
+                    title: "",
+                    editorial:"",
+                    autor:""
                 },
-                {
-                    title:"El señor de los Anillos",
-                    editorial:"Minotauro",
-                    autor:"J. R. R. Tolkien"
-                },
-                {
-                    title:"El señor de los Anillos",
-                    editorial:"Minotauro",
-                    autor:"J. R. R. Tolkien"
-                },
-                {
-                    title:"El señor de los Anillos",
-                    editorial:"Minotauro",
-                    autor:"J. R. R. Tolkien"
-                },
-                {
-                    title:"El señor de los Anillos",
-                    editorial:"Minotauro",
-                    autor:"J. R. R. Tolkien"
-                },
-                {
-                    title:"El señor de los Anillos",
-                    editorial:"Minotauro",
-                    autor:"J. R. R. Tolkien"
-                },
-            ]
-        },
+            },
         actions: {
-            // addFav: favorite => {
-			// 	const store = getStore();
-			// 	if (store.lista_favorito.includes(favorite)){
-			// 		return console.log("Ya existe este favorito")
-			// 	}
-			// 	setStore({ lista_favorito: [...store.lista_favorito, favorite] })
-			// 	return console.log(store.lista_favorito)
-			// },
+            getProducts: () => {
+                    fetch("http://localhost:3000/products")
+                    .then(res => res.json())
+                    .then(data => setStore({products: data}))
+                    .catch(error => console.log(error))
+            },
+            handleProductChange: (e) => {
+                 const { product } = getStore()
+                 setStore ({ product: {...product, [e.target.name]: e.target.value}})
+            },
+            saveProduct: (e) => {
+                e.preventDefault()
+                const {product} = getStore()
+                fetch("http://localhost:3000/product", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type":"application/json"
+                    },
+                    body: JSON.stringify(product)
+                }).then(res => res.json())
+                .then(data => console.log(data))
+                setStore({product: {
+                    title: "",
+                    editorial:"",
+                    autor:""
+                }})
+            }
         }
     };
 };

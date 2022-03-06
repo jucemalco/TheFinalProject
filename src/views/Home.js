@@ -1,19 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Card from "../components/card";
 import { Context } from "../store/appContext";
+// import { Link } from "react-router-dom";
 
 const Home = () => {
-    const { store } = useContext(Context);
+    const { store, actions } = useContext(Context);
+    useEffect(() => {
+           actions.getProducts()
+    }, [])
     return (
         <>
             <div className="container">
             <h1 className="color">Novedades</h1>
                 <div className="row">
-                    {store.products.map((p, i) => <div className="col-4">
+                    {store.products && store.products.map((p, i) => <div className="col-4">
                         <Card
                             title={p.title}
-                            editorial={p.editorial}
                             autor={p.autor}
+                            editorial={p.editorial}
                         />
                     </div>)} 
                 </div>
