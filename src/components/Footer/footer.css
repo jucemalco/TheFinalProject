@@ -1,0 +1,22 @@
+img {
+  width: 30px;
+}
+
+.logo {
+  width: 250px;
+}
+
+.copyrights {
+  font-size: small;
+}
+
+@media (max-width: 959px) {
+  .logo {
+    width: 200px;
+  }
+
+  .responsive-align {
+    justify-content: center !important;
+    padding: 10px 0 !important;
+  }
+}
