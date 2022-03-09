@@ -10,13 +10,13 @@ const Carousel = () => {
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="https://i0.wp.com/hipertextual.com/wp-content/uploads/2020/01/hipertextual-star-wars-deseo-mas-grande-darth-vader-podria-hacerse-realidad-muy-pronto-2020659163.jpg?fit=2048%2C1365&ssl=1" className="d-block carousel-imag w-100" alt="..."/>
+                    <img src="https://us.123rf.com/450wm/leoedition/leoedition1708/leoedition170800398/84002252-banner-reading-club-estante-de-libro-o-librer%C3%ADa-en-el-fondo.jpg?ver=6" className="d-block carousel-image w-100" alt="..."/>
                 </div>
                 <div className="carousel-item">
-                    <img src="https://img.europapress.es/fotoweb/fotonoticia_20181023133557_1200.jpg" className="d-block carousel-image w-100" alt="..."/>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE7q2cL1kFbCFS5mk0z6KM8iGdd_UbdRQ2aQ&usqp=CAU" className="d-block carousel-image w-100" alt="..."/>
                 </div>
                 <div className="carousel-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5fCrEZVM8x7-Cbtqxj2emWYCQZNtT3Gc6eA&usqp=CAU" className="d-block carousel-imag w-100" alt="..."/>
+                    <img src="https://www.librosdelayer.cl/resources/images/general/slider1.jpg" className="d-block carousel-image w-100" alt="..."/>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
