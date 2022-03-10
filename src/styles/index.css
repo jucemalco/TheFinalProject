@@ -11,3 +11,91 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 
+   Login
+*/
+.container{
+  background-color: #f5eeea;
+  /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204);
+  background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
+  border: 2px solid #bdbdbd;
+  width: 800px;
+  height: 90%;
+  margin-top: 50px;
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+} 
+
+
+div.image {
+padding: 30px;
+text-align: center;
+} 
+
+
+.gradient-custom-2 {
+  /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
+  background: linear-gradient(to right, #d0bdd8, #8b6685, #583f58, #050204);
+  font-family: fantasy;
+}
+
+
+
+/* 
+ Navbar
+*/
+
+.dropdown{
+margin-left: 10%;
+margin-right: 5%;
+} 
+
+#nav-item{
+padding-top: 5px;
+margin-left: 10%;
+} 
+
+
+
+/* 
+ Form
+*/
+
+.asterisk{
+color: #fd4444;
+font-size: x-small;
+
+}
+
+.form-title{
+font-family: fantasy;
+padding-top: 10px;
+}
+.form-subtitle{
+font-family: fantasy;
+}
+
+
+#emailHelp{
+font-size: x-small;
+font-style: italic;
+}
+
+#passwordHelpBlock{
+font-size: x-small;
+font-style: italic;
+}
+
+h3, h6{
+font-family: fantasy;
+}
+
+.d-grid {
+font-family: fantasy;
+}
+
+
+.form-label{
+font-family: fantasy;
+}

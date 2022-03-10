@@ -92,18 +92,8 @@ export const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="login">
+                    <Link className="dropdown-item" to="/login/formsignin">
                       Regístrate
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="fotoperfil">
-                      Foto Perfil
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="cerrarsesion">
-                      Cerrar Sesión
                     </Link>
                   </li>
                 </ul>
