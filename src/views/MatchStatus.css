@@ -1,0 +1,11 @@
+.card {
+  position: relative;
+  border-radius: 2%;
+  margin: 30px 50px 50px 50px;
+  width: 180px;
+  height: 210px;
+}
+
+.books img {
+  width: 200 px;
+}
