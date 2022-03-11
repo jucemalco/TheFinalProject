@@ -1,17 +1,25 @@
 import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./views/Home";
-import Footer from "./components/Footer/Footer";
+import Home from './views/Home';
+import Footer from './components/footer';
+import NavBar from './components/navbar';
+import Formsignin from './components/formsignin';
+import { Component } from 'react';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-        <Footer />
-      </Router>
+     <Router>
+       <NavBar />
+       <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/login/formsignin' element={<Formsignin />} />
+        <Route path="/match-status" element={<MatchStatus />} />
+
+       </Routes>
+      <Footer />
+     </Router>
+
     </div>
   );
 }
