@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,6 +12,14 @@ code {
     monospace;
 }
 
+.card-img-top {
+  margin-left: auto;   
+  margin-right: auto;
+}
+
+.carousel-image {
+  height: 300px;
+  object-fit: cover;
 /* 
    Login
 */
