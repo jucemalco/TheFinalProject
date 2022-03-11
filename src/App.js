@@ -1,4 +1,4 @@
-import './styles/App.css';
+import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './views/Home';
 import Footer from './components/footer';
@@ -17,8 +17,8 @@ function App() {
        </Routes>
       <Footer />
      </Router>
+
     </div>
-    
   );
 }
 
