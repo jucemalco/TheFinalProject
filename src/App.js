@@ -1,7 +1,7 @@
 import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './views/Home';
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 import injectContext from "./store/appContext"
 import Product from './views/Product';
 import NavBar from './components/navbar';
@@ -20,7 +20,7 @@ function App() {
         <Route path='/match-status' element={<MatchStatus />} />
         <Route path='/admin/product' element={<Product />}/>
        </Routes>
-      {/* <Footer /> */}
+       <Footer />
      </Router>
     </div>
   );
