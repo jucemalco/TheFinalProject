@@ -1,4 +1,11 @@
-img {
+.footer--container {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer--social_media {
   width: 30px;
 }
 
