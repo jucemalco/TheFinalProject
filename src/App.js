@@ -14,6 +14,8 @@ function App() {
        <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/login/formsignin' element={<Formsignin />} />
+        <Route path="/match-status" element={<MatchStatus />} />
+
        </Routes>
       <Footer />
      </Router>
