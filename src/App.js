@@ -1,15 +1,17 @@
 import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './views/Home';
-import Footer from './components/footer';
 import Navbar from './components/Navbar'
 import Login from "./components/Login";
 import Form from "./views/Form";
 import EditData from "./views/EditData";
 import ProfileNavbar from "./components/ProfileNavbar";
 import Favorites from "./views/Favorites";
-
-
+import Footer from "./components/Footer/Footer";
+import injectContext from "./store/appContext";
+import Product from "./views/Product";
+import MatchStatus from "./views/MatchStatus";
+import { Component } from "react";
 
 function App() {
   return (
@@ -23,10 +25,8 @@ function App() {
         <Route path="/miperfil/editdata" element={<EditData />} />
         <Route path="miperfil" element={<ProfileNavbar />} />
         <Route path="/miperfil/misfavoritos" element={<Favorites />} />
-      
-      
-      
-
+        <Route path="/match-status" element={<MatchStatus />} />
+        <Route path="/admin/product" element={<Product />} />
        </Routes>
       <Footer />
      </Router>
@@ -35,4 +35,4 @@ function App() {
   );
 }
 
-export default App;
+export default injectContext(App);

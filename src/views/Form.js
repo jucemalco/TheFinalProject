@@ -3,7 +3,7 @@ import React from "react";
 
 const Form = () => {
     return (
-        <div className="container">
+        <div className="container loginback ">
             <legend>
                 {" "}
                 <h1 className="form-title text-white">Crear una nueva cuenta</h1>

@@ -10,7 +10,7 @@ const Login = () => {
         email: "",
         password: ""
     });
-    return <div className="container col-6">
+    return <div className="container loginback col-6">
         <div className="image">
             <img src={BookMatch_Logo}
                 style={{ width: "50%", heigth: "30%" }} />

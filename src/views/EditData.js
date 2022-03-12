@@ -4,7 +4,7 @@ import React from "react";
 const EditData = () => {
 
     return (
-        <div id="container">
+        <div class="container loginback ">
 
             <h2 className="form-title text-white text-center mt-4">Editar Datos</h2>
 
