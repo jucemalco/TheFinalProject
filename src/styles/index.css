@@ -1,23 +1,23 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .cardinhome {
   display: block;
-} 
+}
 
 .card-img-top {
-  margin-left: auto;   
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -30,10 +30,9 @@ code {
 */
 
 div.image {
-padding: 30px;
-text-align: center;
-} 
-
+  padding: 30px;
+  text-align: center;
+}
 
 .gradient-custom-2 {
   /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
@@ -41,62 +40,56 @@ text-align: center;
   font-family: fantasy;
 }
 
-
-
 /* 
  Navbar
 */
 
-.dropdown{
-margin-left: 10%;
-margin-right: 5%;
-} 
+.dropdown {
+  margin-left: 10%;
+  margin-right: 5%;
+}
 
-#nav-item{
-padding-top: 5px;
-margin-left: 10%;
-} 
-
-
+#nav-item {
+  padding-top: 5px;
+  margin-left: 10%;
+}
 
 /* 
  Form
 */
 
-.asterisk{
-color: #fd4444;
-font-size: x-small;
-
+.asterisk {
+  color: #fd4444;
+  font-size: x-small;
 }
 
-.form-title{
-font-family: fantasy;
-padding-top: 10px;
+.form-title {
+  font-family: fantasy;
+  padding-top: 10px;
 }
-.form-subtitle{
-font-family: fantasy;
-}
-
-
-#emailHelp{
-font-size: x-small;
-font-style: italic;
+.form-subtitle {
+  font-family: fantasy;
 }
 
-#passwordHelpBlock{
-font-size: x-small;
-font-style: italic;
+#emailHelp {
+  font-size: x-small;
+  font-style: italic;
 }
 
-h3, h6{
-font-family: fantasy;
+#passwordHelpBlock {
+  font-size: x-small;
+  font-style: italic;
+}
+
+h3,
+h6 {
+  font-family: fantasy;
 }
 
 .d-grid {
-font-family: fantasy;
+  font-family: fantasy;
 }
 
-
-.form-label{
-font-family: fantasy;
+.form-label {
+  font-family: fantasy;
 }
