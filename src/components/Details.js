@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 
 
-const Details = (props) => {
+const Details = () => {
     //const { store, actions } = useContext(Context);
     return <div>
+
     </div>
 }
 

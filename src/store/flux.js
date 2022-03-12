@@ -6,8 +6,6 @@ const getState = ({ getStore, setStore, getActions }) => {
             favorite: [],
             favorites: [],
             match: [],
-            product: [],
-            products: [],
             favorite_list: [],
             products: null,
             product: {
@@ -43,7 +41,7 @@ const getState = ({ getStore, setStore, getActions }) => {
                     editorial:"",
                     autor:""
                 }})
-            }
+            },
             addfav: favorite => {
                 const store = getStore();
                 if (store.favorite_list.includes(favorite)){
@@ -61,31 +59,31 @@ const getState = ({ getStore, setStore, getActions }) => {
             /*PARA CONSULTA DE LOGGIN Y REGISTRO DE SIGN IN*/
 
             /*para cuando se inicia sesión LOG IN*/
-            getUser: id => {
-                fetch("" + id)
-                    .then(response => response.json())
-                    .then((result) => {
-                            setStore({user: FALTA LA RUTA DE LA BASE DE DATOS });
+            // getUser: id => {
+            //     fetch("" + id)
+            //         .then(response => response.json())
+            //         .then((result) => {
+            //                 setStore({user: FALTA LA RUTA DE LA BASE DE DATOS });
 
-                    })
-                    .catch(error => console.log("Error", error));
-            },
-            /*para cuando se hace la consulta de registro si el usurio existe o no (registrado) SIGN IN*/
+            //         })
+            //         .catch(error => console.log("Error", error));
+            // },
+            // /*para cuando se hace la consulta de registro si el usurio existe o no (registrado) SIGN IN*/
             
-            getUsers: () => {
-                fetch("http://localhost:5000/")
-                    .then(response => response.json())
-                    .then(data => setStore({users: RUTA A LA BASE DE DATOS}));
-             },
-            /*CONSULTA A LA BASE DE DATOS DESDE "BUSQUEDA"*/
-             getBooks: ()  => {
-                 fetch("http://localhost:5000/")
-                 .then (response => response.json())
-                 .then ((data)) =>
-                        setStore({ planet: ruta en base de datos}));
+            // getUsers: () => {
+            //     fetch("http://localhost:5000/")
+            //         .then(response => response.json())
+            //         .then(data => setStore({users: RUTA A LA BASE DE DATOS}));
+            //  },
+            // /*CONSULTA A LA BASE DE DATOS DESDE "BUSQUEDA"*/
+            // getBooks: ()  => {
+            //      fetch("http://localhost:5000/")
+            //      .then (response => response.json())
+            //      .then ((data)) =>
+            //         setStore({ planet: ruta en base de datos}));
 
-             }
-        }
+            // },
+        },
     };
 };
 
