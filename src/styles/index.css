@@ -12,29 +12,22 @@ code {
     monospace;
 }
 
+.cardinhome {
+  display: block;
+}
+
 .card-img-top {
   margin-left: auto;
   margin-right: auto;
 }
 
-.carousel-image {
+.carousel-inner {
   height: 300px;
   object-fit: cover;
 }
 /* 
    Login
 */
-.container {
-  background-color: #f5eeea;
-  /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204);
-  background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
-  border: 2px solid #bdbdbd;
-  width: 800px;
-  height: 90%;
-  margin-top: 50px;
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
-}
 
 div.image {
   padding: 30px;

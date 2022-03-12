@@ -1,13 +1,13 @@
 import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
-import Footer from "./components/footer";
+import Footer from "./components/Footer/Footer";
 import injectContext from "./store/appContext";
 import Product from "./views/Product";
 import NavBar from "./components/navbar";
 import Formsignin from "./components/formsignin";
-import { Component } from "react";
 import MatchStatus from "./views/MatchStatus";
+import { Component } from "react";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login/formsignin" element={<Formsignin />} />
           <Route path="/match-status" element={<MatchStatus />} />
-          <Route path="/admin/Product" element={<Product />} />
+          <Route path="/admin/product" element={<Product />} />
         </Routes>
         <Footer />
       </Router>
