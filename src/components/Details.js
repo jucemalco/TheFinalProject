@@ -27,7 +27,6 @@ const Details = (props) => {
             </div>
             <h1>Autor</h1>
             <p>Adipisicing veniam nostrud voluptate consectetur qui velit veniam deserunt officia veniam Lorem. Mollit amet exercitation sit nostrud sit minim culpa consequat. Duis laborum aliqua Lorem pariatur proident dolore aliquip enim eu ut incididunt occaecat tempor minim. Exercitation voluptate eiusmod ut mollit cupidatat.</p>
-
         </div>
     </div>
 }
