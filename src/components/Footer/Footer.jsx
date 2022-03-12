@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="d-flex flex-wrap fixed-bottom justify-content-between align-items-center py-3 my-4 border-top bg-dark row">
+    <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark row">
       <div className="bookmatchlogo px-5  d-flex align-items-center col-md-4 justify-content-start responsive-align">
         <Link to="/">
           <img src={logo} alt="Logo" className="logo" />

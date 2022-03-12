@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import injectContext from "./store/appContext";
 import Product from "./views/Product";
 import MatchStatus from "./views/MatchStatus";
+import Details from "./components/Details";
 import { Component } from "react";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/miperfil/misfavoritos" element={<Favorites />} />
         <Route path="/match-status" element={<MatchStatus />} />
         <Route path="/admin/product" element={<Product />} />
+        <Route path="/details" element={<Details />} />
        </Routes>
       <Footer />
      </Router>

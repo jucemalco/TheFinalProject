@@ -46,7 +46,7 @@ const ProfileNavbar = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to="">
+                                        <Link className="dropdown-item" to="/admin/product">
                                             Publica tu Libro
                                         </Link>
                                     </li>
