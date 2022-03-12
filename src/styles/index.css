@@ -90,6 +90,41 @@ h6 {
   font-family: fantasy;
 }
 
+
+.form-label{
+font-family: fantasy;
+}
+
+/* 
+ Form
+*/
+
+
+/* Editar Datos */
+.loginback {
+  background-color: #f5eeea;
+  /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204);
+  background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
+  border: 2px solid #bdbdbd;
+  width: 800px;
+  height: 90%;
+  margin: 0 auto;
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+}
+/* Editar Datos */
+
+
+
+/* Navbar Profile */
+.navbarProfile{
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+  margin-left: 20%;
+  margin-right: 20%;
+}
+/* Navbar Profile */
+
 .form-label {
   font-family: fantasy;
 }
