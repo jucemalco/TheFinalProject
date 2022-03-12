@@ -2,9 +2,6 @@ import React, { useContext } from "react";
 import BookMatch_Logo from "../img/BookMatch_Logo.png"
 import { Link } from "react-router-dom";
 
-
-
-
 export const Navbar = () => {
   return (
     <div>
@@ -46,7 +43,7 @@ export const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <i class="fa fa-book p-2"></i>
+                  <i className="fa fa-book p-2"></i>
                   
                   Libros
                 </a>
