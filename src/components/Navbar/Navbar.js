@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import BookMatch_Logo from "../img/BookMatch_Logo.png"
+import BookMatch_Logo from "../../images/BookMatch_Logo.png"
 import { Link } from "react-router-dom";
+import './Navbar.css'
 
 export const Navbar = () => {
   return (
