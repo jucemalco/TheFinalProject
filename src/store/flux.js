@@ -63,8 +63,7 @@ const getState = ({ getStore, setStore, getActions }) => {
             //     fetch("" + id)
             //         .then(response => response.json())
             //         .then((result) => {
-            //                 setStore({user: FALTA LA RUTA DE LA BASE DE DATOS });
-
+            //                 setStore({user: FALTA LA RUTA DE LA BASE DE DATOS }
             //         })
             //         .catch(error => console.log("Error", error));
             // },
