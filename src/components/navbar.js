@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import BookMatch_Logo from "../img/BookMatch_Logo.png"
+import BookMatch_Logo from "../img/BookMatch_Logo.png";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
@@ -11,8 +11,8 @@ export const Navbar = () => {
             <div className="navbar-image">
               <img src={BookMatch_Logo} style={{ width: "160px" }} />
             </div>
-          </Link> 
-        
+          </Link>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -29,8 +29,6 @@ export const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/">
                   <i className="fa fa-home p-2">Inicio</i>
-                
-                  
                 </Link>
               </li>
 
@@ -44,7 +42,6 @@ export const Navbar = () => {
                   aria-expanded="false"
                 >
                   <i className="fa fa-book p-2"></i>
-                  
                   Libros
                 </a>
 
@@ -89,37 +86,30 @@ export const Navbar = () => {
                   <i className="fa fa-user p-2"></i>
                   Mi cuenta
                 </Link>
-                
-                
+
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    
                     <Link className="dropdown-item" to="login">
                       Ingresa
                     </Link>
                   </li>
                   <li>
-                    
                     <Link className="dropdown-item" to="/login/newaccount">
-                    Regístrate
+                      Regístrate
                     </Link>
 
                     <li>
-                    
-                    <Link className="dropdown-item" to="miperfil">
-                    Mi Perfil
-                    </Link>
+                      <Link className="dropdown-item" to="miperfil">
+                        Mi Perfil
+                      </Link>
+                    </li>
                   </li>
-                  </li>
-                  <li>
-                    
-                   
-                  </li>
+                  <li></li>
                 </ul>
               </li>
               <li id="nav-item">
                 <Link className="nav-link text-white" to="nosotros">
-                Nosotros
+                  Nosotros
                 </Link>
               </li>
             </ul>
@@ -138,7 +128,6 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-  
     </div>
   );
 };
