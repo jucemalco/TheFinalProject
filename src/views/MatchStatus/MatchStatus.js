@@ -1,7 +1,7 @@
 import React from "react";
-import { StatusError } from "../components/StatusError";
-import { RoundedCard } from "../components/RoundedCard";
-import SquareCard from "../components/SquareCard/SquareCard";
+import { StatusError } from "../../components/StatusError";
+import { RoundedCard } from "../../components/RoundedCard";
+import { SquareCard } from "../../components/SquareCard";
 import "./MatchStatus.css";
 
 const MatchStatus = () => {
