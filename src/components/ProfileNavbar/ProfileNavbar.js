@@ -77,11 +77,22 @@ const ProfileNavbar = () => {
                                     <Link className="nav-link text-white p-5" to="/miperfil/misfavoritos">Mis Favoritos <i class="fa fa-heart-o" aria-hidden="true" style={{ color: "#fa5d5d" }} ></i></Link>
                                 </li>
 
-                             
-
                             </ul>
                         </div>
+                        <div className="dropdown">
+                            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Favoritos
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                {store.lista_favorito.map(favorito => {
+                                    return <li><a className="dropdown-item" href="#">{favorito}<button onClick={() => {
+                                        const isLargeNumber = (element) => element === favorito
 
+                                        actions.deleteFav(store.lista_favorito.findIndex(isLargeNumber))
+                                    }}>x</button></a></li>
+                                })}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -93,7 +104,7 @@ const ProfileNavbar = () => {
 
 
 
-    
+
     );
 };
 
