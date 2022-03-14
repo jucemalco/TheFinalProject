@@ -75,10 +75,10 @@ const ProfileNavbar = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link text-white p-5" to="#">Mis Libros Publicados <i class="fa fa-book" aria-hidden="true"></i></Link>
                                 </li>
-                                {/* <li className="nav-item">
+                                <li className="nav-item">
                                     
                                     <Link className="nav-link text-white p-5" to="/miperfil/misfavoritos">Mis Favoritos <i class="fa fa-heart-o" aria-hidden="true" style={{ color: "#fa5d5d" }} ></i></Link>
-                                </li> */}
+                                </li>
 
 
 
