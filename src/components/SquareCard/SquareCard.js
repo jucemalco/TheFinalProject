@@ -3,7 +3,7 @@ import "./style.css";
 
 const SquareCard = (props) => {
   return (
-    <div className="card d-flex justify-content-center align-items-center p-3">
+    <div className="match-status__card card d-flex justify-content-center align-items-center p-3">
       <img
         className="square--card-book_picture"
         src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Rayuela_JC.png"
