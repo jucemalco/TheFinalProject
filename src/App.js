@@ -6,7 +6,7 @@ import Login from "./components/Login/Login";
 import Form from "./views/Form";
 import EditData from "./components/Editdata/EditData";
 import ProfileNavbar from "./components/ProfileNavbar/ProfileNavbar";
-import Favorites from "./views/Favorites";
+// import Favorites from "./views/Favorites/Favorites";
 import Footer from "./components/Footer/Footer";
 import injectContext from "./store/appContext";
 import Product from "./views/Product";
@@ -24,8 +24,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/login/newaccount" element={<Form />} />
         <Route path="/miperfil/editdata" element={<EditData />} />
-        <Route path="miperfil" element={<ProfileNavbar />} />
-        <Route path="/miperfil/misfavoritos" element={<Favorites />} />
+        <Route path="miperfil" element={<ProfileNavbar />} /> 
+        {/* <Route path="/miperfil/misfavoritos" element={<Favorites />} /> */}
         <Route path="/match-status" element={<MatchStatus />} />
         <Route path="/admin/product" element={<Product />} />
         <Route path="/details" element={<Details />} />
