@@ -1,14 +1,14 @@
-import React from "react";
+// import React from "react";
 
 
-const Favorites = () => {
+// const Favorites = () => {
 
-    return (
-        <p>Favoritos </p>
+//     return (
+//         <p>Favoritos </p>
         
-    )
-}
+//     )
+// }
 
 
 
-export default Favorites;
+// export default Favorites;
