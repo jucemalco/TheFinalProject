@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './ProfileNavbar.css'
+
 
 
 const ProfileNavbar = () => {
 
+
     return (
-        <div className="navbarProfile">
+        <div className="navbar navbar-expand-lg navbarProfile mt-5"> 
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="#">
@@ -26,8 +29,8 @@ const ProfileNavbar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item dropdown ">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 p-5">
+                            <li className="nav-item dropdown">
                                 <Link
                                     className="nav-link dropdown-toggle text-white"
                                     to="myaccount"
@@ -73,15 +76,30 @@ const ProfileNavbar = () => {
                                     <Link className="nav-link text-white p-5" to="#">Mis Libros Publicados <i class="fa fa-book" aria-hidden="true"></i></Link>
                                 </li>
                                 <li className="nav-item">
-
+                                    
                                     <Link className="nav-link text-white p-5" to="/miperfil/misfavoritos">Mis Favoritos <i class="fa fa-heart-o" aria-hidden="true" style={{ color: "#fa5d5d" }} ></i></Link>
                                 </li>
 
-                             
+
+
+
 
                             </ul>
                         </div>
+                        <div className="dropdown">
+                            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Favoritos
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                {store.lista_favorito.map(favorito => {
+                                    return <li><a className="dropdown-item" href="#">{favorito}<button onClick={() => {
+                                        const isLargeNumber = (element) => element === favorito
 
+                                        actions.deleteFav(store.lista_favorito.findIndex(isLargeNumber))
+                                    }}>x</button></a></li>
+                                })}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -93,7 +111,7 @@ const ProfileNavbar = () => {
 
 
 
-    
+
     );
 };
 
