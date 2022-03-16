@@ -13,6 +13,7 @@ import Product from "./views/Product";
 import MatchStatus from "./views/MatchStatus/MatchStatus";
 import Details from "./views/Details/Details";
 import { Component } from "react";
+import UserProfile from "./views/UserProfile/UserProfile";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/login/newaccount" element={<Form />} />
           <Route path="/miperfil/editdata" element={<EditData />} />
           <Route path="miperfil" element={<ProfileNavbar />} />
+          <Route path="/miperfil/userprofile" element={<UserProfile />} />
           {/* <Route path="/miperfil/misfavoritos" element={<Favorites />} /> */}
           <Route path="/match-status" element={<MatchStatus />} />
           <Route path="/admin/product" element={<Product />} />
