@@ -6,7 +6,7 @@ import "./MatchStatus.css";
 
 const MatchStatus = () => {
   return (
-    <div className="d-flex align-items-center justify-content-around">
+    <div className="d-flex align-items-center justify-content-around py-3 px-3">
       <div className="d-flex align-items-center justify-content-around flex-column">
         <RoundedCard nombre="juan martinez" />
         <SquareCard nombre="Rayuela" />

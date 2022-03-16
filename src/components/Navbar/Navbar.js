@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import BookMatch_Logo from "../../images/BookMatch_Logo.png"
+import BookMatch_Logo from "../../images/BookMatch_Logo.png";
 import { Link } from "react-router-dom";
-import './Navbar.css'
+import "./Navbar.css";
 // import { Dropdown, DropdownButton } from "react-bootstrap";
-
 
 export const Navbar = () => {
   return (
@@ -32,8 +31,6 @@ export const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/">
                   <i className="fa fa-home p-2">Inicio</i>
-
-
                 </Link>
               </li>
 
@@ -47,7 +44,6 @@ export const Navbar = () => {
                   aria-expanded="false"
                 >
                   <i className="fa fa-book p-2"></i>
-
                   Libros
                 </a>
 
@@ -93,31 +89,24 @@ export const Navbar = () => {
                   Mi cuenta
                 </Link>
 
-
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-
                     <Link className="dropdown-item" to="login">
                       Ingresa
                     </Link>
                   </li>
                   <li>
-
                     <Link className="dropdown-item" to="/login/newaccount">
                       Regístrate
                     </Link>
 
                     <li>
-
                       <Link className="dropdown-item" to="miperfil">
                         Mi Perfil
                       </Link>
                     </li>
                   </li>
-                  <li>
-                
-
-                  </li>
+                  <li></li>
                 </ul>
               </li>
 
@@ -130,25 +119,28 @@ export const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <i className="fa fa-heart-o p-2" style={{ color: "#fa5d5d" }} ></i>
+                  <i
+                    className="fa fa-heart-o p-2"
+                    style={{ color: "#fa5d5d" }}
+                  ></i>
                   Mis Favoritos
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <Link className="dropdown-item text-center" to="">
                       Eliminar
-                      <i class="fa fa-trash-o p-2" style={{ color: "#8b6685" }}></i>
+                      <i
+                        class="fa fa-trash-o p-2"
+                        style={{ color: "#8b6685" }}
+                      ></i>
                     </Link>
                   </li>
 
-                  <li>
-            
-
-                  </li>
+                  <li></li>
+                  <li></li>
                 </ul>
               </li>
 
-              
               <li id="nav-item">
                 <Link className="nav-link text-white" to="nosotros">
                   Nosotros
@@ -170,7 +162,6 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-
     </div>
   );
 };

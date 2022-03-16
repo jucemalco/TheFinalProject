@@ -16,13 +16,15 @@ const Home = () => {
           <h1>Novedades</h1>
         </div>
         <div className="row">
-          {store.products && store.products.map((p, i) => <div className="col-md-4">
-            <Card 
-                 title={p.title}
-                 autor= {p.autor}
-                 editorial= {p.editorial} 
-                 />
-          </div>)}
+          {store.products &&
+            store.products.map((p, i) => (
+              <div
+                key={i}
+                className="col-md-4 d-flex justify-content-center align-items-center"
+              >
+                <Card title={p.title} autor={p.autor} editorial={p.editorial} />
+              </div>
+            ))}
         </div>
         <div>
           <h1>Autores</h1>
