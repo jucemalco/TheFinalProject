@@ -11,10 +11,11 @@ const Form = () => {
     const onChange = (evento) => {
         setState({[evento.target.name] : evento.target.value})
     }
-    const onSubmit = () => {
-        actions.createUser(state)
+    const onSubmit = (evento) => {
+        actions.createUser(state, evento )
     
     }
+    //DETRUCTURING 
     const { store, actions } = useContext(Context)
     return (
         <div className="container loginback ">
