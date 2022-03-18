@@ -73,9 +73,9 @@ const getState = ({ getStore, setStore, getActions }) => {
 
 
             //PARA EL REGISTRO DE USUARIOS //
-            createUser: (state) => {
+            createUser: (state, evento) => {
                 evento.preventDefault()
-                fetch("http://localhost:5000/user"), {
+                fetch("http://localhost:5000/registro"), {
                     method: "POST",
                     headers: {
                         "Content-Type": "applications/json"
