@@ -11,20 +11,20 @@ const EditData = () => {
             <form>
                 
                 <div className="col-md-6 text-white p-4">
-                    <label for="formGroupExampleInput" className="form-label d-flex">Nombres</label>
+                    <label htmlFor="formGroupExampleInput" className="form-label d-flex">Nombres</label>
                     <input type="text" className="form-control" id="formGroupExampleInput" placeholder="" />
                 </div>
                
 
                 
                 <div className="col-md-6 text-white p-4">
-                    <label for="formGroupExampleInput2" className="form-label d-flex">Apellidos</label>
+                    <label htmlFor="formGroupExampleInput2" className="form-label d-flex">Apellidos</label>
                     <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="" />
                 </div>
                 
 
                 <div class="col-md-6 text-white p-4">
-                    <label for="inputEmail4" class="form-label d-flex">Email asociado cambiar</label>
+                    <label htmlFor="inputEmail4" class="form-label d-flex">Email asociado cambiar</label>
                     <input type="email" class="form-control" id="inputEmail4" />
                 </div>
 

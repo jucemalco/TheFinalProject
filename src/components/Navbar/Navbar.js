@@ -130,7 +130,7 @@ export const Navbar = () => {
                     <Link className="dropdown-item text-center" to="">
                       Eliminar
                       <i
-                        class="fa fa-trash-o p-2"
+                        className="fa fa-trash-o p-2"
                         style={{ color: "#8b6685" }}
                       ></i>
                     </Link>
