@@ -74,26 +74,17 @@ const getState = ({ getStore, setStore, getActions }) => {
 
             //PARA EL REGISTRO DE USUARIOS //
             createUser: (state, evento) => {
-                evento.preventDefault()
-                fetch("http://localhost:5000/registro"), {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "applications/json"
-                    },
-                    body: JSON.stringify(state)
-                        .then(response => response.json())
-                        .then(data =>
-                            setStore({
-                                user: {
-                                    name: "",
-                                    surname: "",
-                                    email: "",
-                                    password: "",
-                                }
-                            })
-                        )
-                    
-                }
+                //evento.preventDefault()
+                console.log("flux",state)
+                fetch("http://localhost:5000/registro", {
+                    method: 'POST', // or 'PUT'
+                    body: JSON.stringify(state), // data can be `string` or {object}!
+                    headers:{
+                    'Content-Type': 'application/json'
+                    }
+                    }).then(res => res.json())
+                    .catch(error => console.error('Error:', error))
+                    .then(response => console.log('Success:', response));
             },
         },
     }
@@ -101,6 +92,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 
 
 }
+
 
 
 export default getState;
