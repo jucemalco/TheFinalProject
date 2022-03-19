@@ -3,8 +3,8 @@ const getState = ({ getStore, setStore, getActions }) => {
         store: {
             user: [],
             users: [],
-            favorite: [],
-            favorites: [],
+            favorito: [],
+			lista_favorito: [],
             match: [],
             favorite_list: [],
             products: null,
@@ -15,6 +15,21 @@ const getState = ({ getStore, setStore, getActions }) => {
             },
         },
         actions: {
+            getProducts: (e) => {
+                    fetch("http://localhost:5000/products")
+                    .then(res => res.json())
+                    .then(state => setStore({products: state}))
+                    .catch(error => console.log(error))
+            },
+            onChange: (e) => {
+                 const { product } = getStore()
+                 setStore ({ product: {...product, [e.target.name]: e.target.value}})
+            },
+            saveProduct: (state, e) => {
+                //e.preventDefault()
+                console.log("flux",e)
+                const {product} = getStore()
+                },
             getProducts: () => {
                 fetch("http://localhost:5000/products")
                     .then(res => res.json())
@@ -33,8 +48,15 @@ const getState = ({ getStore, setStore, getActions }) => {
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify(product)
+                    body: JSON.stringify(state)
                 }).then(res => res.json())
+                .then(state => console.log(state))
+                setStore({state: {
+                    title: "",
+                    editorial:"",
+                    autor:""
+                }})
+
                     .then(data => console.log(data))
                 setStore({
                     product: {
@@ -44,7 +66,7 @@ const getState = ({ getStore, setStore, getActions }) => {
                     }
                 })
             },
-            addfav: favorite => {
+            addFav: favorite => {
                 const store = getStore();
                 if (store.favorite_list.includes(favorite)) {
                     return console.log("Ya existe este libro como tu favorito")

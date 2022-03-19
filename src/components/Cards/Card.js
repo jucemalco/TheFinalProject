@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Card = (props) => {
   //const { store, actions } = useContext(Context);
+  //const params = useParams();
+  //useEffect(() => {
+    //actions.getProduct(params.id)
+  //}, [])
+
   return (
     <div className="card">
       <div className="card-body">
@@ -23,12 +29,12 @@ const Card = (props) => {
           <i className="btn btn-primary">Quiero ver más</i>
         </Link>
         &nbsp;
-        <button className={`btn btn-outline-warning`} onClick={() => {}}>
+        <button className={`btn btn-outline-warning`} onClick="">
           <AiOutlineHeart />
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Card;
