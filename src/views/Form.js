@@ -1,19 +1,18 @@
-import React, { useState }from "react";
-import { useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
-
 
 /* FORMULARIO PARA REGISTRARSE*/
 const Form = () => {
     //Estado del state
     const [state, setState] = useState({});
-
+    console.log(state)
     const onChange = (evento) => {
-        setState({[evento.target.name] : evento.target.value})
+        setState({ ...state, [evento.target.name]: evento.target.value })
     }
     const onSubmit = (evento) => {
-        actions.createUser(state, evento )
-    
+        evento.preventDefault()
+        actions.createUser(state, evento)
+        console.log(state)
     }
     //DETRUCTURING 
     const { store, actions } = useContext(Context)
@@ -25,17 +24,19 @@ const Form = () => {
             </legend>
             <h2 className="form-subtitle text-white">Información Personal</h2>
             <br></br>
-            
-            <form onSubmit={(evento)=>onSubmit(evento)}>
+
+            <form onSubmit={(evento) => onSubmit(evento)}>
                 <div class="mb-3">
                     <label for="exampleInputNombre" class="form-label d-flex text-white">
                         Nombre <i class="fa fa-asterisk fa-xs " style={{ fontSize: 6, color: "#fd4444" }}></i>
                     </label>
                     <input
+                        name="name"
                         type="text"
                         class="form-control"
                         id="exampleInputNombre"
                         aria-describedby="nombreHelp"
+                        value={state.name}
                         required
                         onChange={(evento) => onChange(evento)}
                     />
@@ -46,6 +47,7 @@ const Form = () => {
                         Apellidos <i class="fa fa-asterisk fa-xs " style={{ fontSize: 6, color: "#fd4444" }}></i>
                     </label>
                     <input
+                        name="surname"
                         type="text"
                         class="form-control"
                         id="exampleInputApellido"
@@ -60,6 +62,7 @@ const Form = () => {
                         Correo Electrónico <i class="fa fa-asterisk fa-xs" style={{ fontSize: 6, color: "#fd4444" }}></i>
                     </label>
                     <input
+                        name="email"
                         type="email"
                         class="form-control"
                         id="exampleInputEmail1"
@@ -76,6 +79,7 @@ const Form = () => {
                         Contraseña <i className="fa fa-asterisk fa-xs" style={{ fontSize: 6, color: "#fd4444" }}></i>
                     </label>
                     <input
+                        name="password"
                         type="password"
                         class="form-control"
                         id="exampleInputPassword1"
