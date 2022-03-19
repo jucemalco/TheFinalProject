@@ -36,11 +36,11 @@ const getState = ({ getStore, setStore, getActions }) => {
                     .then(data => setStore({ products: data }))
                     .catch(error => console.log(error))
             },
-            handleProductChange: (e) => {
+            handleProductChange: (state, e) => {
                 const { product } = getStore()
                 setStore({ product: { ...product, [e.target.name]: e.target.value } })
             },
-            saveProduct: (e) => {
+            saveProduct: (state, e) => {
                 e.preventDefault()
                 const { product } = getStore()
                 fetch("http://localhost:5000/product", {
