@@ -1,44 +1,38 @@
-import React, { Fragment, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 
 const Product = () => {
-    const { actions } = useContext(Context);
-    const [datos, setDatos] = useState({
+    const [state, setState] = useState({
         title: '',
         autor: "",
         editorial: "",
         review: ""
     })
-    const handleInputChange = (e) => {
-        e.preventDefault();
-        console.log(e.target.value)
-        setDatos({
-            ...datos,
-            [e.target.name]: e.target.value
-        })
+    const onChange = (e) => {
+        setState({...state,[e.target.name] : e.target.value})
     }
-    const enviarDatos = (e) => {
-        actions.saveProduct(e)
+    const onSubmit = (e) => {
+        e.preventDefault()
+        actions.saveProduct(state, e)
+        console.log(state)
     }
-    return (
-        <Fragment>
 
-            <div className="container">
+    const { store, actions } = useContext(Context)
+    return ( <div className="container">
                 <div className="row">
                     <div className="col-12">
                         <h1>Publica tu Libro</h1>
                     </div>
                 </div>
-                <form onSubmit={actions.enviarDatos}>
+                <form onSubmit={(e)=>onSubmit(e)}>
                     <div className="mb-3 row">
                         <label htmlFor="title" className="col-sm-2 col-form-label">Titulo</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
-                                value={datos.title}
                                 className="form-control"
                                 id="title"
-                                onChange={handleInputChange}
+                                onChange={(e) => onChange(e)}
                                 name="title"
                                 placeholder="Title" />
                         </div>
@@ -48,10 +42,9 @@ const Product = () => {
                         <div className="col-sm-10">
                             <input
                                 type="text"
-                                value={datos.autor}
                                 className="form-control"
                                 id="autor"
-                                onChange={handleInputChange}
+                                onChange={(e) => onChange(e)}
                                 name="autor"
                                 placeholder="Autor" />
                         </div>
@@ -61,10 +54,9 @@ const Product = () => {
                         <div className="col-sm-10">
                             <input
                                 type="text"
-                                value={datos.editorial}
                                 className="form-control"
                                 id="editorial"
-                                onChange={handleInputChange}
+                                onChange={(e) => onChange(e)}
                                 name="editorial"
                                 placeholder="Editorial" />
                         </div>
@@ -74,11 +66,9 @@ const Product = () => {
                         <div className="col-sm-10">
                             <input
                                 aria-label="With textarea"
-                               
-                                value={datos.review}
                                 className="form-control"
                                 id="review"
-                                onChange={handleInputChange}
+                                onChange={(e) => onChange(e)}
                                 name="review"
                                 placeholder="Reseña" />
                             
@@ -98,7 +88,6 @@ const Product = () => {
                     </div>
                 </form>
             </div>
-        </Fragment>
     )
 }
 
