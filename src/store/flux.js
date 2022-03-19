@@ -1,20 +1,20 @@
 const getState = ({ getStore, setStore, getActions }) => {
-    return {
-        store: {
-            user: [],
-            users: [],
-            favorito: [],
-			lista_favorito: [],
-            match: [],
-            favorite_list: [],
-            products: null,
-            product: {
-                    title: "",
-                    editorial:"",
-                    autor:""
-                },
-            },
-        actions: {
+
+  return {
+    store: {
+      user: [],
+      users: [],
+      favorito: [],
+      lista_favorito: [],
+      match: [],
+      products: null,
+      product: {
+        title: "",
+        editorial: "",
+        autor: "",
+      },
+    },
+    actions: {
             getProducts: (e) => {
                 fetch("http://localhost:5000/products")
                 .then(res => res.json())
@@ -25,7 +25,7 @@ const getState = ({ getStore, setStore, getActions }) => {
              const { product } = getStore()
              setStore ({ product: {...product, [e.target.name]: e.target.value}})
             },
-             saveProduct: (state, e) => {
+            saveProduct: (state, e) => {
             //e.preventDefault()
             console.log("flux",e)
             const {product} = getStore()
@@ -57,7 +57,38 @@ const getState = ({ getStore, setStore, getActions }) => {
                 setStore({favorite_list:store.favorite_list})
             },
 
-            /*PARA CONSULTA DE LOGGIN Y REGISTRO DE SIGN IN*/
+      /*para cuando se inicia sesión LOG IN*/
+      // getUser: id => {
+      //     fetch("" + id)
+      //         .then(response => response.json())
+      //         .then((result) => {
+      //                 setStore({user: FALTA LA RUTA DE LA BASE DE DATOS }
+      //         })
+      //         .catch(error => console.log("Error", error));
+      // },
+      // /*para cuando se hace la consulta de registro si el usurio existe o no (registrado) SIGN IN*/
+
+
+      //PARA EL REGISTRO DE USUARIOS //
+      createUser: (state, evento) => {
+        //evento.preventDefault()
+        console.log("flux", state);
+        fetch("http://localhost:5000/registro", {
+          method: "POST", // or 'PUT'
+          body: JSON.stringify(state), // data can be `string` or {object}!
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .catch((error) => console.error("Error:", error))
+          .then((response) => console.log("Success:", response));
+      },
+    },
+  };
+};
+
+export default getState;
 
             /*para cuando se inicia sesión LOG IN*/
             // getUser: id => {
@@ -81,10 +112,4 @@ const getState = ({ getStore, setStore, getActions }) => {
             //      .then (response => response.json())
             //      .then ((data)) =>
             //         setStore({ planet: ruta en base de datos}));
-
             // },
-        },
-    };
-};
-
-export default getState;

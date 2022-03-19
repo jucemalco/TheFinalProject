@@ -88,7 +88,10 @@ const ProfileNavbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white p-5" to="#">
+                  <Link
+                    className="nav-link text-white p-5"
+                    to="/miperfil/userprofile"
+                  >
                     perfil de usuario{" "}
                     <i class="fa fa-book" aria-hidden="true"></i>
                   </Link>
