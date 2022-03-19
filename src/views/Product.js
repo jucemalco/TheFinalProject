@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 
 const Product = () => {
+    const { store, actions } = useContext(Context)
     const [state, setState] = useState({
         title: '',
         autor: "",
@@ -17,7 +18,6 @@ const Product = () => {
         console.log(state)
     }
 
-    const { store, actions } = useContext(Context)
     return ( <div className="container">
                 <div className="row">
                     <div className="col-12">
