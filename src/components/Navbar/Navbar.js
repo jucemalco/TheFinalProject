@@ -35,9 +35,9 @@ export const Navbar = () => {
               </li>
 
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle text-white"
-                  href="#"
+                  to="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -45,7 +45,7 @@ export const Navbar = () => {
                 >
                   <i className="fa fa-book p-2"></i>
                   Libros
-                </a>
+                </Link>
 
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
