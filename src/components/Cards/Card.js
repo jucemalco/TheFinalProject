@@ -29,7 +29,7 @@ const Card = (props) => {
             <dt>{props.autor}</dt>
             <dd>{props.editorial}</dd>
           </dl>
-        </p>
+        </p> 
         <Link to="/details">
           <i className="btn btn-primary">Quiero ver más</i>
         </Link>

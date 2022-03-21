@@ -25,7 +25,7 @@ const Details = (props) => {
             </div>
             <div className="col">
                 <h1 className="titledetails">Usuario</h1>
-                <Card2 />
+                <Card2 /> 
             </div>
         </div>
             <img src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg" className="img-thumbnail" style={{ width: "350px", height: "300px" }} alt="..."/>
