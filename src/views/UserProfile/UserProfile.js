@@ -29,7 +29,7 @@ const UserProfile = (props) => {
                     data-mdb-ripple-color="dark"
                     style={{ zIndex: "1" }}
                   >
-                    Edit profile
+                    Editar perfil
                   </button>
                 </div>
                 <div className="ms-3">
@@ -41,33 +41,52 @@ const UserProfile = (props) => {
                 className="p-4 text-black"
                 style={{ backgroundColor: "#f8f9fa" }}
               >
-                <div className="d-flex justify-content-end text-center py-1">
-                  <div>
-                    <p className="mb-1 h5">253</p>
-                    <p className="small text-muted mb-0">Photos</p>
-                  </div>
-                  <div className="px-3">
-                    <p className="mb-1 h5">1026</p>
-                    <p className="small text-muted mb-0">Followers</p>
-                  </div>
-                  <div>
-                    <p className="mb-1 h5">478</p>
-                    <p className="small text-muted mb-0">Following</p>
+                <div className="d-flex justify-content-end text-center py-1 ">
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      otras opciones
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Historial de matches
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Mis matches pendientes
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Nueva solicitud de match
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
               <div className="card-body p-4 text-black">
                 <div className="mb-5">
-                  <p className="lead fw-normal mb-1">About</p>
+                  <p className="lead fw-normal mb-1">sobre mi</p>
                   <div className="p-4" style={{ backgroundColor: "#f8f9fa" }}>
                     <p className="font-italic mb-1">Web Developer</p>
                   </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-center mb-4">
-                  <p className="lead fw-normal mb-0">Recent books</p>
+                  <p className="lead fw-normal mb-0">Mis libros</p>
                   <p className="mb-0">
                     <Link to="#!" className="text-muted">
-                      Show all
+                      Mostrar todos
                     </Link>
                   </p>
                 </div>
