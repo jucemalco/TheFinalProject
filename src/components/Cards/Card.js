@@ -10,6 +10,11 @@ const Card = (props) => {
     //actions.getProduct(params.id)
   //}, [])
 
+  // const handleClick = () => {
+  //   if (!isLogged) return navigate("/login");
+  //   addFav({id});
+  // };
+
   return (
     <div className="card">
       <div className="card-body">
@@ -22,9 +27,9 @@ const Card = (props) => {
           <dl>
             <dt>{props.title}</dt>
             <dt>{props.autor}</dt>
-            <dd>{props.editorial} </dd>
+            <dd>{props.editorial}</dd>
           </dl>
-        </p>
+        </p> 
         <Link to="/details">
           <i className="btn btn-primary">Quiero ver más</i>
         </Link>

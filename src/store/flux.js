@@ -12,6 +12,7 @@ const getState = ({ getStore, setStore, getActions }) => {
         title: "",
         editorial: "",
         autor: "",
+        review: ""
       },
     },
     actions: {
@@ -21,40 +22,46 @@ const getState = ({ getStore, setStore, getActions }) => {
                 .then(state => setStore({products: state}))
                 .catch(error => console.log(error))
             },
+            // getProduct: (id) => {
+            //     fetch("http://localhost:5000/product" + id)
+            //     .then(res => res.json())
+            //     .then(state => setStore({product: state}))
+            //     .catch(error => console.log(error))
+            // },
             onChange: (e) => {
-             const { product } = getStore()
-             setStore ({ product: {...product, [e.target.name]: e.target.value}})
+                const { product } = getStore()
+                setStore ({ product: {...product, [e.target.name]: e.target.value}})
             },
             saveProduct: (state, e) => {
-            //e.preventDefault()
-            console.log("flux",e)
-            const {product} = getStore()
-            fetch("http://localhost:5000/product", {
+                //e.preventDefault()
+                console.log("flux",e)
+                const {product} = getStore()
+                fetch("http://localhost:5000/product", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(state)
-            }).then(res => res.json())
-            .then(state => console.log(state))
-            setStore({state: {
+                }).then(res => res.json())
+                .then(state => console.log(state))
+                setStore({state: {
                 title: "",
                 editorial:"",
                 autor:""
             }})
             },
-            addFav: favorite => {
-                const store = getStore();
-                if (store.favorite_list.includes(favorite)){
+            addFav: favorito => {
+                const state = getState();
+                if (state.lista_favorito.includes(favorito)){
                     return console.log("Ya existe este libro como tu favorito")
                 }
-                setStore({favorite_list: [...store.favorite_list, favorite] })
-                return console.log(store.favorite_list)
+                setStore({lista_favorito: [...state.lista_favorito, favorito] })
+                return console.log(state.lista_favorito)
             },
             deleteFav: (index) => {
                 const store = getStore()
-                store.favorite_list.splice(index,1)
-                setStore({favorite_list:store.favorite_list})
+                store.lista_favorito.splice(index,1)
+                setStore({lista_favorito:store.lista_favorito})
             },
 
       /*para cuando se inicia sesión LOG IN*/
@@ -112,4 +119,4 @@ export default getState;
             //      .then (response => response.json())
             //      .then ((data)) =>
             //         setStore({ planet: ruta en base de datos}));
-            // },
+            // }, 
