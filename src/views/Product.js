@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 const Product = () => {
     const { store, actions } = useContext(Context)
     const [state, setState] = useState({
-        title: '',
+        title: "",
         autor: "",
         editorial: "",
         review: ""

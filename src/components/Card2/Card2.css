@@ -1,0 +1,13 @@
+.photouser {
+    width: 150px; 
+    height: 150px;
+}
+
+.card {
+    border: none;
+    margin-top: -23px;
+}
+
+.card-text {
+    margin-top: 20px;
+}
