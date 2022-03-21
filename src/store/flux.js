@@ -112,4 +112,4 @@ export default getState;
             //      .then (response => response.json())
             //      .then ((data)) =>
             //         setStore({ planet: ruta en base de datos}));
-            // },
+            // }, 
