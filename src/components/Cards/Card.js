@@ -34,7 +34,7 @@ const Card = (props) => {
           <i className="btn btn-primary">Quiero ver más</i>
         </Link>
         &nbsp;
-        <button className={`btn btn-outline-warning`} onClick="">
+        <button className={`btn btn-outline-danger`} onClick="">
           <AiOutlineHeart />
         </button>
       </div>

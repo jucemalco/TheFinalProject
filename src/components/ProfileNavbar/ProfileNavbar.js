@@ -94,7 +94,7 @@ const ProfileNavbar = () => {
                 <li className="nav-item">
                   <Link
                     className="nav-link text-white p-5"
-                    to="/miperfil/userprofile"
+                    to="/userprofile"
                   >
                     Perfil de Usuario{" "}
                   </Link>
