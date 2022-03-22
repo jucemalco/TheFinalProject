@@ -109,6 +109,22 @@ const getState = ({ getStore, setStore, getActions }) => {
           .catch((error) => console.error("Error:", error))
           .then((response) => console.log("Success:", response));
       },
+
+      editData: (state, evento) => {
+        //evento.preventDefault()
+        console.log("flux", state);
+        fetch("http://localhost:5000/editdata", {
+          method: "PUT", 
+          body: JSON.stringify(state), 
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .catch((error) => console.error("Error:", error))
+          .then((response) => console.log("Success:", response));
+      },
+
     },
   };
 };

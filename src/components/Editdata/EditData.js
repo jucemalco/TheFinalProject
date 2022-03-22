@@ -1,31 +1,65 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "../../store/appContext";
 
 
 const EditData = () => {
+    const { store, actions } = useContext(Context)
+    const [state, setState] = useState({});
+    console.log(state)
+    const onChange = (evento) => {
+        setState({ ...state, [evento.target.name]: evento.target.value })
+    }
+    const onSubmit = (evento) => {
+        evento.preventDefault()
+        actions.editData(state, evento)
+        console.log(state)
+    }
+
 
     return (
         <div class="container loginback ">
 
             <h2 className="form-title text-white text-center mt-4">Editar Datos</h2>
 
-            <form>
-                
+            <form onSubmit={(evento) => onSubmit(evento)} >
+
                 <div className="col-md-6 text-white p-4">
                     <label htmlFor="formGroupExampleInput" className="form-label d-flex">Nombres</label>
-                    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="" />
+                    <input 
+                    name="name" 
+                    type="text" 
+                    className="form-control" 
+                    id="formGroupExampleInput" 
+                    placeholder="" 
+                    value={state.name} 
+                    required
+                    onChange={(evento) => onChange(evento)} />
                 </div>
-               
 
-                
+
+
                 <div className="col-md-6 text-white p-4">
                     <label htmlFor="formGroupExampleInput2" className="form-label d-flex">Apellidos</label>
-                    <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="" />
+                    <input 
+                    name="surname"
+                    type="text" 
+                    className="form-control" 
+                    id="formGroupExampleInput2" 
+                    placeholder=""
+                    required
+                    onChange={(evento) => onChange(evento)}  />
                 </div>
-                
+
 
                 <div class="col-md-6 text-white p-4">
                     <label htmlFor="inputEmail4" class="form-label d-flex">Email asociado cambiar</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
+                    <input 
+                    name="email"
+                    type="email" 
+                    class="form-control" 
+                    id="inputEmail4" 
+                    required
+                    onChange={(evento) => onChange(evento)} />
                 </div>
 
 
