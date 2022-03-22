@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./UserProfile.css";
+import Card from "../../components/Cards/Card";
 import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
 
 const UserProfile = (props) => {
@@ -127,12 +128,18 @@ const UserProfile = (props) => {
                 </div>
                 <div className="row g-2">
                   <div className="col mb-2">
-                    <img
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
-                      alt="image 1"
-                      className="w-100 rounded-3"
-                    />
+                    <Card />
                   </div>
+                  <div className="col mb-2">
+                    <Card />
+                  </div>
+                </div>
+                <div className="row g-2">
+                  <div className="col">
+                    <Card />
+                  </div>
+                  <div className="col">
+                    <Card />
                   <div className="d-flex justify-content-between align-items-center mb-4">
                     <p className="lead fw-normal mb-0">Libros Recientes</p>
                     <p className="mb-0">
