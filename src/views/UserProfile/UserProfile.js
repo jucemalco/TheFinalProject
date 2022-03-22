@@ -55,7 +55,7 @@ const UserProfile = (props) => {
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        otras opciones
+                        Otras opciones
                       </button>
                       <ul
                         class="dropdown-menu"
