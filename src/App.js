@@ -11,6 +11,7 @@ import Product from "./views/Product";
 import MatchStatus from "./views/MatchStatus/MatchStatus";
 import Details from "./views/Details/Details";
 import UserProfile from "./views/UserProfile/UserProfile";
+import Logueado from "./views/Logueado";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/logueado" element={<Logueado />} />
           <Route path="/login" element={<Login />} />
           <Route path="/login/newaccount" element={<Form />} />
           <Route path="/miperfil/editdata" element={<EditData />} />
