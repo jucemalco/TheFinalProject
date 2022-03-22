@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../../store/appContext";
+import ProfileNavbar from "../ProfileNavbar/ProfileNavbar";
 
 
 const EditData = () => {
@@ -17,6 +18,8 @@ const EditData = () => {
 
 
     return (
+        <>
+        <ProfileNavbar />
         <div class="container loginback ">
 
             <h2 className="form-title text-white text-center mt-4">Editar Datos</h2>
@@ -68,8 +71,8 @@ const EditData = () => {
                 </div>
             </form>
         </div>
+    </>
     )
-
 }
 
 
