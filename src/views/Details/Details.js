@@ -1,7 +1,16 @@
 import React, { useContext } from "react";
+import { Context } from "../../store/appContext";
+import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
 
-const Details = (props) => {
-    return <div className="container">
+
+const Details = () => {
+//DESTRUCTURING
+const {store, actions} = useContext(Context)
+
+
+
+    return <> <ProfileNavbar/> 
+        <div className="container">
         <div className="row align-items-start">
             <div className="col">
                 <img src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg" className="img-thumbnail" style={{ width: "300px", height: "300px", display: "inline-block", }} alt="..."></img>
@@ -10,8 +19,8 @@ const Details = (props) => {
                 <h1>Titulo</h1>
                 <h5>Reseña</h5>
                 <p>Ea nisi ea aliquip occaecat excepteur veniam nisi. Aute officia cupidatat occaecat cupidatat duis nostrud dolore eiusmod voluptate est. Qui mollit aliquip enim duis quis. Labore adipisicing magna magna ipsum mollit elit non veniam excepteur ipsum.</p>
-                <a href="#" className="btn btn-primary">Añadir Favoritos</a> {""}
-                <a href="#" className="btn btn-primary">Hacer Match</a> {""}
+                <button to="#" className="btn btn-primary">Añadir Favoritos</button> {""}
+                <button className="btn btn-primary" onCLick={()=> actions.match()}>Hacer Match</button> {""}
             </div>
             <div className="col">
                 <h1>Usuario</h1>
@@ -29,6 +38,7 @@ const Details = (props) => {
             <p>Adipisicing veniam nostrud voluptate consectetur qui velit veniam deserunt officia veniam Lorem. Mollit amet exercitation sit nostrud sit minim culpa consequat. Duis laborum aliqua Lorem pariatur proident dolore aliquip enim eu ut incididunt occaecat tempor minim. Exercitation voluptate eiusmod ut mollit cupidatat.</p>
         </div>
     </div>
+    </>
 }
 
 

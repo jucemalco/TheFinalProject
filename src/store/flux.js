@@ -58,39 +58,42 @@ const getState = ({ getStore, setStore, getActions }) => {
                 setStore({ favorite_list: store.favorite_list })
             },
 
-            /*PARA CONSULTA DE LOGGIN Y REGISTRO DE SIGN IN*/
-
-            /*para cuando se inicia sesión LOG IN*/
-            // getUser: id => {
-            //     fetch("" + id)
-            //         .then(response => response.json())
-            //         .then((result) => {
-            //                 setStore({user: FALTA LA RUTA DE LA BASE DE DATOS }
-            //         })
-            //         .catch(error => console.log("Error", error));
-            // },
-            // /*para cuando se hace la consulta de registro si el usurio existe o no (registrado) SIGN IN*/
+            //LOGIN USUARIOS
+            login: (state, evento, navegate) => {
+                console.log("flux, state")
+                fetch("http://localhost:5000/login", {
+                    method: 'POST',
+                    body: JSON.stringify(state),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(res => res.json())
+                    .then(response => {
+                        console.log('Success:', response)
+                        navegate ('/miperfil/userprofile')
+                    })
+                    .catch(error => console.error('Error:', error));
+            },
 
 
             //PARA EL REGISTRO DE USUARIOS //
             createUser: (state, evento) => {
                 //evento.preventDefault()
-                console.log("flux",state)
+                console.log("flux", state)
                 fetch("http://localhost:5000/registro", {
                     method: 'POST', // or 'PUT'
-                    body: JSON.stringify(state), // data can be `string` or {object}!
-                    headers:{
-                    'Content-Type': 'application/json'
+                    body: JSON.stringify(state),
+                    headers: {
+                        'Content-Type': 'application/json'
                     }
-                    }).then(res => res.json())
+                }).then(res => res.json())
                     .catch(error => console.error('Error:', error))
                     .then(response => console.log('Success:', response));
             },
         },
-    }
     
-
-
+    }
+  
 }
 
 

@@ -1,8 +1,11 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
+import Navbar from "../components/Navbar/Navbar";
 
 /* FORMULARIO PARA REGISTRARSE*/
 const Form = () => {
+    //DETRUCTURING 
+    const { store, actions } = useContext(Context)
     //Estado del state
     const [state, setState] = useState({});
     console.log(state)
@@ -14,9 +17,8 @@ const Form = () => {
         actions.createUser(state, evento)
         console.log(state)
     }
-    //DETRUCTURING 
-    const { store, actions } = useContext(Context)
-    return (
+    
+    return ( <> <Navbar />
         <div className="container loginback ">
             <legend>
                 {" "}
@@ -105,7 +107,7 @@ const Form = () => {
             </form>
             <ul></ul>
         </div>
-    );
+    </>);
 };
 
 export default Form;
