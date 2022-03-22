@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .footer--container {
   position: relative;
   bottom: 0;
@@ -6,15 +7,26 @@
 }
 
 .footer--social_media {
+=======
+.footer--img {
+>>>>>>> 55126add722e0e281ed6370114aa95c1301b4c8f
   width: 30px;
 }
 
-.logo {
+.footer--logo {
   width: 250px;
 }
 
 .copyrights {
   font-size: small;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 @media (max-width: 959px) {
