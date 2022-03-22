@@ -8,11 +8,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-<<<<<<< HEAD:src/components/Footer/Footer.jsx
     <footer className="d-flex flex-wrap justify-content-between align-items-center bg-dark row footer--container">
-=======
-    <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-dark row">
->>>>>>> 55126add722e0e281ed6370114aa95c1301b4c8f:src/components/Footer/Footer.js
       <div className="bookmatchlogo px-5  d-flex align-items-center col-md-4 justify-content-start responsive-align">
         <Link to="/">
           <img src={logo} alt="Logo" className="footer--logo footer--img" />
@@ -31,15 +27,11 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-<<<<<<< HEAD:src/components/Footer/Footer.jsx
             <img
               src={instagram}
               alt="instagramLogo"
               className="footer--social_media"
             />
-=======
-            <img src={instagram} alt="instagramLogo" className="footer--img" />
->>>>>>> 55126add722e0e281ed6370114aa95c1301b4c8f:src/components/Footer/Footer.js
           </a>
         </li>
         <li className="ms-3">
@@ -49,15 +41,11 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-<<<<<<< HEAD:src/components/Footer/Footer.jsx
             <img
               src={twitter}
               alt="twitterLogo"
               className="footer--social_media"
             />
-=======
-            <img src={twitter} alt="twitterLogo" className="footer--img" />
->>>>>>> 55126add722e0e281ed6370114aa95c1301b4c8f:src/components/Footer/Footer.js
           </a>
         </li>
         <li className="ms-3">
@@ -67,15 +55,11 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-<<<<<<< HEAD:src/components/Footer/Footer.jsx
             <img
               src={facebook}
               alt="facebookLogo"
               className="footer--social_media"
             />
-=======
-            <img src={facebook} alt="facebookLogo" className="footer--img" />
->>>>>>> 55126add722e0e281ed6370114aa95c1301b4c8f:src/components/Footer/Footer.js
           </a>
         </li>
       </ul>
