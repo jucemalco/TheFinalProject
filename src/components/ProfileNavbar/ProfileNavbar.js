@@ -75,7 +75,7 @@ const ProfileNavbar = () => {
                   <Link className="nav-link text-white p-5" to="#">
                     Mis Match{" "}
                     <i
-                      class="fa fa-heart"
+                      className="fa fa-heart"
                       aria-hidden="true"
                       style={{ color: "#8b6685" }}
                     ></i>
@@ -88,7 +88,10 @@ const ProfileNavbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white p-5" to="#">
+                  <Link
+                    className="nav-link text-white p-5"
+                    to="/miperfil/userprofile"
+                  >
                     perfil de usuario{" "}
                     <i class="fa fa-book" aria-hidden="true"></i>
                   </Link>
@@ -100,7 +103,7 @@ const ProfileNavbar = () => {
                   >
                     Mis Favoritos{" "}
                     <i
-                      class="fa fa-heart-o"
+                      className="fa fa-heart-o"
                       aria-hidden="true"
                       style={{ color: "#fa5d5d" }}
                     ></i>

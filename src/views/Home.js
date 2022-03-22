@@ -13,13 +13,13 @@ const Home = () => {
     <>
       <Navbar />
       <Carousel />
+      {""}
       <div className="container">
         <div>
-          <h1>Novedades</h1>
+          <h1 className="title1">Novedades</h1>
         </div>
         <div className="row">
-          {store.products &&
-            store.products.map((p, i) => (
+          {store.products && store.products.map((p, i) => (
               <div
                 key={i}
                 className="col-md-4 d-flex justify-content-center align-items-center"
@@ -27,9 +27,6 @@ const Home = () => {
                 <Card title={p.title} autor={p.autor} editorial={p.editorial} />
               </div>
             ))}
-        </div>
-        <div>
-          <h1>Autores</h1>
         </div>
       </div>
     </>

@@ -1,62 +1,69 @@
 const getState = ({ getStore, setStore, getActions }) => {
-    return {
-        store: {
-            user: [],
-            users: [],
-            favorite: [],
-            favorites: [],
-            match: [],
-            favorite_list: [],
-            products: null,
-            product: {
-                title: "",
-                editorial: "",
-                autor: ""
-            },
-        },
-        actions: {
-            getProducts: () => {
+
+  return {
+    store: {
+      user: [],
+      users: [],
+      favorito: [],
+      lista_favorito: [],
+      match: [],
+      products: null,
+      product: {
+        title: "",
+        editorial: "",
+        autor: "",
+        review: ""
+      },
+    },
+    actions: {
+            getProducts: (e) => {
                 fetch("http://localhost:5000/products")
-                    .then(res => res.json())
-                    .then(data => setStore({ products: data }))
-                    .catch(error => console.log(error))
+                .then(res => res.json())
+                .then(state => setStore({products: state}))
+                .catch(error => console.log(error))
             },
-            handleProductChange: (e) => {
+            // getProduct: (id) => {
+            //     fetch("http://localhost:5000/product" + id)
+            //     .then(res => res.json())
+            //     .then(state => setStore({product: state}))
+            //     .catch(error => console.log(error))
+            // },
+            onChange: (e) => {
                 const { product } = getStore()
-                setStore({ product: { ...product, [e.target.name]: e.target.value } })
+                setStore ({ product: {...product, [e.target.name]: e.target.value}})
             },
-            saveProduct: (e) => {
-                e.preventDefault()
-                const { product } = getStore()
+            saveProduct: (state, e) => {
+                //e.preventDefault()
+                console.log("flux",e)
+                const {product} = getStore()
                 fetch("http://localhost:5000/product", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(product)
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(state)
                 }).then(res => res.json())
-                    .then(data => console.log(data))
-                setStore({
-                    product: {
-                        title: "",
-                        editorial: "",
-                        autor: ""
-                    }
-                })
+                .then(state => console.log(state))
+                setStore({state: {
+                title: "",
+                editorial:"",
+                autor:""
+            }})
             },
-            addfav: favorite => {
-                const store = getStore();
-                if (store.favorite_list.includes(favorite)) {
+            addFav: favorito => {
+                const state = getState();
+                if (state.lista_favorito.includes(favorito)){
                     return console.log("Ya existe este libro como tu favorito")
                 }
-                setStore({ favorite_list: [...store.favorite_list, favorite] })
-                return console.log(store.favorite_list)
+                setStore({lista_favorito: [...state.lista_favorito, favorito] })
+                return console.log(state.lista_favorito)
             },
             deleteFav: (index) => {
                 const store = getStore()
-                store.favorite_list.splice(index, 1)
-                setStore({ favorite_list: store.favorite_list })
+                store.lista_favorito.splice(index,1)
+                setStore({lista_favorito:store.lista_favorito})
             },
+
 
             //LOGIN USUARIOS
             login: (state, evento, navegate) => {
@@ -75,27 +82,35 @@ const getState = ({ getStore, setStore, getActions }) => {
                     .catch(error => console.error('Error:', error));
             },
 
-
-            //PARA EL REGISTRO DE USUARIOS //
-            createUser: (state, evento) => {
-                //evento.preventDefault()
-                console.log("flux", state)
-                fetch("http://localhost:5000/registro", {
-                    method: 'POST', // or 'PUT'
-                    body: JSON.stringify(state),
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }).then(res => res.json())
-                    .catch(error => console.error('Error:', error))
-                    .then(response => console.log('Success:', response));
-            },
-        },
-    
-    }
-  
-}
+      /*para cuando se inicia sesión LOG IN*/
+      // getUser: id => {
+      //     fetch("" + id)
+      //         .then(response => response.json())
+      //         .then((result) => {
+      //                 setStore({user: FALTA LA RUTA DE LA BASE DE DATOS }
+      //         })
+      //         .catch(error => console.log("Error", error));
+      // },
+      // /*para cuando se hace la consulta de registro si el usurio existe o no (registrado) SIGN IN*/
 
 
+      //PARA EL REGISTRO DE USUARIOS //
+      createUser: (state, evento) => {
+        //evento.preventDefault()
+        console.log("flux", state);
+        fetch("http://localhost:5000/registro", {
+          method: "POST", // or 'PUT'
+          body: JSON.stringify(state), // data can be `string` or {object}!
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .catch((error) => console.error("Error:", error))
+          .then((response) => console.log("Success:", response));
+      },
+    },
+  };
+};
 
 export default getState;
