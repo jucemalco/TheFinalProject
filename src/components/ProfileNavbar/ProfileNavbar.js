@@ -8,7 +8,7 @@ const ProfileNavbar = () => {
     <div className="navbar navbar-expand-lg navbarProfile mt-5">
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="#">
+          <Link className="navbar-brand" to="/">
             <div className="navbar-image">
                   <img src={BookMatch_Logo} style={{ width: "160px" }} />
                 </div> 

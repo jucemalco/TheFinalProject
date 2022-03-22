@@ -21,7 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/login/newaccount" element={<Form />} />
           <Route path="/miperfil/editdata" element={<EditData />} />
-          <Route path="/miperfil/userprofile" element={<UserProfile />} />
+          <Route path="/userprofile" element={<UserProfile />} />
           {/* <Route path="/miperfil/misfavoritos" element={<Favorites />} /> */}
           <Route path="/match-status" element={<MatchStatus />} />
           <Route path="/admin/product" element={<Product />} />

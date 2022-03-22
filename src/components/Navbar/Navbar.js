@@ -101,7 +101,7 @@ export const Navbar = () => {
                     </Link>
 
                     <li>
-                      <Link className="dropdown-item" to="miperfil">
+                      <Link className="dropdown-item" to="UserProfile">
                         Mi Perfil
                       </Link>
                     </li>
