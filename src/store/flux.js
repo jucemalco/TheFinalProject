@@ -64,6 +64,24 @@ const getState = ({ getStore, setStore, getActions }) => {
                 setStore({lista_favorito:store.lista_favorito})
             },
 
+
+            //LOGIN USUARIOS
+            login: (state, evento, navegate) => {
+                console.log("flux, state")
+                fetch("http://localhost:5000/login", {
+                    method: 'POST',
+                    body: JSON.stringify(state),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(res => res.json())
+                    .then(response => {
+                        console.log('Success:', response)
+                        navegate ('/miperfil/userprofile')
+                    })
+                    .catch(error => console.error('Error:', error));
+            },
+
       /*para cuando se inicia sesión LOG IN*/
       // getUser: id => {
       //     fetch("" + id)
@@ -96,27 +114,3 @@ const getState = ({ getStore, setStore, getActions }) => {
 };
 
 export default getState;
-
-            /*para cuando se inicia sesión LOG IN*/
-            // getUser: id => {
-            //     fetch("" + id)
-            //         .then(response => response.json())
-            //         .then((result) => {
-            //                 setStore({user: FALTA LA RUTA DE LA BASE DE DATOS }
-            //         })
-            //         .catch(error => console.log("Error", error));
-            // },
-            // /*para cuando se hace la consulta de registro si el usurio existe o no (registrado) SIGN IN*/
-            
-            // getUsers: () => {
-            //     fetch("http://localhost:5000/")
-            //         .then(response => response.json())
-            //         .then(data => setStore({users: RUTA A LA BASE DE DATOS}));
-            //  },
-            // /*CONSULTA A LA BASE DE DATOS DESDE "BUSQUEDA"*/
-            // getBooks: ()  => {
-            //      fetch("http://localhost:5000/")
-            //      .then (response => response.json())
-            //      .then ((data)) =>
-            //         setStore({ planet: ruta en base de datos}));
-            // }, 
