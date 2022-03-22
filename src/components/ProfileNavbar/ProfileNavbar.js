@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ProfileNavbar.css";
+import BookMatch_Logo from "../../images/BookMatch_Logo.png";
 
 const ProfileNavbar = () => {
   return (
@@ -8,11 +9,10 @@ const ProfileNavbar = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="#">
-            {/* <div className="navbar-image">
-                  <img src={logoImage} style={{ width: "160px" }} />
-                </div> */}
+            <div className="navbar-image">
+                  <img src={BookMatch_Logo} style={{ width: "160px" }} />
+                </div> 
           </Link>
-
           <button
             className="navbar-toggler"
             type="button"
@@ -22,7 +22,7 @@ const ProfileNavbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 p-5">
@@ -73,18 +73,20 @@ const ProfileNavbar = () => {
               <ul className="navbar-nav ">
                 <li className="nav-item">
                   <Link className="nav-link text-white p-5" to="#">
-                    Mis Match{" "}
-                    <i
-                      className="fa fa-heart"
+                  <i
+                      className="fa fa-heart p-2"
                       aria-hidden="true"
                       style={{ color: "#8b6685" }}
                     ></i>
+                    Mis Match{" "}
+                    
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link text-white p-5" to="#">
+                  <i class="fa fa-book p-2" aria-hidden="true" style={{ color: "#d0bdd8" }}></i>
                     Mis Libros Publicados{" "}
-                    <i class="fa fa-book" aria-hidden="true"></i>
+                    
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -92,36 +94,51 @@ const ProfileNavbar = () => {
                     className="nav-link text-white p-5"
                     to="/miperfil/userprofile"
                   >
-                    perfil de usuario{" "}
-                    <i class="fa fa-book" aria-hidden="true"></i>
+                    Perfil de Usuario{" "}
+                  
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link text-white p-5"
-                    to="/miperfil/misfavoritos"
-                  >
-                    Mis Favoritos{" "}
-                    <i
-                      className="fa fa-heart-o"
-                      aria-hidden="true"
-                      style={{ color: "#fa5d5d" }}
-                    ></i>
-                  </Link>
-                </li>
+              
               </ul>
             </div>
             <div className="dropdown">
-              <button
-                className="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Favoritos
-              </button>
-              {/* <ul
+            <Link
+                  className="nav-link dropdown-toggle text-white"
+                  to="myaccount"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i
+                    className="fa fa-heart-o p-2"
+                    style={{ color: "#fa5d5d" }}
+                  ></i>
+                  Mis Favoritos
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <Link className="dropdown-item text-center" to="">
+                      Eliminar
+                      <i
+                        className="fa fa-trash-o p-2"
+                        style={{ color: "#8b6685" }}
+                      ></i>
+                    </Link>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
+};
+
+export default ProfileNavbar;
+
+
+ {/* <ul
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton1"
               >
@@ -147,12 +164,3 @@ const ProfileNavbar = () => {
                   );
                 })}
               </ul> */}
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  );
-};
-
-export default ProfileNavbar;
