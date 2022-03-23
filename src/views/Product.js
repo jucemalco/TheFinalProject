@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Store } from "type-r";
 import { Context } from "../store/appContext";
 
 const Product = () => {
@@ -92,3 +93,12 @@ const Product = () => {
 }
 
 export default Product; 
+
+//ENVIAR EL ID DEL USUARIO, EL ID DE USUARIO EL PRIMARY KEY DE LA TABLA, Y RELACIONAR LA TABLA USUARIO CON EL "PRODUCTO"
+//EL USUARIO QUE ESTA GUARDADO EN EL Store, AGREGAR A ESE OBJETO LOS DATOS DEL USUARIO. QUE ESTAN GUARDADOS EN EL STORE
+
+// objeto tengo que enviar los dos ID, ID del libro, id del dueño, y el estado. 
+
+// solicitudes que me han hecho y las solicitudes que he hecho. 
+
+//mostrar los botones segun el estado. cuando consulto el la dB de los pendientes. 
