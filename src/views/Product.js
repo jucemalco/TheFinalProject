@@ -9,7 +9,8 @@ const Product = () => {
         title: "",
         autor: "",
         editorial: "",
-        review: ""
+        review: "",
+        user_id: ""
     })
     const onChange = (e) => {
         setState({...state,[e.target.name] : e.target.value})
