@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import "./index.css";
 import Card2 from "../../components/Card2/Card2";
 import { Context } from "../../store/appContext";
+import Footer2 from "../../components/FotterLogueado/Footer2"
 
 const Details = () => {
   const { store, actions } = useContext(Context);
@@ -74,6 +75,7 @@ const Details = () => {
           />
         </div>
       </div>
+      <Footer2 />
     </>
   );
 };

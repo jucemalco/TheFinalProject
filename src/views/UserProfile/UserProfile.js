@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./UserProfile.css";
 import Card from "../../components/Cards/Card";
 import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
+import Footer2 from "../../components/FotterLogueado/Footer2"
 
 const UserProfile = (props) => {
   return (
@@ -111,6 +112,7 @@ const UserProfile = (props) => {
           </div>
         </div>
       </section>
+      <Footer2 />
     </>
   );
 };

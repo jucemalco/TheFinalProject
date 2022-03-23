@@ -9,7 +9,7 @@ const ProfileNavbar = () => {
     <div>
     <nav className="navbar navbar-expand-lg navbar-light btn-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/logueado/">
           <div className="navbar-image">
             <img src={BookMatch_Logo} style={{ width: "160px" }} />
           </div>
@@ -29,7 +29,7 @@ const ProfileNavbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/">
+              <Link className="nav-link text-white" to="/logueado/">
                 <i className="fa fa-home p-2">Inicio</i>
               </Link>
             </li>
@@ -148,7 +148,7 @@ const ProfileNavbar = () => {
               </ul>
             </li>
             <li id="nav-item">
-              <Link className="nav-link text-white" to="nosotros">
+              <Link className="nav-link text-white" to="/aboutuslog/">
                 Nosotros
               </Link>
             </li>

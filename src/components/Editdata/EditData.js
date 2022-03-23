@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../../store/appContext";
 import ProfileNavbar from "../ProfileNavbar/ProfileNavbar";
-
+import Footer2 from "../FotterLogueado/Footer2"
 
 const EditData = () => {
     const { store, actions } = useContext(Context)
@@ -71,6 +71,7 @@ const EditData = () => {
                 </div>
             </form>
         </div>
+        <Footer2 />
     </>
     )
 }

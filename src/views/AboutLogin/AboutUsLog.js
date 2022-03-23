@@ -1,13 +1,13 @@
 import React from "react";
 import Nico from "../../images/Nico.png"
 import Vane from "../../images/Vane.png"
-import "./AboutUs.css"
+import "./AboutUsLog.css"
 import Navbar from "../../components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import { BsLinkedin } from 'react-icons/bs';
-import Footer from "../../components/Footer/Footer"
+import Footer2 from "../../components/FotterLogueado/Footer2"
 
-const AboutUs = () => {
+const AboutUsLog = () => {
     return (
         <>
             <Navbar />
@@ -27,10 +27,10 @@ const AboutUs = () => {
                     </Link>
                 </div>
             </div>
-            <Footer />
+            <Footer2 />
         </>
     )
 }
 
-export default AboutUs;
+export default AboutUsLog;
 

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer"
 
 /* FORMULARIO PARA REGISTRARSE*/
 const Form = () => {
@@ -109,6 +110,7 @@ const Form = () => {
             <ul></ul>
             </div>
         </div>
+        <Footer />
     </>);
 };
 
