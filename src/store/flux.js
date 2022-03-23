@@ -90,6 +90,21 @@ const getState = ({ getStore, setStore, getActions }) => {
                     .catch(error => console.error('Error:', error))
                     .then(response => console.log('Success:', response));
             },
+            
+            //PARA ENVIAR AL ENDPOINT LA SOLICITUD DE LOS LIBROS CON ID DE USUARIO Y CAMBIO DE ESTADO A PENDING
+            bookmatch: (state, evento) => {
+                //evento.preventDefault()
+                console.log("flux", state)
+                fetch("http://localhost:5000/bookmatch", {
+                    method: 'POST', // or 'PUT'
+                    body: JSON.stringify(state),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(res => res.json())
+                    .catch(error => console.error('Error:', error))
+                    .then(response => console.log('Success:', response));
+            },
         },
     
     }
