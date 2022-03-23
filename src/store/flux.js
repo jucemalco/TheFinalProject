@@ -22,12 +22,12 @@ const getState = ({ getStore, setStore, getActions }) => {
                 .then(state => setStore({products: state}))
                 .catch(error => console.log(error))
             },
-            // getProduct: (id) => {
-            //     fetch("http://localhost:5000/product" + id)
-            //     .then(res => res.json())
-            //     .then(state => setStore({product: state}))
-            //     .catch(error => console.log(error))
-            // },
+            getProduct: (e) => {
+                 fetch("http://localhost:5000/product")
+                 .then(res => res.json())
+                 .then(state => setStore({product: state}))
+                 .catch(error => console.log(error))
+             },
             onChange: (e) => {
                 const { product } = getStore()
                 setStore ({ product: {...product, [e.target.name]: e.target.value}})
@@ -35,7 +35,7 @@ const getState = ({ getStore, setStore, getActions }) => {
             saveProduct: (state, e) => {
                 //e.preventDefault()
                 console.log("flux",e)
-                const {product} = getStore()
+                const {  products } = getStore()
                 fetch("http://localhost:5000/product", {
                 method: "POST",
                 headers: {
@@ -78,7 +78,7 @@ const getState = ({ getStore, setStore, getActions }) => {
                 }).then(res => res.json())
                     .then(response => {
                         console.log('Success:', response)
-                        navegate ('/miperfil/userprofile')
+                        navegate ('/userprofile')
                     })
                     .catch(error => console.error('Error:', error));
             },

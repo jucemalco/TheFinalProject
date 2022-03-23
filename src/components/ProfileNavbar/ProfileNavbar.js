@@ -91,6 +91,11 @@ const ProfileNavbar = () => {
 
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
+                  <Link className="dropdown-item" to="/userprofile/">
+                    Mi perfil
+                  </Link>
+                </li>
+                <li>
                   <Link className="dropdown-item" to="/miperfil/editdata/">
                     Editar Mis Datos
                   </Link>
