@@ -64,6 +64,74 @@ const UserProfile = (props) => {
                     <div className="p-4" style={{ backgroundColor: "#f8f9fa" }}>
                       <p className="font-italic mb-1">Web Developer</p>
                     </div>
+                    Editar perfil
+                  </button>
+                </div>
+                <div className="ms-3">
+                  <h5>{props.name}</h5>
+                  <p>{props.city}</p>
+                </div>
+              </div>
+              <div
+                className="p-4 text-black"
+                style={{ backgroundColor: "#f8f9fa" }}
+              >
+                <div className="d-flex justify-content-end text-center py-1 ">
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      otras opciones
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Historial de matches
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Mis matches pendientes
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Nueva solicitud de match
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="card-body p-4 text-black">
+                <div className="mb-5">
+                  <p className="lead fw-normal mb-1">sobre mi</p>
+                  <div className="p-4" style={{ backgroundColor: "#f8f9fa" }}>
+                    <p className="font-italic mb-1">Web Developer</p>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-center mb-4">
+                  <p className="lead fw-normal mb-0">Mis libros</p>
+                  <p className="mb-0">
+                    <Link to="#!" className="text-muted">
+                      Mostrar todos
+                    </Link>
+                  </p>
+                </div>
+                <div className="row g-2">
+                  <div className="col mb-2">
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
+                      alt="image 1"
+                      className="w-100 rounded-3"
+                    />
                   </div>
                   <div className="d-flex justify-content-between align-items-center mb-4">
                     <p className="lead fw-normal mb-0">Libros Recientes</p>

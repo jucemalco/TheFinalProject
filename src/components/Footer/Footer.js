@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark row">
+    <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-dark row">
       <div className="bookmatchlogo px-5  d-flex align-items-center col-md-4 justify-content-start responsive-align">
         <Link to="/">
-          <img src={logo} alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="footer--logo footer--img" />
         </Link>
       </div>
       <div className="copyrights d-flex align-items-center col-md-4 justify-content-center responsive-align">
@@ -27,7 +27,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={instagram} alt="instagramLogo" />
+            <img src={instagram} alt="instagramLogo" className="footer--img" />
           </a>
         </li>
         <li className="ms-3">
@@ -37,7 +37,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={twitter} alt="twitterLogo" />
+            <img src={twitter} alt="twitterLogo" className="footer--img" />
           </a>
         </li>
         <li className="ms-3">
@@ -47,7 +47,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={facebook} alt="facebookLogo" />
+            <img src={facebook} alt="facebookLogo" className="footer--img" />
           </a>
         </li>
       </ul>
