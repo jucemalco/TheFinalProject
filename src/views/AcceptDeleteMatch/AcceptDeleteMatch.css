@@ -1,0 +1,14 @@
+
+#container{
+    border: 1px solid #ede5f0;
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    
+}
+
+.gradient-custom-1 {
+    /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
+    background: linear-gradient(to right, #d0bdd8, #8b6685, #583f58, #414040);
+    font-family: fantasy;
+}

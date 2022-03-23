@@ -13,6 +13,9 @@ import UserProfile from "./views/UserProfile/UserProfile";
 import Logueado from "./views/Logueado";
 import AboutUs from "./views/AboutUs/AboutUs"
 import AboutUsLog from "./views/AboutLogin/AboutUsLog"
+import TheMostRead from "./components/TheMostRead/TheMostRead";
+import AcceptDeleteMatch from "./views/AcceptDeleteMatch/AcceptDeleteMatch";
+
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
           <Route path="/details" element={<Details />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/aboutuslog" element={<AboutUsLog />} />
+          <Route path="/losmasleidos" element={<TheMostRead />} />
+          <Route path="/userprofile/matchpendientes" element={<AcceptDeleteMatch />} />
+       
         </Routes>
       </Router>
     </div>
