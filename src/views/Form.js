@@ -19,7 +19,8 @@ const Form = () => {
     }
     
     return ( <> <Navbar />
-        <div className="container loginback ">
+        <div className="container">
+            <div className="loginback">
             <legend>
                 {" "}
                 <h1 className="form-title text-white">Crear una nueva cuenta</h1>
@@ -106,6 +107,7 @@ const Form = () => {
 
             </form>
             <ul></ul>
+            </div>
         </div>
     </>);
 };

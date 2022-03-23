@@ -47,7 +47,8 @@ const getState = ({ getStore, setStore, getActions }) => {
                 setStore({state: {
                 title: "",
                 editorial:"",
-                autor:""
+                autor:"",
+                review: ""
             }})
             },
             addFav: favorito => {

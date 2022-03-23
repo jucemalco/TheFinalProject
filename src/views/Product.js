@@ -86,6 +86,11 @@ const Product = () => {
                             Publicar
                         </button>
                     </div>
+                    <div>
+                        <form>
+                            <input type="hidden"></input>
+                        </form>
+                    </div>
                 </form>
             </div>
     </>

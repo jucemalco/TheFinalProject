@@ -12,6 +12,7 @@ import MatchStatus from "./views/MatchStatus/MatchStatus";
 import Details from "./views/Details/Details";
 import UserProfile from "./views/UserProfile/UserProfile";
 import Logueado from "./views/Logueado";
+import AboutUs from "./views/AboutUs/AboutUs"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/match-status" element={<MatchStatus />} />
           <Route path="/admin/product" element={<Product />} />
           <Route path="/details" element={<Details />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
         <Footer />
       </Router>
