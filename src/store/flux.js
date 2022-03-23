@@ -45,10 +45,11 @@ const getState = ({ getStore, setStore, getActions }) => {
                 }).then(res => res.json())
                 .then(state => console.log(state))
                 setStore({state: {
-                title: "",
-                editorial:"",
-                autor:"",
-                review: ""
+                title: "title",
+                editorial:"editorial",
+                autor:"autor",
+                review: "review",
+                user_id: "user_id"
             }})
             },
             addFav: favorito => {
