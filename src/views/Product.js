@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import ProfileNavbar from "../components/ProfileNavbar/ProfileNavbar";
+import Footer2 from "../components/FotterLogueado/Footer2.js"
 
 const Product = () => {
     const { store, actions } = useContext(Context)
@@ -86,8 +87,14 @@ const Product = () => {
                             Publicar
                         </button>
                     </div>
+                    <div>
+                        <form>
+                            <input type="hidden"></input>
+                        </form>
+                    </div>
                 </form>
             </div>
+            <Footer2 />
     </>
     )
 }

@@ -5,13 +5,14 @@ import Login from "./components/Login/Login";
 import Form from "./views/Form";
 import EditData from "./components/Editdata/EditData";
 // import Favorites from "./views/Favorites/Favorites";
-import Footer from "./components/Footer/Footer";
 import injectContext from "./store/appContext";
 import Product from "./views/Product";
 import MatchStatus from "./views/MatchStatus/MatchStatus";
 import Details from "./views/Details/Details";
 import UserProfile from "./views/UserProfile/UserProfile";
 import Logueado from "./views/Logueado";
+import AboutUs from "./views/AboutUs/AboutUs"
+import AboutUsLog from "./views/AboutLogin/AboutUsLog"
 
 function App() {
   return (
@@ -28,8 +29,9 @@ function App() {
           <Route path="/match-status" element={<MatchStatus />} />
           <Route path="/admin/product" element={<Product />} />
           <Route path="/details" element={<Details />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/aboutuslog" element={<AboutUsLog />} />
         </Routes>
-        <Footer />
       </Router>
     </div>
   );

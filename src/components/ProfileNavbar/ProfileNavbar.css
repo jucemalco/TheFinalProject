@@ -1,5 +1,17 @@
-.navbarProfile {
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
-  height: 80px;
+.dropdown{
+  margin-left: 10%;
+  margin-right: 5%;
+}
+#nav-item{
+  padding-top: 5px;
+  margin-left: 10%;
+}
+/* visited link */
+.underline:visited {
+  color: white;
+}
+
+/* mouse over link */
+.underline:hover {
+  color: red;
 }

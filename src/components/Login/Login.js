@@ -4,6 +4,7 @@ import BookMatch_Logo from "../../images/BookMatch_Logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar"
+import Footer from "../Footer/Footer"
 
 /*LOGIN INICIO DE SESIÓN*/
 const Login = () => {
@@ -102,6 +103,7 @@ const Login = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </>);
 };
 

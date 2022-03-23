@@ -3,6 +3,7 @@ import Card from "../components/Cards/Card";
 import { Context } from "../store/appContext";
 import Carousel from "../components/Carousel/Carousel";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer"
 
 const Home = () => {
   const { store, actions } = useContext(Context);
@@ -29,6 +30,7 @@ const Home = () => {
             ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
