@@ -15,6 +15,9 @@ import AboutUs from "./views/AboutUs/AboutUs"
 import AboutUsLog from "./views/AboutLogin/AboutUsLog"
 import TheMostRead from "./components/TheMostRead/TheMostRead";
 import AcceptDeleteMatch from "./views/AcceptDeleteMatch/AcceptDeleteMatch";
+import PendingMatch from "./views/UserProfile/Buttons/PendingMatch/PendindMatch"
+import AceptedMatch from "./views/UserProfile/Buttons/AceptedMatch/AceptedMatch"
+import DetailsMyBooks from "./views/DetailsMyBooks/DetailsMyBooks"
 
 
 function App() {
@@ -28,10 +31,13 @@ function App() {
           <Route path="/login/newaccount" element={<Form />} />
           <Route path="/miperfil/editdata" element={<EditData />} />
           <Route path="/userprofile" element={<UserProfile />} />
+          <Route path="/userprofile/pendingmatch" element={<PendingMatch />} />
+          <Route path="/userprofile/aceptedmatch" element={<AceptedMatch />} />
           {/* <Route path="/miperfil/misfavoritos" element={<Favorites />} /> */}
           <Route path="/match-status" element={<MatchStatus />} />
           <Route path="/admin/product" element={<Product />} />
           <Route path="/details" element={<Details />} />
+          <Route path="/detailsmybooks" element={<DetailsMyBooks />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/aboutuslog" element={<AboutUsLog />} />
           <Route path="/losmasleidos" element={<TheMostRead />} />
