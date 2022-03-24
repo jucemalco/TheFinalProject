@@ -7,6 +7,9 @@ import Footer2 from "../../components/FotterLogueado/Footer2"
 
 const Details = () => {
   const { store, actions } = useContext(Context);
+  console.log(store.products)
+
+console.log(store.user)
 
   return (
     <>
