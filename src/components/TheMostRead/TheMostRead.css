@@ -1,0 +1,28 @@
+
+.gradient-custom-1 {
+    /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
+    background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+    font-family: fantasy;
+}
+
+#card-text{
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+
+.title-most-read{
+    font-family: fantasy;
+}
+
+.theMostRead{
+    background: linear-gradient(
+        to right,
+        rgb(116, 91, 109),
+        rgba(166, 193, 238, 1)
+      );
+}
+
+

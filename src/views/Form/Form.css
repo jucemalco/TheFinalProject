@@ -1,0 +1,43 @@
+.form {
+    background-color: #f5eeea; 
+    border: 2px solid #bdbdbd;
+    width: 800px;
+    height: 90%;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+    background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+} 
+
+.asterisk {
+    color: #fd4444;
+    font-size: x-small;
+ }
+  
+.form-title {
+    font-family: fantasy;
+    padding-top: 10px;
+}
+
+.form-subtitle {
+    font-family: fantasy;
+}
+  
+#emailHelp {
+    font-size: x-small;
+    font-style: italic;
+}
+  
+#passwordHelpBlock {
+    font-size: x-small;
+    font-style: italic;
+}
+  
+  
+.d-grid {
+    font-family: fantasy;
+}
+    
+.form-label{
+  font-family: fantasy;
+}

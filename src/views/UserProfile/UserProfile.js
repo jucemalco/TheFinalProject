@@ -29,14 +29,14 @@ const UserProfile = (props) => {
                       className="img-fluid img-thumbnail mt-4 mb-2"
                       style={{ width: "150px" }}
                     />
-                    <button
+                    <Link
+                      to="/miperfil/editdata/"
                       type="button"
                       className="btn btn-outline-dark"
                       data-mdb-ripple-color="dark"
-                      style={{ zIndex: "1" }}
-                    >
+                      style={{ zIndex: "1" }}>
                       Editar perfil
-                    </button>
+                    </Link>
                   </div>
                   <div className="ms-3">
                     <h5>{props.name}</h5>
