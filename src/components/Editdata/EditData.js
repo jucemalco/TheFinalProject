@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Context } from "../../store/appContext";
 import ProfileNavbar from "../ProfileNavbar/ProfileNavbar";
 import Footer2 from "../FotterLogueado/Footer2"
+import "./EditData.css";
 
 const EditData = () => {
     const { store, actions } = useContext(Context)
@@ -20,13 +21,13 @@ const EditData = () => {
     return (
         <>
         <ProfileNavbar />
-        <div class="container loginback ">
+        <div class="container edit">
 
             <h2 className="form-title text-white text-center mt-4">Editar Datos</h2>
 
             <form onSubmit={(evento) => onSubmit(evento)} >
 
-                <div className="col-md-6 text-white p-4">
+                <div className=" col-6 text-white pe-5 ps-5 mx-auto mt-4">  
                     <label htmlFor="formGroupExampleInput" className="form-label d-flex">Nombres</label>
                     <input 
                     name="name" 
@@ -39,9 +40,9 @@ const EditData = () => {
                     onChange={(evento) => onChange(evento)} />
                 </div>
 
+               
 
-
-                <div className="col-md-6 text-white p-4">
+                <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
                     <label htmlFor="formGroupExampleInput2" className="form-label d-flex">Apellidos</label>
                     <input 
                     name="surname"
@@ -54,7 +55,7 @@ const EditData = () => {
                 </div>
 
 
-                <div class="col-md-6 text-white p-4">
+                <div class="col-6 text-white pe-5 ps-5 mx-auto mt-4">
                     <label htmlFor="inputEmail4" class="form-label d-flex">Email asociado cambiar</label>
                     <input 
                     name="email"
@@ -67,7 +68,7 @@ const EditData = () => {
 
 
                 <div class=" col-12 p-4 mb-2 text-center">
-                    <button type="submit" class="btn btn-outline-light gradient-custom-2 px-4">Guardar</button>
+                    <button type="submit" class="btn btn-outline-light gradient-custom-1 px-4">Guardar</button>
                 </div>
             </form>
         </div>

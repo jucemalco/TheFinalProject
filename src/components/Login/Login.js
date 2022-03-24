@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer"
+import "./Login.css";
 
 /*LOGIN INICIO DE SESIÓN*/
 const Login = () => {
@@ -28,7 +29,7 @@ const Login = () => {
   }
   return (
     <> <Navbar />
-      <div className="container loginback col-6">
+      <div className="container login col-6">
         <div className="image">
           <img src={BookMatch_Logo} style={{ width: "50%", heigth: "30%" }} />
         </div>
@@ -81,7 +82,7 @@ const Login = () => {
             </div>
             <div className="button text-center ms-5">
               <button
-                className="btn btn-outline-light gradient-custom-2 mt-3"
+                className="btn btn-outline-light gradient-custom-1 mt-3"
                 type="submit" // onClick={() => { navegate("/src/UserProfile/UserProfile") }}// 
               >
                 Iniciar Sesion
@@ -94,7 +95,7 @@ const Login = () => {
               <div>
                 <Link
                   to="/login/newaccount"
-                  className="btn btn-outline-light gradient-custom-2 mt-3"
+                  className="btn btn-outline-light gradient-custom-1 mt-3"
                 >
                   Resgistrate
                 </Link>
