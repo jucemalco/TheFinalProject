@@ -3,7 +3,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
 }
 
 .footer--social_media {
@@ -27,4 +26,7 @@
     justify-content: center !important;
     padding: 10px 0 !important;
   }
+}
+.d-flex.flex-wrap.justify-content-between.align-items-center.bg-dark.row.footer--container {
+  width: 101%;
 }

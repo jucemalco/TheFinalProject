@@ -50,7 +50,7 @@ const PendingMatch = (props) => {
                     </div>
                   </div>
                   <div className="historybootom">
-                    <div className="ms-4 mt-1 d-flex flex-column" style={{ width: "150px" }}>
+                    <div className="ms-4 mt-1 d-flex flex-column" style={{ width: "160px" }}>
                       <Link
                         to=""
                         type="button"

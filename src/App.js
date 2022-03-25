@@ -1,12 +1,12 @@
 import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./views/Home";
+import Home from "./views/Home/Home";
 import Login from "./components/Login/Login";
 import Form from "./views/Form/Form";
 import EditData from "./components/Editdata/EditData";
 // import Favorites from "./views/Favorites/Favorites";
 import injectContext from "./store/appContext";
-import Product from "./views/Product";
+import Product from "./views/Product/Product";
 import MatchStatus from "./views/MatchStatus/MatchStatus";
 import Details from "./views/Details/Details";
 import UserProfile from "./views/UserProfile/UserProfile";

@@ -20,60 +20,60 @@ const EditData = () => {
 
     return (
         <>
-        <ProfileNavbar />
-        <div class="container edit">
+            <ProfileNavbar />
+            <div className="container edit">
 
-            <h2 className="form-title text-white text-center mt-4">Editar Datos</h2>
+                <h2 className="form-title text-white text-center mt-4">Editar Datos</h2>
 
-            <form onSubmit={(evento) => onSubmit(evento)} >
+                <form onSubmit={(evento) => onSubmit(evento)} >
 
-                <div className=" col-6 text-white pe-5 ps-5 mx-auto mt-4">  
-                    <label htmlFor="formGroupExampleInput" className="form-label d-flex">Nombres</label>
-                    <input 
-                    name="name" 
-                    type="text" 
-                    className="form-control" 
-                    id="formGroupExampleInput" 
-                    placeholder="" 
-                    value={state.name} 
-                    required
-                    onChange={(evento) => onChange(evento)} />
-                </div>
-
-               
-
-                <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                    <label htmlFor="formGroupExampleInput2" className="form-label d-flex">Apellidos</label>
-                    <input 
-                    name="surname"
-                    type="text" 
-                    className="form-control" 
-                    id="formGroupExampleInput2" 
-                    placeholder=""
-                    required
-                    onChange={(evento) => onChange(evento)}  />
-                </div>
+                    <div className=" col-6 text-white pe-5 ps-5 mx-auto mt-4">
+                        <label htmlFor="formGroupExampleInput" className="form-label d-flex">Nombres</label>
+                        <input
+                            name="name"
+                            type="text"
+                            className="form-control"
+                            id="formGroupExampleInput"
+                            placeholder=""
+                            value={state.name}
+                            required
+                            onChange={(evento) => onChange(evento)} />
+                    </div>
 
 
-                <div class="col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                    <label htmlFor="inputEmail4" class="form-label d-flex">Email asociado cambiar</label>
-                    <input 
-                    name="email"
-                    type="email" 
-                    class="form-control" 
-                    id="inputEmail4" 
-                    required
-                    onChange={(evento) => onChange(evento)} />
-                </div>
+
+                    <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
+                        <label htmlFor="formGroupExampleInput2" className="form-label d-flex">Apellidos</label>
+                        <input
+                            name="surname"
+                            type="text"
+                            className="form-control"
+                            id="formGroupExampleInput2"
+                            placeholder=""
+                            required
+                            onChange={(evento) => onChange(evento)} />
+                    </div>
 
 
-                <div class=" col-12 p-4 mb-2 text-center">
-                    <button type="submit" class="btn btn-outline-light gradient-custom-1 px-4">Guardar</button>
-                </div>
-            </form>
-        </div>
-        <Footer2 />
-    </>
+                    <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
+                        <label htmlFor="inputEmail4" className="form-label d-flex">Email asociado cambiar</label>
+                        <input
+                            name="email"
+                            type="email"
+                            className="form-control"
+                            id="inputEmail4"
+                            required
+                            onChange={(evento) => onChange(evento)} />
+                    </div>
+
+
+                    <div className=" col-12 p-4 mb-2 text-center">
+                        <button type="submit" className="btn btn-outline-light gradient-custom-1 px-4">Guardar</button>
+                    </div>
+                </form>
+            </div>
+            <Footer2 />
+        </>
     )
 }
 
