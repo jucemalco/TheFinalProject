@@ -120,20 +120,20 @@ const getState = ({ getStore, setStore, getActions }) => {
 
       //FETCH PARA CONSULTAR LOS MATCH PENDIENTES
       match: (state, evento, navegate) => {
-        console.log("flux, state");
+        console.log("flux, state")
         fetch("http://localhost:5000/pendingmatches", {
-          method: "POST",
+          method: 'POST',
           body: JSON.stringify(state),
           headers: {
-            "Content-Type": "application/json",
-          },
-        })
-          .then((res) => res.json())
-          .then((response) => {
-            console.log("Success:", response);
-            setStore({ user: response });
+            'Content-Type': 'application/json'
+          }
+        }).then(res => res.json())
+          .then(response => {
+            console.log('Success:', response)
+            setStore({ user: response })
+            
           })
-          .catch((error) => console.error("Error:", error));
+          .catch(error => console.error('Error:', error));
       },
       //FECTH PARA CONSULTAR LOS MATCH ACEPTADOS
       acceptedmatches: () => {},

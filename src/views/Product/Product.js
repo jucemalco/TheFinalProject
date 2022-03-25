@@ -99,12 +99,30 @@ const Product = () => {
                         <input type="file" className="form-control" id="inputGroupFile01" />
                     </div>
                     <div className="text-center">
-                        <button className="btn btn-primary" type="submit">
+                        <button className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Publicar
                         </button>
                     </div>
+
+                    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title" id="exampleModalLabel">Estás casi...</h5>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div className="modal-body">
+                                    <p className="card-text">Seguro que quieres publicar el libro?</p>
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="submit" className="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+                                    <button type="button" className="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div>
-                            <input type="hidden"></input>
+                        <input type="hidden"></input>
                     </div>
                 </form>
             </div>
