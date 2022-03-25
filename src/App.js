@@ -42,7 +42,6 @@ function App() {
           <Route path="/aboutuslog" element={<AboutUsLog />} />
           <Route path="/losmasleidos" element={<TheMostRead />} />
           {/* <Route path="/userprofile/matchpendientes" element={<AcceptDeleteMatch />} /> */}
-       
         </Routes>
       </Router>
     </div>

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import Card from "../components/Cards/Card";
+import Card4 from "../components/Card4/Card4";
 import { Context } from "../store/appContext";
 import Carousel from "../components/Carousel/Carousel";
 import ProfileNavbar from "../components/ProfileNavbar/ProfileNavbar";
@@ -25,7 +25,7 @@ const Logueado = () => {
                 key={i}
                 className="col-md-4 mb-3 d-flex justify-content-center align-items-center"
               >
-                <Card title={p.title} autor={p.autor} editorial={p.editorial} />
+                <Card4 title={p.title} autor={p.autor} editorial={p.editorial} />
               </div>
             ))}
         </div>

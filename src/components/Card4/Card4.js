@@ -3,7 +3,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-const Card = (props) => {
+const Card4 = (props) => {
   //const { store, actions } = useContext(Context);
   //const params = useParams();
   //useEffect(() => {
@@ -30,16 +30,16 @@ const Card = (props) => {
             <dd>{props.editorial}</dd>
           </dl>
         </p> 
-        <Link to="/login/">
+        <Link to="/details/">
           <i className="btn btn-primary">Quiero ver más</i>
         </Link >
         &nbsp;
-        <Link to="/login/" className={`btn btn-outline-danger`} onClick="">
+        <buttons to="" className={`btn btn-outline-danger`} onClick="">
           <AiOutlineHeart />
-        </Link>
+        </buttons>
       </div>
     </div>
   )
 }
 
-export default Card;
+export default Card4;
