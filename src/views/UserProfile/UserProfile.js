@@ -22,10 +22,8 @@ const UserProfile = (props) => {
               <div className="card">
                 <div
                   className="rounded-top text-white d-flex flex-row"
-                  style={{ background: "#000", height: "200px" }}
-                >
-                  <div className="ms-4 mt-5 d-flex flex-column" style={{ width: "150px" }}
-                  >
+                  style={{ background: "#000", height: "200px" }}>
+                  <div className="ms-4 mt-5 d-flex flex-column" style={{ width: "150px" }}>
                     <img
                       src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                       alt="Generic placeholder image"
@@ -88,9 +86,7 @@ const UserProfile = (props) => {
                   style={{ backgroundColor: "#f8f9fa" }}
                 >
                 </div>
-
                 <div className="card-body p-4 text-black">
-
                   <div className="row g-2">
                     {store.products && store.products.map((p, i) => (
                       <div
