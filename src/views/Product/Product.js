@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
-import { Context } from "../store/appContext";
-import ProfileNavbar from "../components/ProfileNavbar/ProfileNavbar";
-import Footer2 from "../components/FotterLogueado/Footer2.js"
+import { Context } from "../../store/appContext";
+import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
+import Footer2 from "../../components/FotterLogueado/Footer2.js"
+import "./Product.css"
 
 const Product = () => {
     const { store, actions } = useContext(Context)

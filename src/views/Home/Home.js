@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import Card from "../components/Cards/Card";
-import { Context } from "../store/appContext";
-import Carousel from "../components/Carousel/Carousel";
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer"
+import Card from "../../components/Cards/Card";
+import { Context } from "../../store/appContext";
+import Carousel from "../../components/Carousel/Carousel";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer"
+import "./Home.css"
 
 const Home = () => {
   const { store, actions } = useContext(Context);

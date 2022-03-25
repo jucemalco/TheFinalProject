@@ -3,6 +3,7 @@ import Card from "../components/Cards/Card";
 import { Context } from "../store/appContext";
 import Carousel from "../components/Carousel/Carousel";
 import ProfileNavbar from "../components/ProfileNavbar/ProfileNavbar";
+import Footer2 from "../components/FotterLogueado/Footer2";
 
 const Logueado = () => {
     const { store, actions } = useContext(Context);
@@ -29,6 +30,7 @@ const Logueado = () => {
             ))}
         </div>
       </div>
+      <Footer2 />
     </>
   );
 };
