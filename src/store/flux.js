@@ -16,7 +16,6 @@ const getState = ({ getStore, setStore, getActions }) => {
       },
     },
     actions: {
-
       getProducts: () => {
         fetch("http://localhost:5000/products")
           .then(res => res.json())
@@ -69,7 +68,6 @@ const getState = ({ getStore, setStore, getActions }) => {
         setStore({ lista_favorito: store.lista_favorito })
       },
 
-
       //LOGIN USUARIOS
       login: (state, evento, navegate) => {
         console.log("flux, state")
@@ -118,53 +116,45 @@ const getState = ({ getStore, setStore, getActions }) => {
           .catch((error) => console.error("Error:", error))
           .then((response) => console.log("Success:", response));
       },
-
       //FETCH PARA CONSULTAR LOS MATCH PENDIENTES
-      match: () => {
-        login: (state, evento) => {
-          console.log("flux, state")
-          fetch("http://localhost:5000//pendingmatches", {
-            method: 'POST',
-            body: JSON.stringify(state),
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          }).then(res => res.json())
-            .then(response => {
-              console.log('Success:', response)
-              setStore({ user: response })
-              })
-            .catch(error => console.error('Error:', error));
-        },
-
+      match: (state, evento, navegate) => {
+        console.log("flux, state")
+        fetch("http://localhost:5000/pendingmatch", {
+          method: 'POST',
+          body: JSON.stringify(state),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }).then(res => res.json())
+          .then(response => {
+            console.log('Success:', response)
+            setStore({ user: response })
+            
+          })
+          .catch(error => console.error('Error:', error));
       },
       //FECTH PARA CONSULTAR LOS MATCH ACEPTADOS
-      acceptedmatches: () => {
+      //acceptedmatches: () => {
 
-      },
+     // },
       //FETCH SOLOS MIS LIBROS PUBLICADOS
-      mybookspublished: () => {
+      //mybookspublished: () => {
 
-      },
+      //},
       //TODOS LOS LIBROS PUBLICADOS MENOS LOS MIOS
-      allbookspublished: () => {
+     // allbookspublished: () => {
 
-      },
+     // },
       //FETCH PARA CAMBIO DE ESTADO A ACEPTADO
-      acceptedrequest: () => {
+      //acceptedrequest: () => {
 
-      },
+     // },
       //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
-      rejectrequest: () => {
+     // rejectrequest: () => {}
 
-      },
-
-      match: () => {
-
-      }
-
+      
     },
-  };
-};
+  }
+}
 
 export default getState;
