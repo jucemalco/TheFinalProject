@@ -14,7 +14,7 @@ import Logueado from "./views/Logueado";
 import AboutUs from "./views/AboutUs/AboutUs"
 import AboutUsLog from "./views/AboutLogin/AboutUsLog"
 import TheMostRead from "./components/TheMostRead/TheMostRead";
-import AcceptDeleteMatch from "./views/AcceptDeleteMatch/AcceptDeleteMatch";
+// import AcceptDeleteMatch from "./views/AcceptDeleteMatch/AcceptDeleteMatch";
 import PendingMatch from "./views/UserProfile/Buttons/PendingMatch/PendindMatch"
 import AceptedMatch from "./views/UserProfile/Buttons/AceptedMatch/AceptedMatch"
 import DetailsMyBooks from "./views/DetailsMyBooks/DetailsMyBooks"
@@ -41,7 +41,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/aboutuslog" element={<AboutUsLog />} />
           <Route path="/losmasleidos" element={<TheMostRead />} />
-          <Route path="/userprofile/matchpendientes" element={<AcceptDeleteMatch />} />
+          {/* <Route path="/userprofile/matchpendientes" element={<AcceptDeleteMatch />} /> */}
        
         </Routes>
       </Router>

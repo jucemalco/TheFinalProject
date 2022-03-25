@@ -9,7 +9,7 @@ const Details = () => {
   const { store, actions } = useContext(Context);
   console.log(store.products)
 
-console.log(store.user)
+  console.log(store.user)
 
   return (
     <>
@@ -45,13 +45,37 @@ console.log(store.user)
                 Añadir Favoritos
               </button>{" "}
               {""}
-              <button
-                className="btn btn-primary"
+              {/* <button
+                className="btn btn-primary "
                 onCLick={() => actions.match()}
               >
                 Hacer Match
-              </button>{" "}
+              </button>{" "} */}
               {""}
+
+              <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                onCLick={() => actions.match()}>
+                Hacer Match
+              </button>
+
+
+              <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h5 className="modal-title" id="exampleModalLabel">Match</h5>
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <p className="card-text fw-light" >El libro que deseas intercambiar debe estar en muy buen estado, es decir, no debe: tener hojas sueltas, tapas y lomo despegado, haber estado mojado, estar manchado o contar con rayones en su portada o en el interior que dificulten su lectura.</p>
+                    </div>
+                    <div className="modal-footer">
+                      <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
+                      <button type="button" className="btn btn-primary">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="col">
               <h1 className="titledetails">Usuario</h1>
