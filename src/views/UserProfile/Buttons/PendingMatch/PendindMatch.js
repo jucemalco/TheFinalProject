@@ -1,16 +1,11 @@
-import React, { useContext, useEffect } from "react";
-import { Context } from "../../store/appContext";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./UserProfile.css";
-import Card3 from "../../components/Card3/Card3";
-import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
-import Footer2 from "../../components/FotterLogueado/Footer2"
+import "./PendingMatch.css";
+import Card from "../../../../components/Cards/Card";
+import ProfileNavbar from "../../../../components/ProfileNavbar/ProfileNavbar";
+import Footer2 from "../../../../components/FotterLogueado/Footer2"
 
-const UserProfile = (props) => {
-  const { store, actions } = useContext(Context);
-  useEffect(() => {
-    actions.getProducts();
-  }, []);
+const PendingMatch = (props) => {
   return (
     <>
       {" "}
@@ -22,8 +17,10 @@ const UserProfile = (props) => {
               <div className="card">
                 <div
                   className="rounded-top text-white d-flex flex-row"
-                  style={{ background: "#000", height: "200px" }}>
-                  <div className="ms-4 mt-5 d-flex flex-column" style={{ width: "150px" }}>
+                  style={{ background: "#000", height: "200px" }}
+                >
+                  <div className="ms-4 mt-5 d-flex flex-column" style={{ width: "150px" }}
+                  >
                     <img
                       src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                       alt="Generic placeholder image"
@@ -43,9 +40,9 @@ const UserProfile = (props) => {
                   <div className="historybootom">
                     <div className="ms-4 mt-10 d-flex flex-column" style={{ width: "150px" }}>
                       <Link
-                        to=""
+                        to="/userprofile/"
                         type="button"
-                        className="btn btn-outline-dark active mislibros"
+                        className="btn btn-outline-dark mislibros"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}>
                         Mis Libros
@@ -55,9 +52,9 @@ const UserProfile = (props) => {
                   <div className="historybootom">
                     <div className="ms-4 mt-1 d-flex flex-column" style={{ width: "160px" }}>
                       <Link
-                        to="/userprofile/pendingmatch"
+                        to=""
                         type="button"
-                        className="btn btn-outline-dark matchpendientes"
+                        className="btn btn-outline-dark active matchpendientes"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}>
                         Match Pendientes
@@ -86,17 +83,11 @@ const UserProfile = (props) => {
                   style={{ backgroundColor: "#f8f9fa" }}
                 >
                 </div>
+
                 <div className="card-body p-4 text-black">
-                  <div className="row g-2">
-                    {store.products && store.products.map((p, i) => (
-                      <div
-                        key={i}
-                        className="col-md-4 d-flex justify-content-center align-items-center"
-                      >
-                        <Card3 title={p.title} autor={p.autor} editorial={p.editorial} />
-                      </div>
-                    ))}
-                  </div>
+              
+                  <h1>Pendientes</h1>
+                   
                 </div>
               </div>
             </div>
@@ -108,4 +99,4 @@ const UserProfile = (props) => {
   );
 };
 
-export default UserProfile;
+export default PendingMatch;

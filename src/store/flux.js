@@ -16,6 +16,7 @@ const getState = ({ getStore, setStore, getActions }) => {
       },
     },
     actions: {
+
       getProducts: () => {
         fetch("http://localhost:5000/products")
           .then(res => res.json())
@@ -117,6 +118,7 @@ const getState = ({ getStore, setStore, getActions }) => {
           .catch((error) => console.error("Error:", error))
           .then((response) => console.log("Success:", response));
       },
+
       //FETCH PARA CONSULTAR LOS MATCH PENDIENTES
       match: () => {
         login: (state, evento) => {
@@ -156,6 +158,11 @@ const getState = ({ getStore, setStore, getActions }) => {
       rejectrequest: () => {
 
       },
+
+      match: () => {
+
+      }
+
     },
   };
 };

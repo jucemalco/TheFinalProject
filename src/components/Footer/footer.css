@@ -27,3 +27,6 @@
     padding: 10px 0 !important;
   }
 }
+.d-flex.flex-wrap.justify-content-between.align-items-center.bg-dark.row.footer--container {
+  width: 101%;
+}

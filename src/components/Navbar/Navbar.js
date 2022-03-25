@@ -59,19 +59,16 @@ export const Navbar = () => {
                       Romance
                     </Link>
                     <Link className="dropdown-item" to="historia">
-                      Historia
+                      Historico
                     </Link>
                     <Link className="dropdown-item" to="misteriosysuspenso">
-                      Misterios y Suspenso
+                      Misterio y Suspenso
                     </Link>
                     <Link className="dropdown-item" to="clasicos">
                       Clásicos
                     </Link>
                     <Link className="dropdown-item" to="infantilyjuvenil">
                       Infantil y Juvenil
-                    </Link>
-                    <Link className="dropdown-item" to="clasicos">
-                      Clásicos
                     </Link>
                   </li>
                 </ul>
