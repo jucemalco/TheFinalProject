@@ -11,7 +11,7 @@ const ProfileNavbar = () => {
       <div className="container-fluid">
         <Link className="navbar-brand" to="/logueado/">
           <div className="navbar-image">
-            <img src={BookMatch_Logo} style={{ width: "160px" }} />
+            <img src={BookMatch_Logo} style={{ width: "160px" }} alt="logo"/>
           </div>
         </Link>
 

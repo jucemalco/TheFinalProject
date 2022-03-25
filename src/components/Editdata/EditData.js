@@ -56,7 +56,7 @@ const EditData = () => {
 
 
                     <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                        <label htmlFor="inputEmail4" class="form-label d-flex">Email asociado cambiar</label>
+                        <label htmlFor="inputEmail4" className="form-label d-flex">Email asociado cambiar</label>
                         <input
                             name="email"
                             type="email"

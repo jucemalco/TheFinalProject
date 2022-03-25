@@ -71,7 +71,7 @@ const Product = () => {
                         <label htmlFor="category" className="col-sm-2 col-form-label">Categoría</label>
                         <div className="col-sm-10">
                             <select className="form-select" aria-label="Default select example">
-                                <option selected className="">Escoge una categoria</option>
+                                <option defaultValue>Escoge una categoria</option>
                                 <option value="1">Ficción</option>
                                 <option value="2">Romance</option>
                                 <option value="3">Historico</option>
@@ -103,9 +103,7 @@ const Product = () => {
                         </button>
                     </div>
                     <div>
-                        <form>
                             <input type="hidden"></input>
-                        </form>
                     </div>
                 </form>
             </div>
