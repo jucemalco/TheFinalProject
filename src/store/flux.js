@@ -16,7 +16,7 @@ const getState = ({ getStore, setStore, getActions }) => {
       },
     },
     actions: {
-            getProducts: (e) => {
+            getProducts: () => {
                 fetch("http://localhost:5000/products")
                 .then(res => res.json())
                 .then(state => setStore({products: state}))
@@ -79,22 +79,11 @@ const getState = ({ getStore, setStore, getActions }) => {
                 }).then(res => res.json())
                     .then(response => {
                         console.log('Success:', response)
+                        setStore({user:response})
                         navegate ('/userprofile')
                     })
                     .catch(error => console.error('Error:', error));
             },
-
-      /*para cuando se inicia sesión LOG IN*/
-      // getUser: id => {
-      //     fetch("" + id)
-      //         .then(response => response.json())
-      //         .then((result) => {
-      //                 setStore({user: FALTA LA RUTA DE LA BASE DE DATOS }
-      //         })
-      //         .catch(error => console.log("Error", error));
-      // },
-      // /*para cuando se hace la consulta de registro si el usurio existe o no (registrado) SIGN IN*/
-
 
       //PARA EL REGISTRO DE USUARIOS //
       createUser: (state, evento) => {
@@ -126,7 +115,9 @@ const getState = ({ getStore, setStore, getActions }) => {
           .catch((error) => console.error("Error:", error))
           .then((response) => console.log("Success:", response));
       },
+      match: () => {
 
+      }
     },
   };
 };
