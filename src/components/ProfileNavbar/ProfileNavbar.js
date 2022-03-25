@@ -59,19 +59,16 @@ const ProfileNavbar = () => {
                     Romance
                   </Link>
                   <Link className="dropdown-item" to="historia">
-                    Historia
+                    Historico
                   </Link>
                   <Link className="dropdown-item" to="misteriosysuspenso">
-                    Misterios y Suspenso
+                    Misterio y Suspenso
                   </Link>
                   <Link className="dropdown-item" to="clasicos">
                     Clásicos
                   </Link>
                   <Link className="dropdown-item" to="infantilyjuvenil">
                     Infantil y Juvenil
-                  </Link>
-                  <Link className="dropdown-item" to="clasicos">
-                    Clásicos
                   </Link>
                 </li>
               </ul>
@@ -106,8 +103,13 @@ const ProfileNavbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="">
+                  <Link className="dropdown-item" to="/userprofile/aceptedmatch/">
                      Mis Match
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/userprofile/pendingmatch/">
+                     Mis Match Pendientes
                   </Link>
                 </li>
                 <li>
@@ -116,7 +118,7 @@ const ProfileNavbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="">
+                  <Link className="dropdown-item" to="/userprofile/">
                      Mis Libros Publicados
                   </Link>
                 </li>

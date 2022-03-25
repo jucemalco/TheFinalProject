@@ -2,7 +2,7 @@ import React from "react"
 import "./index.css";
 
 const Carousel = () => {
-    return <div className="container">
+    return <div className="container-fluid mt-3">
         <div id="carouselExampleIndicators" className="carousel slide carousel-css" data-bs-ride="carousel">
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

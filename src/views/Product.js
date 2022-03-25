@@ -13,7 +13,7 @@ const Product = () => {
         user_id: ""
     })
     const onChange = (e) => {
-        setState({...state,[e.target.name] : e.target.value})
+        setState({ ...state, [e.target.name]: e.target.value })
     }
     const onSubmit = (e) => {
         e.preventDefault()
@@ -21,16 +21,16 @@ const Product = () => {
         console.log(state)
     }
 
-    return ( 
+    return (
         <>
-        <ProfileNavbar />
-    <div className="container ">
+            <ProfileNavbar />
+            <div className="container ">
                 <div className="row">
                     <div className="col-12">
                         <h1 className="titleproduct">Publica tu Libro</h1>
                     </div>
                 </div>
-                <form onSubmit={(e)=>onSubmit(e)}>
+                <form onSubmit={(e) => onSubmit(e)}>
                     <div className="mb-3 row formproduct">
                         <label htmlFor="title" className="col-sm-2 col-form-label">Titulo</label>
                         <div className="col-sm-10">
@@ -67,8 +67,22 @@ const Product = () => {
                                 placeholder="Editorial" />
                         </div>
                     </div>
+                    <div className="mb-3 row formproduct">
+                        <label htmlFor="category" className="col-sm-2 col-form-label">Categoría</label>
+                        <div className="col-sm-10">
+                            <select className="form-select" aria-label="Default select example">
+                                <option selected className="">Escoge una categoria</option>
+                                <option value="1">Ficción</option>
+                                <option value="2">Romance</option>
+                                <option value="3">Historico</option>
+                                <option value="3">Misterios y Suspenso</option>
+                                <option value="3">Clásicos</option>
+                                <option value="3">Infantil y Juvenil</option>
+                            </select>
+                        </div>
+                    </div>
                     <div className="mb-3 row formproductreview">
-                        <label htmlFor="editorial" className="col-sm-2 col-form-label">Reseña</label>
+                        <label htmlFor="review" className="col-sm-2 col-form-label">Reseña</label>
                         <div className="col-sm-10">
                             <input
                                 aria-label="With textarea"
@@ -96,7 +110,7 @@ const Product = () => {
                 </form>
             </div>
             <Footer2 />
-    </>
+        </>
     )
 }
 
