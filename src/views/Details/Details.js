@@ -9,7 +9,8 @@ const Details = () => {
   const { store, actions } = useContext(Context);
   console.log(store.products)
 
-  console.log(store.user)
+console.log(store.user)
+
 
   return (
     <>
