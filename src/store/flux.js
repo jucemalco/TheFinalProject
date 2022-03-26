@@ -1,8 +1,7 @@
 const getState = ({ getStore, setStore, getActions }) => {
-
   return {
     store: {
-      user: [],
+      user: null,
       users: [],
       favorito: [],
       lista_favorito: [],
@@ -12,15 +11,15 @@ const getState = ({ getStore, setStore, getActions }) => {
         title: "",
         editorial: "",
         autor: "",
-        review: ""
+        review: "",
       },
     },
     actions: {
       getProducts: () => {
         fetch("http://localhost:5000/products")
-          .then(res => res.json())
-          .then(state => setStore({ products: state }))
-          .catch(error => console.log(error))
+          .then((res) => res.json())
+          .then((state) => setStore({ products: state }))
+          .catch((error) => console.log(error));
       },
       // getProduct: (id) => {
       //     fetch("http://localhost:5000/product" + id)
@@ -29,61 +28,64 @@ const getState = ({ getStore, setStore, getActions }) => {
       //     .catch(error => console.log(error))
       // },
       onChange: (e) => {
-        const { product } = getStore()
-        setStore({ product: { ...product, [e.target.name]: e.target.value } })
+        const { product } = getStore();
+        setStore({ product: { ...product, [e.target.name]: e.target.value } });
       },
       saveProduct: (state, e) => {
         //e.preventDefault()
-        console.log("flux", e)
-        const { product } = getStore()
+        console.log("flux", e);
+        const { product } = getStore();
         fetch("http://localhost:5000/product", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(state)
-        }).then(res => res.json())
-          .then(state => console.log(state))
+          body: JSON.stringify(state),
+        })
+          .then((res) => res.json())
+          .then((state) => console.log(state));
         setStore({
           state: {
             title: "title",
             editorial: "editorial",
             autor: "autor",
             review: "review",
-            user_id: "user_id"
-          }
-        })
+            user_id: "user_id",
+          },
+        });
       },
-      addFav: favorito => {
+      addFav: (favorito) => {
         const state = getState();
         if (state.lista_favorito.includes(favorito)) {
-          return console.log("Ya existe este libro como tu favorito")
+          return console.log("Ya existe este libro como tu favorito");
         }
-        setStore({ lista_favorito: [...state.lista_favorito, favorito] })
-        return console.log(state.lista_favorito)
+        setStore({ lista_favorito: [...state.lista_favorito, favorito] });
+        return console.log(state.lista_favorito);
       },
       deleteFav: (index) => {
-        const store = getStore()
-        store.lista_favorito.splice(index, 1)
-        setStore({ lista_favorito: store.lista_favorito })
+        const store = getStore();
+        store.lista_favorito.splice(index, 1);
+        setStore({ lista_favorito: store.lista_favorito });
       },
 
       //LOGIN USUARIOS
       login: (state, evento, navegate) => {
-        console.log("flux, state")
+        console.log("flux, state");
         fetch("http://localhost:5000/login", {
-          method: 'POST',
+          method: "POST",
           body: JSON.stringify(state),
           headers: {
-            'Content-Type': 'application/json'
-          }
-        }).then(res => res.json())
-          .then(response => {
-            console.log('Success:', response)
-            setStore({ user: response })
-            navegate('/userprofile')
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            setStore({ user: response });
+            localStorage.setItem('userinfo', JSON.stringify(response))
+            console.log("Success:", response);            
+            navegate("/userprofile");
           })
-          .catch(error => console.error('Error:', error));
+          .catch((error) => console.error("Error:", error));
       },
 
       //PARA EL REGISTRO DE USUARIOS //
@@ -116,8 +118,8 @@ const getState = ({ getStore, setStore, getActions }) => {
           .catch((error) => console.error("Error:", error))
           .then((response) => console.log("Success:", response));
       },
-      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES
-      match: (state, evento, navegate) => {
+      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD 
+      pendingMatch: (state, evento, navegate) => {
         console.log("flux, state")
         fetch("http://localhost:5000/pendingmatch", {
           method: 'POST',
@@ -133,10 +135,12 @@ const getState = ({ getStore, setStore, getActions }) => {
           })
           .catch(error => console.error('Error:', error));
       },
-      //FECTH PARA CONSULTAR LOS MATCH ACEPTADOS
-      //acceptedmatches: () => {
+      ////HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch 
+      requestMatch: () => {}
+      ////SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
+       // acceptedmatches: () => {
 
-     // },
+     //},
       //FETCH SOLOS MIS LIBROS PUBLICADOS
       //mybookspublished: () => {
 

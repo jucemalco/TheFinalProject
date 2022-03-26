@@ -5,7 +5,16 @@ import Card from "../../../../components/Cards/Card";
 import ProfileNavbar from "../../../../components/ProfileNavbar/ProfileNavbar";
 import Footer2 from "../../../../components/FotterLogueado/Footer2"
 
+// solicitando la consulta hacia la base de datos de los pendientes #pendingmatch
 const PendingMatch = (props) => {
+//SOLICITUD DE MOSTRAR MATCH PENDIENTES
+
+useEffect(() => {
+  actions.PendingMatch()
+}, [])
+ 
+
+
   return (
     <>
       {" "}

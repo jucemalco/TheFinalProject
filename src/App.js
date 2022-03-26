@@ -36,13 +36,12 @@ function App() {
           {/* <Route path="/miperfil/misfavoritos" element={<Favorites />} /> */}
           <Route path="/match-status" element={<MatchStatus />} />
           <Route path="/admin/product" element={<Product />} />
-          <Route path="/details" element={<Details />} />
+          <Route path="/details/" element={<Details />} />
           <Route path="/detailsmybooks" element={<DetailsMyBooks />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/aboutuslog" element={<AboutUsLog />} />
           <Route path="/losmasleidos" element={<TheMostRead />} />
           {/* <Route path="/userprofile/matchpendientes" element={<AcceptDeleteMatch />} /> */}
-       
         </Routes>
       </Router>
     </div>

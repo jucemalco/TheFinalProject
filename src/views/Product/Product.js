@@ -3,16 +3,23 @@ import { Context } from "../../store/appContext";
 import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
 import Footer2 from "../../components/FotterLogueado/Footer2.js"
 import "./Product.css"
-
+//FALTA AGREGAR EL CAMPO USER_ID PARA CREAR LIBRO CON USER QUE ESTA LOGGEADO
 const Product = () => {
+    
+    let userinfo = localStorage.getItem('userinfo');
+    userinfo = JSON.parse(userinfo)
+    console.log(userinfo.user.id) 
+    
     const { store, actions } = useContext(Context)
     const [state, setState] = useState({
         title: "",
         autor: "",
         editorial: "",
         review: "",
-        user_id: ""
+        user_id: userinfo.user.id
+        
     })
+        
     const onChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value })
     }
