@@ -1,6 +1,8 @@
 // import React from "react";
 // import "./AcceptDeleteMatch.css";
 
+//SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
+
 // const AcceptDeleteMatch = () => {
 
 //     return (

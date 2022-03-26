@@ -1,16 +1,24 @@
 import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect,  } from "react";
 import "./index.css";
 import Card2 from "../../components/Card2/Card2";
 import { Context } from "../../store/appContext";
 import Footer2 from "../../components/FotterLogueado/Footer2"
+import { useParams } from "react-router-dom";
 
 const Details = () => {
   const { store, actions } = useContext(Context);
-  console.log(store.products)
-
-console.log(store.user)
-
+ //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch 
+    const params = useParams();
+   // useEffect(() => {
+	//	store.getProducts(params.id)
+	//}, [])
+  
+  //useEffect(() => {
+   // actions.requestmatching()
+  //}, [])
+  console.log(store.product.title)
+  //console.log(store.user)
 
   return (
     <>
@@ -32,8 +40,8 @@ console.log(store.user)
               ></img>
             </div>
             <div className="col">
-              <h1 className="titledetails">Titulo</h1>
-              <h4 className="titledetails2">Autor</h4>
+              <h1 className="titledetails">{store.products.title}</h1>
+              <h4 className="titledetails2">{store.products.editorial}</h4>
               <h5 className="">Reseña</h5>
               <p>
                 Ea nisi ea aliquip occaecat excepteur veniam nisi. Aute officia
@@ -46,16 +54,16 @@ console.log(store.user)
                 Añadir Favoritos
               </button>{" "}
               {""}
-              {/* <button
+              { <button
                 className="btn btn-primary "
-                onCLick={() => actions.match()}
+                onCLick={() => actions.requestmatch()}
               >
                 Hacer Match
-              </button>{" "} */}
+              </button>}
               {""}
 
               <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                onCLick={() => actions.match()}>
+                onCLick={() => actions.requestmatching()}>
                 Hacer Match
               </button>
 

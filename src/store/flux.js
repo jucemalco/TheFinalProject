@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore, getActions }) => {
   return {
     store: {
-      user: [],
+      user: null,
       users: [],
       favorito: [],
       lista_favorito: [],
@@ -80,8 +80,9 @@ const getState = ({ getStore, setStore, getActions }) => {
         })
           .then((res) => res.json())
           .then((response) => {
-            console.log("Success:", response);
             setStore({ user: response });
+            localStorage.setItem('userinfo', JSON.stringify(response))
+            console.log("Success:", response);            
             navegate("/userprofile");
           })
           .catch((error) => console.error("Error:", error));
@@ -117,11 +118,10 @@ const getState = ({ getStore, setStore, getActions }) => {
           .catch((error) => console.error("Error:", error))
           .then((response) => console.log("Success:", response));
       },
-
-      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES
-      match: (state, evento, navegate) => {
+      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD 
+      pendingMatch: (state, evento, navegate) => {
         console.log("flux, state")
-        fetch("http://localhost:5000/pendingmatches", {
+        fetch("http://localhost:5000/pendingmatch", {
           method: 'POST',
           body: JSON.stringify(state),
           headers: {
@@ -135,20 +135,30 @@ const getState = ({ getStore, setStore, getActions }) => {
           })
           .catch(error => console.error('Error:', error));
       },
-      //FECTH PARA CONSULTAR LOS MATCH ACEPTADOS
-      acceptedmatches: () => {},
-      //FETCH SOLOS MIS LIBROS PUBLICADOS
-      mybookspublished: () => {},
-      //TODOS LOS LIBROS PUBLICADOS MENOS LOS MIOS
-      allbookspublished: () => {},
-      //FETCH PARA CAMBIO DE ESTADO A ACEPTADO
-      acceptedrequest: () => {},
-      //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
-      rejectrequest: () => {},
+      ////HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch 
+      requestMatch: () => {}
+      ////SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
+       // acceptedmatches: () => {
 
-      match: () => {},
+     //},
+      //FETCH SOLOS MIS LIBROS PUBLICADOS
+      //mybookspublished: () => {
+
+      //},
+      //TODOS LOS LIBROS PUBLICADOS MENOS LOS MIOS
+     // allbookspublished: () => {
+
+     // },
+      //FETCH PARA CAMBIO DE ESTADO A ACEPTADO
+      //acceptedrequest: () => {
+
+     // },
+      //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
+     // rejectrequest: () => {}
+
+      
     },
-  };
-};
+  }
+}
 
 export default getState;

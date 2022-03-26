@@ -11,6 +11,7 @@ const UserProfile = (props) => {
   useEffect(() => {
     actions.getProducts();
   }, []);
+  console.log(store.user)
   return (
     <>
       {" "}

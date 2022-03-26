@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+
 
 const Card = (props) => {
   //const { store, actions } = useContext(Context);
