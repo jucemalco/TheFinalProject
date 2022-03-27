@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore, getActions }) => {
   return {
     store: {
-      user: {},
+      user: null,
       users: [],
       favorito: [],
       lista_favorito: [],
@@ -79,7 +79,7 @@ const getState = ({ getStore, setStore, getActions }) => {
           });
           const data = await res.json();
           setStore({ user: data });
-          sessionStorage.setItem("token", data.access_token);
+          localStorage.setItem("token", data.access_token);
         } catch (error) {
           console.log("error", error);
         }
@@ -100,7 +100,7 @@ const getState = ({ getStore, setStore, getActions }) => {
             if (response.success) {
               setStore({ user: response });
               navegate("/userprofile");
-              sessionStorage.setItem("token", response.access_token);
+              localStorage.setItem("userinfo", JSON.stringify(response));
             } else {
               navegate("/login/newaccount");
             }
@@ -142,11 +142,10 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((response) => console.log("Success:", response))
           .catch((error) => console.error("Error:", error));
       },
-
-      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES
-      match: (state, evento, navegate) => {
+      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
+      pendingMatch: (state, evento, navegate) => {
         console.log("flux, state");
-        fetch("http://localhost:5000/pendingmatches", {
+        fetch("http://localhost:5000/pendingmatch", {
           method: "POST",
           body: JSON.stringify(state),
           headers: {
@@ -160,18 +159,26 @@ const getState = ({ getStore, setStore, getActions }) => {
           })
           .catch((error) => console.error("Error:", error));
       },
-      //FECTH PARA CONSULTAR LOS MATCH ACEPTADOS
-      acceptedmatches: () => {},
-      //FETCH SOLOS MIS LIBROS PUBLICADOS
-      mybookspublished: () => {},
-      //TODOS LOS LIBROS PUBLICADOS MENOS LOS MIOS
-      allbookspublished: () => {},
-      //FETCH PARA CAMBIO DE ESTADO A ACEPTADO
-      acceptedrequest: () => {},
-      //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
-      rejectrequest: () => {},
+      ////HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch
+      requestMatch: () => {},
+      ////SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
+      // acceptedmatches: () => {
 
-      match: () => {},
+      //},
+      //FETCH SOLOS MIS LIBROS PUBLICADOS
+      //mybookspublished: () => {
+
+      //},
+      //TODOS LOS LIBROS PUBLICADOS MENOS LOS MIOS
+      // allbookspublished: () => {
+
+      // },
+      //FETCH PARA CAMBIO DE ESTADO A ACEPTADO
+      //acceptedrequest: () => {
+
+      // },
+      //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
+      // rejectrequest: () => {}
     },
   };
 };
