@@ -21,18 +21,17 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((state) => setStore({ products: state }))
           .catch((error) => console.log(error));
       },
-      // getProduct: (id) => {
-      //     fetch("http://localhost:5000/product" + id)
-      //     .then(res => res.json())
-      //     .then(state => setStore({product: state}))
-      //     .catch(error => console.log(error))
-      // },
+      getProduct: (id) => {
+           fetch("http://localhost:5000/product/" + id)
+           .then(res => res.json())
+           .then(state => setStore({product: state}))
+           .catch(error => console.log(error))
+       },
       onChange: (e) => {
         const { product } = getStore();
         setStore({ product: { ...product, [e.target.name]: e.target.value } });
       },
       saveProduct: (state, e) => {
-        //e.preventDefault()
         console.log("flux", e);
         const { product } = getStore();
         fetch("http://localhost:5000/product", {
@@ -107,8 +106,9 @@ const getState = ({ getStore, setStore, getActions }) => {
           })
           .catch((error) => console.error("Error:", error));
       },
-
+      //CRUD USUARIO //
       //PARA EL REGISTRO DE USUARIOS //
+
       createUser: (state, navegate) => {
         //evento.preventDefault()
         console.log("flux", state);
@@ -125,23 +125,32 @@ const getState = ({ getStore, setStore, getActions }) => {
               navegate("/login");
             }
           })
+          .then((response) => console.log("Success:", response))
           .catch((error) => console.error("Error:", error));
       },
-
-      editData: (state, evento) => {
-        //evento.preventDefault()
-        console.log("flux", state);
-        fetch("http://localhost:5000/editdata", {
-          method: "PUT",
-          body: JSON.stringify(state),
+      //PARA EDITAR USUARIOS
+      editUser: (state, evento) => {
+          console.log("flux", evento);
+          fetch("http://localhost:5000/registro", {
+          method: "PUT", // or 'PUT'
+          body: JSON.stringify(state), // data can be `string` or {object}!
           headers: {
             "Content-Type": "application/json",
           },
         })
           .then((res) => res.json())
-          .then((response) => console.log("Success:", response))
-          .catch((error) => console.error("Error:", error));
-      },
+          .then((state) => console.log(state));
+          setStore({
+            state:{
+              id: "id",
+              name: "name",
+              surname: "surname",
+              password: "password",
+            }
+          })
+        },
+        },
+
       //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
       pendingMatch: (state, evento, navegate) => {
         console.log("flux, state");
@@ -159,10 +168,29 @@ const getState = ({ getStore, setStore, getActions }) => {
           })
           .catch((error) => console.error("Error:", error));
       },
+      //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
+       requestMatching: (state) => {
+         const { product } = getStore();
+         fetch("http://localhost:5000/bookmatch", {
+           method: "POST",
+           headers: {
+             "Content-Type": "application/json",
+           },
+           body: JSON.stringify(state),
+            })
+           .then((res) => res.json())
+           .then((state) => console.log(state));            
+        }
+      
+      //SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
+      // acceptedmatches: () => {
+       //},
+
       ////HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch
-      requestMatch: () => {},
+      //requestMatch: () => {},
       ////SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
       // acceptedmatches: () => {
+
 
       //},
       //FETCH SOLOS MIS LIBROS PUBLICADOS
@@ -180,7 +208,21 @@ const getState = ({ getStore, setStore, getActions }) => {
       //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
       // rejectrequest: () => {}
     },
+      //CRUD PARA EDITAR USUARIO 
+      editData: () => {
+         fetch("http://localhost:5000/editdata/", {
+          method: "PUT",
+          body: JSON.stringify(),
+          headers: {
+            "Content-Type": "application/json",
+           },
+         })
+          .then((res) => res.json())
+          .catch((error) => console.error("Error:", error))
+          .then((response) => console.log("Success:", response));
+       },
   };
-};
+}
+
 
 export default getState;

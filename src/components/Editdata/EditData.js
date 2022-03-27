@@ -5,28 +5,40 @@ import Footer2 from "../FotterLogueado/Footer2"
 import "./EditData.css";
 
 const EditData = () => {
+    
+     // LOCAL STORAGE DONDE ESTÁN GUARDADO ID DEL INICIO DE SESIÓN
+     let userinfo = localStorage.getItem('userinfo');
+     userinfo = JSON.parse(userinfo)
+     console.log(userinfo.user.id)
+    
+    
     const { store, actions } = useContext(Context)
-    const [state, setState] = useState({});
-    console.log(state)
+    const [state, setState] = useState({
+        id: userinfo.user.id,
+        name: "",
+        surname: "",
+        password: ""        
+    });
+        
     const onChange = (evento) => {
         setState({ ...state, [evento.target.name]: evento.target.value })
     }
+    
     const onSubmit = (evento) => {
         evento.preventDefault()
-        actions.editData(state, evento)
+        actions.editUser(state, evento)
         console.log(state)
     }
-
-
+    
     return (
         <>
             <ProfileNavbar />
             <div className="container edit">
 
-                <h2 className="form-title text-white text-center mt-4">Editar Datos</h2>
+                <h2 className="form-title text-white text-center mt-4">Editar Mis Datos</h2>
 
                 <form onSubmit={(evento) => onSubmit(evento)} >
-
+                    
                     <div className=" col-6 text-white pe-5 ps-5 mx-auto mt-4">
                         <label htmlFor="formGroupExampleInput" className="form-label d-flex">Nombres</label>
                         <input
@@ -56,10 +68,10 @@ const EditData = () => {
 
 
                     <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                        <label htmlFor="inputEmail4" className="form-label d-flex">Email asociado cambiar</label>
+                        <label htmlFor="inputEmail4" className="form-label d-flex">Password</label>
                         <input
-                            name="email"
-                            type="email"
+                            name="password"
+                            type="password"
                             className="form-control"
                             id="inputEmail4"
                             required
