@@ -3,32 +3,39 @@ import { Context } from "../../store/appContext";
 import BookMatch_Logo from "../../images/BookMatch_Logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../Navbar/Navbar"
-import Footer from "../Footer/Footer"
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import "./Login.css";
+import { GoogleLogin } from "react-google-login";
 
 /*LOGIN INICIO DE SESIÓN*/
 const Login = () => {
-  //DETRUCTURING 
-  const { store, actions } = useContext(Context)
+  //DETRUCTURING
+  const { store, actions } = useContext(Context);
   //Estado del state
   const [state, setState] = useState({});
-  console.log(state)
   const onChange = (evento) => {
-    setState({ ...state, [evento.target.name]: evento.target.value })
-  }
+    setState({ ...state, [evento.target.name]: evento.target.value });
+  };
   //PARA INGRESAR AL PERFIL USUARIO
 
   const navegate = useNavigate();
   //const history = useHistory();
 
   const onSubmit = (evento) => {
-    evento.preventDefault()
-    actions.login(state, evento, navegate)
-    console.log(state)
-  }
+    evento.preventDefault();
+    actions.login(state, evento, navegate);
+  };
+
+  const responseGoogle = (response) => {
+    actions.googleAuth(response);
+    navegate("/userprofile");
+  };
+
   return (
-    <> <Navbar />
+    <>
+      {" "}
+      <Navbar />
       <div className="container login col-6">
         <div className="image">
           <img src={BookMatch_Logo} style={{ width: "50%", heigth: "30%" }} />
@@ -37,7 +44,10 @@ const Login = () => {
         <h6 className="text-center ms-5">Por favor iniciar sesion</h6>
         <div className="row justify-content-center">
           <form
-            onSubmit={(evento) => { onSubmit(evento) }}>
+            onSubmit={(evento) => {
+              onSubmit(evento);
+            }}
+          >
             <div className="row justify-content-center">
               <label className="col-md-auto text-white" htmlFor="email">
                 <i
@@ -54,8 +64,7 @@ const Login = () => {
                   value={state.email}
                   name="email"
                   required
-                  onChange={(evento) => onChange(evento)
-                  }
+                  onChange={(evento) => onChange(evento)}
                 />
               </div>
             </div>
@@ -83,10 +92,20 @@ const Login = () => {
             <div className="button text-center ms-5">
               <button
                 className="btn btn-outline-light gradient-custom-1 mt-3"
-                type="submit" // onClick={() => { navegate("/src/UserProfile/UserProfile") }}// 
+                type="submit" // onClick={() => { navegate("/src/UserProfile/UserProfile") }}//
               >
                 Iniciar Sesion
               </button>
+              <br></br>
+              <div className="button btn btn-outline-secondary my-3 gradient-custom-1 mt-3">
+                <GoogleLogin
+                  clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+                  buttonText="Login"
+                  onSuccess={responseGoogle}
+                  onFailure={responseGoogle}
+                  cookiePolicy={"single_host_origin"}
+                />
+              </div>
             </div>
             <h6 className="text-center mt-3  ms-5">¿Recuperar contraseña?</h6>
 
@@ -105,7 +124,8 @@ const Login = () => {
         </div>
       </div>
       <Footer />
-    </>);
+    </>
+  );
 };
 
 export default Login;
