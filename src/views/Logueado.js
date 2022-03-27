@@ -25,7 +25,7 @@ const Logueado = () => {
                 key={i}
                 className="col-md-4 mb-3 d-flex justify-content-center align-items-center"
               >
-                <Card4 title={p.title} autor={p.autor} editorial={p.editorial} />
+                <Card4 title={p.title} autor={p.autor} editorial={p.editorial} id={p.id}/>
               </div>
             ))}
         </div>

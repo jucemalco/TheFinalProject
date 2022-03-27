@@ -14,7 +14,7 @@ const Card4 = (props) => {
   //   if (!isLogged) return navigate("/login");
   //   addFav({id});
   // };
-
+console.log(props)
   return (
     <div className="card">
       <div className="card-body">
@@ -30,7 +30,7 @@ const Card4 = (props) => {
             <dd>{props.editorial}</dd>
           </dl>
         </p> 
-        <Link to="/details/">
+        <Link to={"/details/" + props.id}>
           <i className="btn btn-primary">Quiero ver más</i>
         </Link >
         &nbsp;
