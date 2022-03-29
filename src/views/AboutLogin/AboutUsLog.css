@@ -1,14 +1,9 @@
-.circular--square {
-    border-radius: 50%;
-    width: 400px;
-}
-
-.iconlinkedin {
-    font-size: 50px;
-    
-}
-
-.us {
-    margin-top: 1%;
-    margin-bottom: 0%;
-}
+.title{
+    font-family: fantasy;
+     
+  }
+  
+  .rounded-circle{
+      width: 200px;
+      border: 2px solid #583f58;
+  }

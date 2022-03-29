@@ -1,6 +1,8 @@
 import React from "react";
 import Nico from "../../images/Nico.png"
 import Vane from "../../images/Vane.png"
+import Monica from "../../images/Monica.png"
+import Julio from "../../images/Julio.png"
 import "./AboutUsLog.css"
 import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar"
 import { BsLinkedin } from 'react-icons/bs';
@@ -10,23 +12,39 @@ const AboutUsLog = () => {
     return (
         <>
            <ProfileNavbar />
-            <div className="container">
-                <h1>Nuestro Equipo</h1>
-                <p>Eiusmod aliquip laboris amet in. Ut fugiat duis ex occaecat ex enim eu mollit. Elit sit non reprehenderit ut consequat sunt laborum nisi magna amet nisi minim anim elit.</p>
-                <div>
-                    <img className="circular--square" src={Nico} />
-                    <h1 className="us">Nicolás Aravena</h1>
-                    <a className="iconlinkedin" href="https://www.linkedin.com/in/thenoa96/">
+           <div className="container">
+                <h1 className="title mt-3">Nuestro Equipo</h1>
+                <hr></hr>
+                <div className="row">
+                    <div className="col-3 mt-5">
+                        <img className="rounded-circle mb-3" src={Nico} />
+                        <h3 className="us">Nicolás Aravena</h3>
+                        <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/thenoa96/">
                         <BsLinkedin />
                     </a>
-                    
-                </div>
-                <div>
-                    <img className="circular--square" src={Vane} />
-                    <h1 className="us">Vanessa Pinchetti</h1>
-                    <a className="iconlinkedin" href="https://www.linkedin.com/in/vanessa-pinchetti-inostroza-a73712160/">
+                    </div>
+                    <div className="col-3 mt-5">
+                        <img className="rounded-circle mb-3" src={Vane} />
+                        <h3 className="us">Vanessa Pinchetti</h3>
+                        <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/vanessa-pinchetti-inostroza-a73712160/">
                         <BsLinkedin />
                     </a>
+                    </div>
+                    <div className="col-3 mt-5">
+                        <img className="rounded-circle mb-3" src={Monica} />
+                        <h3 className="us">Mónica Calle</h3>
+                        <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/m%C3%B3nica-calle-47b199227/">
+                        <BsLinkedin />
+                    </a>
+                    </div>
+
+                      <div className="col-3 mt-5">
+                        <img className="rounded-circle mb-3" src={Julio} />
+                        <h3 className="us">Julio Maldonado</h3>
+                        <a className="iconlinkedin fs-3" href="">
+                        <BsLinkedin />
+                    </a>
+                    </div> 
                 </div>
             </div>
             <Footer2 />
