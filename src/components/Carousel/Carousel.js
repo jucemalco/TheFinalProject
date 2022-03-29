@@ -1,5 +1,8 @@
 import React from "react"
 import "./index.css";
+import Foto1 from "../../images/Foto1.png"
+import Foto2 from "../../images/Foto2.png"
+import Foto3 from "../../images/Foto3.png"
 
 const Carousel = () => {
     return <div className="container-fluid mt-3">
@@ -11,13 +14,13 @@ const Carousel = () => {
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="https://us.123rf.com/450wm/leoedition/leoedition1708/leoedition170800398/84002252-banner-reading-club-estante-de-libro-o-librer%C3%ADa-en-el-fondo.jpg?ver=6" className="d-block carousel-image w-100" alt="..."/>
+                    <img src={Foto1} className="d-block carousel-image w-100" alt="..."/>
                 </div>
                 <div className="carousel-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE7q2cL1kFbCFS5mk0z6KM8iGdd_UbdRQ2aQ&usqp=CAU" className="d-block carousel-image w-100" alt="..."/>
+                    <img src={Foto2} className="d-block carousel-image w-100" alt="..."/>
                 </div>
                 <div className="carousel-item">
-                    <img src="https://www.librosdelayer.cl/resources/images/general/slider1.jpg" className="d-block carousel-image w-100" alt="..."/>
+                    <img src={Foto3} className="d-block carousel-image w-100" alt="..."/>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
