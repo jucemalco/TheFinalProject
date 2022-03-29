@@ -1,7 +1,6 @@
 const getState = ({ getStore, setStore, getActions }) => {
   return {
     store: {
-      pendingmatch: [],
       user: null,
       users: [],
       favorito: [],
@@ -130,9 +129,9 @@ const getState = ({ getStore, setStore, getActions }) => {
           .catch((error) => console.error("Error:", error));
       },
       //PARA EDITAR USUARIOS
-      editUser: (state, evento, userinfo) => {
-        console.log(state, userinfo);
-        fetch("http://localhost:5000/edituser/" + userinfo, {
+      editUser: (state, evento) => {
+        console.log("flux", evento);
+        fetch("http://localhost:5000/registro", {
           method: "PUT", // or 'PUT'
           body: JSON.stringify(state), // data can be `string` or {object}!
           headers: {
@@ -143,7 +142,7 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((state) => console.log(state));
         setStore({
           state: {
-            //id: "id",
+            id: "id",
             name: "name",
             surname: "surname",
             password: "password",
@@ -151,9 +150,26 @@ const getState = ({ getStore, setStore, getActions }) => {
         });
       },
 
+      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
+      pendingMatch: (state, evento, navegate) => {
+        console.log("flux, state");
+        fetch("http://localhost:5000/pendingmatch", {
+          method: "POST",
+          body: JSON.stringify(state),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log("Success:", response);
+            setStore({ user: response });
+          })
+          .catch((error) => console.error("Error:", error));
+      },
       //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
-      sendMatching: (state) => {
-        console.log(state);
+      requestMatching: (state) => {
+        const { product } = getStore();
         fetch("http://localhost:5000/bookmatch", {
           method: "POST",
           headers: {
@@ -164,28 +180,17 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((res) => res.json())
           .then((state) => console.log(state));
       },
-      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
-      pendingMatch: () => {
-        fetch("http://localhost:5000/pendingmatch", {
-          method: "GET",
-          body: JSON.stringify(),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-          .then((res) => res.json())
-          .then((response) => {
-            console.log("Success:", response);
-            const filterpending = response.filter(allobject => allobject.status == "pending")
 
-            setStore({ pendingmatch: filterpending });
-          })
-          .catch((error) => console.error("Error:", error));
-      },
       //SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
       // acceptedmatches: () => {
       //},
 
+      ////HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch
+      //requestMatch: () => {},
+      ////SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
+      // acceptedmatches: () => {
+
+      //},
       //FETCH SOLOS MIS LIBROS PUBLICADOS
       //mybookspublished: () => {
 
@@ -200,23 +205,9 @@ const getState = ({ getStore, setStore, getActions }) => {
       // },
       //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
       // rejectrequest: () => {}
-      // },
-      //CRUD PARA EDITAR USUARIO 
-      // editData: () => {
-      //    fetch("http://localhost:5000/editdata/", {
-      //     method: "PUT",
-      //     body: JSON.stringify(),
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //      },
-      //    })
-      //     .then((res) => res.json())
-      //     .catch((error) => console.error("Error:", error))
-      //     .then((response) => console.log("Success:", response));
-      //  },
+      //CRUD PARA EDITAR USUARIO
     },
   };
-
-}
+};
 
 export default getState;
