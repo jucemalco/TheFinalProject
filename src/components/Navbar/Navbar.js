@@ -5,6 +5,13 @@ import "./Navbar.css";
 // import { Dropdown, DropdownButton } from "react-bootstrap";
 
 export const Navbar = () => {
+  function MouseOver(event) {
+    event.target.style.color = '#8b6685';
+  }
+
+  function MouseOut(event){
+    event.target.style.color='';
+  }
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light btn-dark">
@@ -24,21 +31,21 @@ export const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon" ></span> 
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/">
+                <Link className="nav-link text-white" to="/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
                   <i className="fa fa-home p-2">Inicio</i>
                 </Link>
               </li>
 
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown" onMouseOver={MouseOver} onMouseOut={MouseOut}>
                 <Link
                   className="nav-link dropdown-toggle text-white"
                   to="#"
-                  id="navbarDropdown"
+                  id="navbarDropdown" 
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -47,7 +54,7 @@ export const Navbar = () => {
                   Libros
                 </Link>
 
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown" >
                   <li>
                     <Link className="dropdown-item" to="losmasleidos">
                       Los Más Leídos
@@ -74,14 +81,14 @@ export const Navbar = () => {
                 </ul>
               </li>
               <li className="nav-item dropdown ">
-                <Link className="nav-link dropdown-toggle text-white" to="/login/">
+                <Link className="nav-link dropdown-toggle text-white" to="/login/" >
                   <i className="fa fa-heart-o p-2" style={{ color: "#fa5d5d" }}></i>
                   Mis Favoritos
                 </Link>
               </li>
 
               <li id="nav-item">
-                <Link className="nav-link text-white" to="/about/">
+                <Link className="nav-link text-white"  to="/about/">
                   Nosotros
                 </Link>
               </li>
@@ -94,15 +101,15 @@ export const Navbar = () => {
                 placeholder="Título, Autor"
                 aria-label="Search"
               />
-              <button className="btn btn-light" type="submit">
+              <button className="btn btn-light" type="submit" onMouseOver={MouseOver} onMouseOut={MouseOut}>
                 Búsqueda
               </button>
             </form>
-              <Link className="nav-link text-white" to="/login/">
-                <i className="underline">Iniciar Sesión</i>
+              <Link className="nav-link text-white" to="/login/" onMouseOver={MouseOver} onMouseOut={MouseOut} >
+                <i className="" >Iniciar Sesión</i>
               </Link>
-              <Link className="nav-link text-white" to="/login/newaccount/">
-                <i className="underline">Registrarse</i>
+              <Link className="nav-link text-white" to="/login/newaccount/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+                <i className="">Registrarse</i>
               </Link>
             <div>
             </div>
