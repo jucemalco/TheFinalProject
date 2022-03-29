@@ -1,11 +1,14 @@
+
 .dropdown{
   margin-left: 10%;
   margin-right: 5%;
 }
-#nav-item{
+/* #nav-item{
   padding-top: 5px;
   margin-left: 10%;
-}
+ 
+} */
+
 /* visited link */
 .underline:visited {
   color: white;
