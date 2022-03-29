@@ -9,8 +9,7 @@ const EditData = () => {
      // LOCAL STORAGE DONDE ESTÁN GUARDADO ID DEL INICIO DE SESIÓN
      let userinfo = localStorage.getItem('userinfo');
      userinfo = JSON.parse(userinfo)
-     console.log(userinfo.user.id)
-    
+     console.log(userinfo.user.id)    
 
     const { store, actions } = useContext(Context)
     const [state, setState] = useState({
@@ -21,14 +20,16 @@ const EditData = () => {
         
     const onChange = (evento) => {
         setState({ ...state, [evento.target.name]: evento.target.value })
-    }
-    
+    }    
     const onSubmit = (evento) => {
         evento.preventDefault()
         actions.editUser(state, evento, userinfo.user.id)
         console.log(state)
     }
-    
+    const deleteUser = () => {
+        actions.deleteUser(userinfo.user.id, state)
+        console.log(userinfo.user.id)
+    }
     return (
         <>
             <ProfileNavbar />
@@ -78,8 +79,10 @@ const EditData = () => {
                     </div>
 
 
-                    <div className=" col-12 p-4 mb-2 text-center">
+                    <div className=" col-12 p-4 mb-2 text-center mt-3">
                         <button type="submit" className="btn btn-outline-light gradient-custom-1 px-4">Guardar</button>
+                        
+                        <button className="btn btn-outline-light gradient-custom-1 px-4 mt-3" onClick={() =>deleteUser()}>Eliminar Perfil</button>
                     </div>
                 </form>
             </div>
