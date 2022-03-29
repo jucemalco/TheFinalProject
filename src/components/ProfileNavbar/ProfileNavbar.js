@@ -34,7 +34,7 @@ const ProfileNavbar = () => {
               </Link>
             </li>
 
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown ms-2">
               <Link
                 className="nav-link dropdown-toggle text-white"
                 to="#"
@@ -73,7 +73,7 @@ const ProfileNavbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown ">
+            <li className="nav-item dropdown ms-1">
               <Link
                 className="nav-link dropdown-toggle text-white"
                 to="myaccount"
@@ -124,7 +124,7 @@ const ProfileNavbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown ">
+            <li className="nav-item dropdown ms-1">
               <Link
                 className="nav-link dropdown-toggle text-white"
                 to="myaccount"
@@ -154,7 +154,7 @@ const ProfileNavbar = () => {
                 <li></li>
               </ul>
             </li>
-            <li id="nav-item">
+            <li className="nav-item ms-1 mt-1">
               <Link className="nav-link text-white" to="/aboutuslog/">
                 Nosotros
               </Link>
