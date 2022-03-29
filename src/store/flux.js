@@ -1,6 +1,7 @@
 const getState = ({ getStore, setStore, getActions }) => {
   return {
     store: {
+      pendingmatch: [],
       user: null,
       users: [],
       favorito: [],
@@ -22,11 +23,11 @@ const getState = ({ getStore, setStore, getActions }) => {
           .catch((error) => console.log(error));
       },
       getProduct: (id) => {
-           fetch("http://localhost:5000/product/" + id)
-           .then(res => res.json())
-           .then(state => setStore({product: state}))
-           .catch(error => console.log(error))
-       },
+        fetch("http://localhost:5000/product/" + id)
+          .then((res) => res.json())
+          .then((state) => setStore({ product: state }))
+          .catch((error) => console.log(error));
+      },
       onChange: (e) => {
         const { product } = getStore();
         setStore({ product: { ...product, [e.target.name]: e.target.value } });
@@ -129,9 +130,9 @@ const getState = ({ getStore, setStore, getActions }) => {
           .catch((error) => console.error("Error:", error));
       },
       //PARA EDITAR USUARIOS
-      editUser: (state, evento) => {
-          console.log("flux", evento);
-          fetch("http://localhost:5000/registro", {
+      editUser: (state, evento, userinfo) => {
+        console.log(state, userinfo);
+        fetch("http://localhost:5000/edituser/" + userinfo, {
           method: "PUT", // or 'PUT'
           body: JSON.stringify(state), // data can be `string` or {object}!
           headers: {
@@ -140,23 +141,34 @@ const getState = ({ getStore, setStore, getActions }) => {
         })
           .then((res) => res.json())
           .then((state) => console.log(state));
-          setStore({
-            state:{
-              id: "id",
-              name: "name",
-              surname: "surname",
-              password: "password",
-            }
-          })
-        },
-        },
+        setStore({
+          state: {
+            //id: "id",
+            name: "name",
+            surname: "surname",
+            password: "password",
+          },
+        });
+      },
 
-      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
-      pendingMatch: (state, evento, navegate) => {
-        console.log("flux, state");
-        fetch("http://localhost:5000/pendingmatch", {
+      //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
+      sendMatching: (state) => {
+        console.log(state);
+        fetch("http://localhost:5000/bookmatch", {
           method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify(state),
+        })
+          .then((res) => res.json())
+          .then((state) => console.log(state));
+      },
+      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
+      pendingMatch: () => {
+        fetch("http://localhost:5000/pendingmatch", {
+          method: "GET",
+          body: JSON.stringify(),
           headers: {
             "Content-Type": "application/json",
           },
@@ -164,35 +176,16 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((res) => res.json())
           .then((response) => {
             console.log("Success:", response);
-            setStore({ user: response });
+            const filterpending = response.filter(allobject => allobject.status == "pending")
+
+            setStore({ pendingmatch: filterpending  });
           })
           .catch((error) => console.error("Error:", error));
       },
-      //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
-       requestMatching: (state) => {
-         const { product } = getStore();
-         fetch("http://localhost:5000/bookmatch", {
-           method: "POST",
-           headers: {
-             "Content-Type": "application/json",
-           },
-           body: JSON.stringify(state),
-            })
-           .then((res) => res.json())
-           .then((state) => console.log(state));            
-        },
-      
       //SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
       // acceptedmatches: () => {
-       //},
-
-      ////HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch
-      //requestMatch: () => {},
-      ////SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
-      // acceptedmatches: () => {
-
-
       //},
+
       //FETCH SOLOS MIS LIBROS PUBLICADOS
       //mybookspublished: () => {
 
@@ -207,21 +200,21 @@ const getState = ({ getStore, setStore, getActions }) => {
       // },
       //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
       // rejectrequest: () => {}
- 
-      //CRUD PARA EDITAR USUARIO 
-      // editData: () => {
-      //    fetch("http://localhost:5000/editdata/", {
-      //     method: "PUT",
-      //     body: JSON.stringify(),
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //      },
-      //    })
-      //     .then((res) => res.json())
-      //     .catch((error) => console.error("Error:", error))
-      //     .then((response) => console.log("Success:", response));
-      //  },
 
+      //CRUD PARA EDITAR USUARIO
+      editData: () => {
+        fetch("http://localhost:5000/editdata/", {
+          method: "PUT",
+          body: JSON.stringify(),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .catch((error) => console.error("Error:", error))
+          .then((response) => console.log("Success:", response));
+      },
+    },
   };
 };
 

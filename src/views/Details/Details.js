@@ -1,34 +1,43 @@
 import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
-import React, { useContext, useEffect, useState  } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./index.css";
 import Card2 from "../../components/Card2/Card2";
 import { Context } from "../../store/appContext";
-import Footer2 from "../../components/FotterLogueado/Footer2"
+import Footer2 from "../../components/FotterLogueado/Footer2";
 import { useParams } from "react-router-dom";
+import { Modal, Button } from "react-bootstrap";
 
 const Details = (props) => {
   const { store, actions } = useContext(Context);
- //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch 
-    const params = useParams();
-   console.log(params.id)
-    useEffect(() => {
-	  actions.getProduct(params.id)
-	  }, [])
-    //si no está iniciado sesión, el objeto en localstorage no esta lleno. por lo tanto no puedes hacer match
-    let userinfo = localStorage.getItem('userinfo');
-    userinfo = JSON.parse(userinfo)
-    console.log(userinfo.user.id) 
-    
-  //requestMatching    
-   const [state, setState] = useState({
-   title: store.product.title,
-   autor: store.product.autor,
-   editorial: store.product.editorial,
-   review: store.product.review,
-   user_id: userinfo.user.id,
-   status : "pending"
-  })
+  const [show, setShow] = useState(false);
+  const handleClose = () =>  setShow(false);
+  const handleShow = () => setShow(true);
+
+  //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch
+  const params = useParams();
+  console.log(params.id);
+  useEffect(() => {
+    actions.getProduct(params.id);
+  }, []);
+  //si no está iniciado sesión, el objeto en localstorage no esta lleno. por lo tanto no puedes hacer match
+  let userinfo = localStorage.getItem("userinfo");
+  userinfo = JSON.parse(userinfo);
+  console.log(userinfo.user.id);
+  const booktitle = store.product?.title
+  //requestMatching
+  const [state, setState] = useState({
+    book: store.product?.title,
+    interested: userinfo.user.name,
+    user_id: userinfo.user.id,
+    status: "pending",
+  });
   
+  console.log(state)
+  const matching = () => {
+    actions.sendMatching(state)
+    setShow(false)
+  };
+
   return (
     <>
       {" "}
@@ -62,17 +71,15 @@ const Details = (props) => {
               <button to="#" className="btn btn-primary">
                 Añadir Favoritos
               </button>{" "}
-              {""}
-              
-              {""}
-
-              <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                >
+              {/* <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
                 Hacer Match
-              </button>
-
-
-              <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              </button> */}
+              {/* <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -83,13 +90,31 @@ const Details = (props) => {
                       <p className="card-text fw-light" >El libro que deseas intercambiar debe estar en muy buen estado, es decir, no debe: tener hojas sueltas, tapas y lomo despegado, haber estado mojado, estar manchado o contar con rayones en su portada o en el interior que dificulten su lectura.</p>
                     </div>
                     <div className="modal-footer">
-                      <button type="button" className="btn btn-secondary" onCLick={() => actions.requestMatching(state)} >Aceptar</button>
-                      <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
-                      
+                      <button onCLick={matching} >Aceptar</button>
+                      <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>                      
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              <Button variant="primary" onClick={handleShow}>
+                Hacer Match
+              </Button>
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>MatchBook</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  Seguro de hacer Match?
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={() =>matching()}>
+                    Sí
+                  </Button>
+                  <Button variant="primary" onClick={handleClose}>
+                    Cerrar
+                  </Button>
+                </Modal.Footer>
+              </Modal>
             </div>
             <div className="col">
               <h1 className="titledetails">Usuario</h1>
