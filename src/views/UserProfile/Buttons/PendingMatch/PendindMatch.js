@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useEffect, useContext, useState } from "react";
+import { Context } from "../../../../store/appContext";
 import { Link } from "react-router-dom";
 import "./PendingMatch.css";
 import Card from "../../../../components/Cards/Card";
 import ProfileNavbar from "../../../../components/ProfileNavbar/ProfileNavbar";
 import Footer2 from "../../../../components/FotterLogueado/Footer2"
 
+
 // solicitando la consulta hacia la base de datos de los pendientes #pendingmatch
 const PendingMatch = (props) => {
 //SOLICITUD DE MOSTRAR MATCH PENDIENTES
 
+const { store, actions } = useContext(Context)
 useEffect(() => {
-  actions.PendingMatch()
+  actions.pendingMatch()
 }, [])
- 
-
-
+ console.log(store.pendingmatch)
   return (
     <>
       {" "}
@@ -36,6 +37,7 @@ useEffect(() => {
                       className="img-fluid img-thumbnail mt-4 mb-2"
                       style={{ width: "150px" }}
                     />
+                     
                     <Link
                       to="/miperfil/editdata/"
                       type="button"
@@ -45,6 +47,7 @@ useEffect(() => {
                       Editar perfil
                     </Link>
                   </div>
+
                   <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist"></ul>
                   <div className="historybootom">
                     <div className="ms-4 mt-10 d-flex flex-column" style={{ width: "150px" }}>
@@ -58,6 +61,7 @@ useEffect(() => {
                       </Link>
                     </div>
                   </div>
+
                   <div className="historybootom">
                     <div className="ms-4 mt-1 d-flex flex-column" style={{ width: "160px" }}>
                       <Link
@@ -96,7 +100,7 @@ useEffect(() => {
                 <div className="card-body p-4 text-black">
               
                   <h1>Pendientes</h1>
-                   
+              
                 </div>
               </div>
             </div>
