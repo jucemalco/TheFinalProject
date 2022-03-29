@@ -180,7 +180,7 @@ const getState = ({ getStore, setStore, getActions }) => {
             })
            .then((res) => res.json())
            .then((state) => console.log(state));            
-        }
+        },
       
       //SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
       // acceptedmatches: () => {
@@ -207,22 +207,22 @@ const getState = ({ getStore, setStore, getActions }) => {
       // },
       //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
       // rejectrequest: () => {}
-    },
+ 
       //CRUD PARA EDITAR USUARIO 
-      editData: () => {
-         fetch("http://localhost:5000/editdata/", {
-          method: "PUT",
-          body: JSON.stringify(),
-          headers: {
-            "Content-Type": "application/json",
-           },
-         })
-          .then((res) => res.json())
-          .catch((error) => console.error("Error:", error))
-          .then((response) => console.log("Success:", response));
-       },
-  };
-}
+      // editData: () => {
+      //    fetch("http://localhost:5000/editdata/", {
+      //     method: "PUT",
+      //     body: JSON.stringify(),
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //      },
+      //    })
+      //     .then((res) => res.json())
+      //     .catch((error) => console.error("Error:", error))
+      //     .then((response) => console.log("Success:", response));
+      //  },
 
+  };
+};
 
 export default getState;
