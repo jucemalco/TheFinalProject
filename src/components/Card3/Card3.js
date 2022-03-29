@@ -15,7 +15,8 @@ const Card3 = (props) => {
   // };
 
   return (
-    <div className="card">
+
+      <div className="card">
       <div className="card-body">
         <img
           src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"

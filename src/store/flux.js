@@ -151,6 +151,18 @@ const getState = ({ getStore, setStore, getActions }) => {
         });
       },
 
+      //PARA ELIMINAR USUARIO
+      deleteUser: (userinfo) => {
+        console.log(userinfo);
+        fetch("http://localhost:5000/registro/" + userinfo, {
+          method: "DELETE",
+          body: JSON.stringify(), // data can be `string` or {object}!
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        },
+      
       //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
       sendMatching: (state) => {
         console.log(state);

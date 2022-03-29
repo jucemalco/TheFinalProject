@@ -37,7 +37,9 @@ const UserProfile = (props) => {
                       className="btn btn-outline-light gradient-custom-1 editperfil"
                       data-mdb-ripple-color="dark"
                       style={{ zIndex: "1" }}>
-                      Editar o Eliminar Perfil
+
+                      Editar/Eliminar Perfil
+
                     </Link>
                   </div>
                   <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist"></ul>
