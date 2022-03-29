@@ -11,10 +11,9 @@ const EditData = () => {
      userinfo = JSON.parse(userinfo)
      console.log(userinfo.user.id)
     
-    
+
     const { store, actions } = useContext(Context)
     const [state, setState] = useState({
-        id: userinfo.user.id,
         name: "",
         surname: "",
         password: ""        
@@ -26,7 +25,7 @@ const EditData = () => {
     
     const onSubmit = (evento) => {
         evento.preventDefault()
-        actions.editUser(state, evento)
+        actions.editUser(state, evento, userinfo.user.id)
         console.log(state)
     }
     
