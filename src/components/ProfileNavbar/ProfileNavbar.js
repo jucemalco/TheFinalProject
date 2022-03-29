@@ -5,6 +5,13 @@ import BookMatch_Logo from "../../images/BookMatch_Logo.png";
 
 
 const ProfileNavbar = () => {
+  function MouseOver(event) {
+    event.target.style.color = '#8b6685';
+  }
+
+  function MouseOut(event){
+    event.target.style.color='';
+  }
   return (
     <div>
     <nav className="navbar navbar-expand-lg navbar-light btn-dark">
@@ -28,26 +35,26 @@ const ProfileNavbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
+            <li className="nav-item" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link className="nav-link text-white" to="/logueado/">
                 <i className="fa fa-home p-2">Inicio</i>
               </Link>
             </li>
 
-            <li className="nav-item dropdown ms-2">
+            <li className="nav-item dropdown ms-2" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link
-                className="nav-link dropdown-toggle text-white"
+                className="nav-link dropdown-toggle text-white" 
                 to="#"
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i className="fa fa-book p-2"></i>
+                <i className="fa fa-book p-2" ></i>
                 Libros
               </Link>
 
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown" >
                 <li>
                   <Link className="dropdown-item" to="losmasleidos">
                     Los Más Leídos
@@ -73,22 +80,23 @@ const ProfileNavbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown ms-1">
+            <li className="nav-item dropdown ms-1" >
               <Link
-                className="nav-link dropdown-toggle text-white"
+                className="nav-link dropdown-toggle text-white" 
                 to="myaccount"
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                
               >
                 <i className="fa fa-user p-2"></i>
                 Mi Perfil
               </Link>
 
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown" onMouseOver={MouseOver} onMouseOut={MouseOut}>
                 <li>
-                  <Link className="dropdown-item" to="/userprofile/">
+                  <Link className="dropdown-item" to="/userprofile/" >
                     Mi perfil
                   </Link>
                 </li>
@@ -124,7 +132,7 @@ const ProfileNavbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown ms-1">
+            <li className="nav-item dropdown ms-1" >
               <Link
                 className="nav-link dropdown-toggle text-white"
                 to="myaccount"
@@ -135,7 +143,7 @@ const ProfileNavbar = () => {
               >
                 <i
                   className="fa fa-heart-o p-2"
-                  style={{ color: "#fa5d5d" }}
+                  style={{ color: "#fa5d5d"}}
                 ></i>
                 Mis Favoritos
               </Link>
@@ -150,8 +158,7 @@ const ProfileNavbar = () => {
                   </Link>
                 </li>
 
-                <li></li>
-                <li></li>
+              
               </ul>
             </li>
             <li className="nav-item ms-1 mt-1">
@@ -172,12 +179,13 @@ const ProfileNavbar = () => {
               placeholder="Título, Autor"
               aria-label="Search"
             />
-            <button className="btn btn-light" type="submit">
+            <button className="btn btn-light" type="submit" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               Búsqueda
             </button>
           </form>
-            <Link className="nav-link text-white" to="/login/">
-              <i className="underline">Cerrar Sesión</i>
+
+            <Link className="nav-link text-white" to="/login/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+              <i className>Cerrar Sesión</i>
             </Link>
         </div>
       </div>

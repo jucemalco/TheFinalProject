@@ -46,3 +46,20 @@
     margin-right: 260px;
     margin-bottom: 260px;
 }
+
+
+.titledetails, titledetails2{
+    font-family: fantasy;
+}
+  
+h5{
+    font-family: fantasy;
+}
+
+.details{
+    background: linear-gradient(
+      to right,
+      rgb(116, 91, 109),
+      rgba(166, 193, 238, 1)
+    );
+}
