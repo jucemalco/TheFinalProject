@@ -150,10 +150,28 @@ const getState = ({ getStore, setStore, getActions }) => {
         });
       },
 
+
       //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
       pendingMatch: (state, evento, navegate) => {
         console.log("flux, state");
         fetch("http://localhost:5000/pendingmatch", {
+
+      //PARA ELIMINAR USUARIO
+      deleteUser: (userinfo) => {
+        console.log(userinfo);
+        fetch("http://localhost:5000/registro/" + userinfo, {
+          method: "DELETE",
+          body: JSON.stringify(), // data can be `string` or {object}!
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        },
+      
+      //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
+      sendMatching: (state) => {
+        console.log(state);
+        fetch("http://localhost:5000/bookmatch", {
           method: "POST",
           body: JSON.stringify(state),
           headers: {
