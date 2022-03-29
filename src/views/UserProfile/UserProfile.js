@@ -38,7 +38,7 @@ const UserProfile = (props) => {
                     <Link
                       to="/miperfil/editdata/"
                       type="button"
-                      className="btn btn-outline-light gradient-custom-1 editperfil"
+                      className="btn btn-outline-light gradient-custom-1 "
                       data-mdb-ripple-color="dark"
                       style={{ zIndex: "1" }}
                     >
@@ -52,13 +52,13 @@ const UserProfile = (props) => {
                   ></ul>
                   <div className="historybootom">
                     <div
-                      className="ms-4 mt-10 d-flex flex-column"
+                      className="ms-4 mt-1 d-flex flex-column"
                       style={{ width: "150px" }}
                     >
                       <Link
                         to=""
                         type="button"
-                        className="btn btn-outline-light gradient-custom-1 mislibros"
+                        className="btn btn-outline-light gradient-custom-1"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >
@@ -74,7 +74,7 @@ const UserProfile = (props) => {
                       <Link
                         to="/userprofile/pendingmatch"
                         type="button"
-                        className="btn btn-outline-light gradient-custom-1 matchpendientes"
+                        className="btn btn-outline-light gradient-custom-1"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >
@@ -108,12 +108,12 @@ const UserProfile = (props) => {
                   style={{ backgroundColor: "#f8f9fa" }}
                 ></div>
                 <div className="card-body p-4 text-black">
-                  <div className="row g-2">
+                  <div className="row g-2 pt-4">
                     {store.products &&
                       store.products.map((p, i) => (
                         <div
                           key={i}
-                          className="col-md-4 d-flex justify-content-center align-items-center"
+                          className="col-md-4 d-flex justify-content-center align-items-start"
                         >
                           <Card3
                             title={p.title}
