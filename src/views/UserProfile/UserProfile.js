@@ -11,7 +11,7 @@ const UserProfile = (props) => {
   useEffect(() => {
     actions.getProducts();
   }, []);
-  console.log(store.user);
+  console.log(store);
   return (
     <>
       {" "}
@@ -38,11 +38,11 @@ const UserProfile = (props) => {
                     <Link
                       to="/miperfil/editdata/"
                       type="button"
-                      className="btn btn-outline-dark editperfil "
+                      className="btn btn-outline-light gradient-custom-1 editperfil"
                       data-mdb-ripple-color="dark"
                       style={{ zIndex: "1" }}
                     >
-                      Editar perfil
+                      Editar o Eliminar Perfil
                     </Link>
                   </div>
                   <ul
@@ -58,7 +58,7 @@ const UserProfile = (props) => {
                       <Link
                         to=""
                         type="button"
-                        className="btn btn-outline-dark active mislibros"
+                        className="btn btn-outline-light gradient-custom-1 mislibros"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >
@@ -74,7 +74,7 @@ const UserProfile = (props) => {
                       <Link
                         to="/userprofile/pendingmatch"
                         type="button"
-                        className="btn btn-outline-dark matchpendientes"
+                        className="btn btn-outline-light gradient-custom-1 matchpendientes"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >
@@ -90,7 +90,7 @@ const UserProfile = (props) => {
                       <Link
                         to="/userprofile/aceptedmatch"
                         type="button"
-                        className="btn btn-outline-dark matchaceptados"
+                        className="btn btn-outline-light gradient-custom-1 matchaceptados"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >

@@ -43,3 +43,9 @@
 .historybootom2 {
   margin-top: 30px;
 }
+
+.gradient-custom-1 {
+  /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+  font-family: fantasy;
+}
