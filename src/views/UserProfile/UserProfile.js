@@ -40,9 +40,11 @@ const UserProfile = (props) => {
                       type="button"
                       className="btn btn-outline-light gradient-custom-1 "
                       data-mdb-ripple-color="dark"
+
                       style={{ zIndex: "1" }}
                     >
                       Editar o Eliminar Perfil
+
                     </Link>
                   </div>
                   <ul

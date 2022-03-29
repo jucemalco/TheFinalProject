@@ -60,7 +60,7 @@ const Details = (props) => {
             <div className="col">
               <h1 className="titledetails">{store.product?.title}</h1>
               <h4 className="titledetails2">{store.product?.editorial}</h4>
-              {/* <h5 className="">{store.product?.review}</h5> */}
+              <h5 className="">{store.product?.review}</h5>
               <p>
                 Ea nisi ea aliquip occaecat excepteur veniam nisi. Aute officia
                 cupidatat occaecat cupidatat duis nostrud dolore eiusmod
