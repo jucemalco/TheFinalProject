@@ -191,7 +191,7 @@ const getState = ({ getStore, setStore, getActions }) => {
             const filterpending = response.filter(allobject => allobject.status == "pending")
 
             setStore({ pendingmatch: filterpending });
-          })
+            })
           .catch((error) => console.error("Error:", error));
       },
       //SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
