@@ -2,6 +2,7 @@ const getState = ({ getStore, setStore, getActions }) => {
   return {
     store: {
       pendingmatch: [],
+      filterbyid: [],
       user: null,
       users: [],
       favorito: [],
@@ -177,7 +178,7 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((state) => console.log(state));
       },
       //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
-      pendingMatch: () => {
+      pendingMatch: (userinfo) => {
         fetch("http://localhost:5000/pendingmatch", {
           method: "GET",
           body: JSON.stringify(),
@@ -189,8 +190,12 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((response) => {
             console.log("Success:", response);
             const filterpending = response.filter(allobject => allobject.status == "pending")
+            console.log(filterpending)
+            const filterbyid = filterpending.filter(allobject => Number(allobject.user_id) == userinfo.user.id)
+            console.log(filterbyid)
 
-            setStore({ pendingmatch: filterpending });
+
+            setStore({ pendingmatch: filterbyid });            
             })
           .catch((error) => console.error("Error:", error));
       },
