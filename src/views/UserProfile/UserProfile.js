@@ -8,8 +8,10 @@ import Footer2 from "../../components/FotterLogueado/Footer2";
 
 const UserProfile = (props) => {
   const { store, actions } = useContext(Context);
+  let userinfo = localStorage.getItem("userinfo");
+  userinfo = JSON.parse(userinfo);
   useEffect(() => {
-    actions.getProducts();
+    actions.getProducts(userinfo);
   }, []);
   console.log(store)
 
@@ -46,6 +48,8 @@ const UserProfile = (props) => {
 
                   <div className="m-auto mx-5 text">
                     <h4 style={{fontFamily:"fantasy"}}>Bienvenido a BookMatch</h4>
+                    <h4 style={{fontFamily:"fantasy"}}>{userinfo.user.name}</h4>
+
                   </div>
                 </div>
                 <div className=" p-5 text-center ">
@@ -59,7 +63,7 @@ const UserProfile = (props) => {
                     Editar Perfil
                   </Link>
                   <Link
-                    to="/userprofile/mislibros"
+                    to="/userprofile/"
                     type="button"
                     className="button-profile btn btn-outline-dark btn-md me-3"
                     onMouseOver={MouseOver}
@@ -67,6 +71,7 @@ const UserProfile = (props) => {
                   >
                     Mis Libros
                   </Link>
+                  {/* SOLICITUDES RECIBIDAS DE OTROS USUARIOS*/}
                   <Link
                     to="/userprofile/aceptedmatch"
                     type="button"
@@ -74,9 +79,9 @@ const UserProfile = (props) => {
                     onMouseOver={MouseOver}
                     onMouseOut={MouseOut}
                   >
-                    Match Aceptados
+                  Recibidos Pendientes
                   </Link>
-
+                 {/* SOLICITUDES ENVIADAS DE INTERCAMBIO DE LIBRO A OTROS USUARIOS  */}
                   <Link
                     to="/userprofile/pendingmatch"
                     type="button"
@@ -84,7 +89,7 @@ const UserProfile = (props) => {
                     onMouseOver={MouseOver}
                     onMouseOut={MouseOut}
                   >
-                    Match Pendientes
+                   Enviados Pendientes
                   </Link>
 
                 </div>

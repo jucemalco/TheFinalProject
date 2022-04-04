@@ -18,12 +18,14 @@ import TheMostRead from "./components/TheMostRead/TheMostRead";
 import PendingMatch from "./views/UserProfile/Buttons/PendingMatch/PendindMatch"
 import AceptedMatch from "./views/UserProfile/Buttons/AceptedMatch/AceptedMatch"
 import DetailsMyBooks from "./views/DetailsMyBooks/DetailsMyBooks"
+import {ToastContainer} from "react-toastify"
 
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ToastContainer/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/logueado" element={<Logueado />} />

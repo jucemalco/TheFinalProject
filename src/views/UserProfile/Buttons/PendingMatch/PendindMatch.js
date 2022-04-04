@@ -83,13 +83,13 @@ const PendingMatch = (props) => {
                       style={{ width: "160px" }}
                     >
                       <Link
-                        to=""
+                        to="/userprofile/aceptedmatch"
                         type="button"
                         className="btn btn-outline-dark active matchpendientes"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >
-                        Match Pendientes
+                        Recibidos Pendientes
                       </Link>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ const PendingMatch = (props) => {
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >
-                        Match Aceptados
+                        Recibidos Pendientes
                       </Link>
                     </div>
                   </div>

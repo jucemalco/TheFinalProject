@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 const getState = ({ getStore, setStore, getActions }) => {
   return {
     store: {
@@ -17,11 +18,12 @@ const getState = ({ getStore, setStore, getActions }) => {
       },
     },
     actions: {
-      getProducts: () => {
+      getProducts: (userinfo) => {
         fetch("http://localhost:5000/products")
           .then((res) => res.json())
           .then((state) => setStore({ products: state }))
           .catch((error) => console.log(error));
+                    
       },
       getProduct: (id) => {
         fetch("http://localhost:5000/product/" + id)
@@ -124,10 +126,11 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((res) => res.json())
           .then((response) => {
             if (response.success) {
+              toast.success(response.msg)
               navegate("/login");
             }
+            console.log(response)
           })
-          .then((response) => console.log("Success:", response))
           .catch((error) => console.error("Error:", error));
       },
       //PARA EDITAR USUARIOS
