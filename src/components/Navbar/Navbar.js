@@ -51,7 +51,7 @@ export const Navbar = () => {
                   aria-expanded="false"
                 >
                   <i className="fa fa-book p-2"></i>
-                  Libros
+                  <span>Libros</span>
                 </Link>
 
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown" >
@@ -80,16 +80,16 @@ export const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item dropdown ">
-                <Link className="nav-link dropdown-toggle text-white" to="/login/" >
+              <li className="nav-item dropdown" >
+                <Link className="nav-link dropdown-toggle text-white" to="/login/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
                   <i className="fa fa-heart-o p-2" style={{ color: "#fa5d5d" }}></i>
-                  Mis Favoritos
+                  <span>Mis Favoritos</span>
                 </Link>
               </li>
 
               <li id="nav-item">
-                <Link className="nav-link text-white"  to="/about/">
-                  Nosotros
+                <Link className="nav-link text-white"  to="/about/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+                  <span>Nosotros</span>
                 </Link>
               </li>
             </ul>

@@ -7,10 +7,12 @@ import BookMatch_Logo from "../../images/BookMatch_Logo.png";
 const ProfileNavbar = () => {
   function MouseOver(event) {
     event.target.style.color = '#8b6685';
+   
   }
 
   function MouseOut(event){
     event.target.style.color='';
+   
   }
   return (
     <div>
@@ -50,8 +52,8 @@ const ProfileNavbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i className="fa fa-book p-2" ></i>
-                Libros
+                <i className="fa fa-book p-2"></i>
+               <span>Libros</span>
               </Link>
 
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown" >
@@ -80,7 +82,7 @@ const ProfileNavbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown ms-1" >
+            <li className="nav-item dropdown ms-1" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link
                 className="nav-link dropdown-toggle text-white" 
                 to="myaccount"
@@ -91,7 +93,7 @@ const ProfileNavbar = () => {
                 
               >
                 <i className="fa fa-user p-2"></i>
-                Mi Perfil
+                <span>Mi Perfil</span>
               </Link>
 
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown" onMouseOver={MouseOver} onMouseOut={MouseOut}>
@@ -132,7 +134,7 @@ const ProfileNavbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown ms-1" >
+            <li className="nav-item dropdown ms-1 me-3" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link
                 className="nav-link dropdown-toggle text-white"
                 to="myaccount"
@@ -145,7 +147,7 @@ const ProfileNavbar = () => {
                   className="fa fa-heart-o p-2"
                   style={{ color: "#fa5d5d"}}
                 ></i>
-                Mis Favoritos
+                <span>Mis Favoritos</span>
               </Link>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
@@ -161,15 +163,15 @@ const ProfileNavbar = () => {
               
               </ul>
             </li>
-            <li className="nav-item ms-1 mt-1">
-              <Link className="nav-link text-white" to="/aboutuslog/">
-                Nosotros
+            <li className="nav-item mt-1 me-5" >
+              <Link className="nav-link text-white" to="/aboutuslog/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+              <span className>Nosotros</span>
               </Link>
             </li>
           </ul>
             
-              <Link className="nav-link text-white" to="/admin/product">
-                Publica tu libro
+              <Link className="nav-link text-white" to="/admin/product" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+              <span className>Publica tu Libro</span>
               </Link>
            
           <form className="d-flex">
