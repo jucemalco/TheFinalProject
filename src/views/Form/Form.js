@@ -30,9 +30,9 @@ const Form = () => {
         <div className="form">
           <legend>
             {" "}
-            <h1 className="form-title text-white">Crear una nueva cuenta</h1>
+            <h1 style={{fontFamily:"fantasy"}} className="form-title text-white">Crear una nueva cuenta</h1>
           </legend>
-          <h2 className="form-subtitle text-white">Información Personal</h2>
+          <h2 style={{fontFamily:"fantasy"}} className="form-subtitle text-white">Información Personal</h2>
           <br></br>
 
           <form onSubmit={(evento) => onSubmit(evento)}>
@@ -131,22 +131,24 @@ const Form = () => {
               </div>
             </div>
             <div className="asterisk d-flex ms-4">
-              <i
-                className="fa fa-asterisk  p-2"
+              <i 
+                className="fa fa-asterisk"
                 style={{ fontSize: 6, color: "#fd4444" }}
-              ></i>
-              Campos Obligatorios
+              >  Campos Obligatorios</i>
             </div>
 
             <button
-              className="btn btn-outline-light gradient-custom-1 mt-3"
+              className="btn btn-outline-light gradient-custom mt-3" 
+              style={{borderRadius: "25px", width: "20%"}}
               type="submit"
             >
+              
               Crear una cuenta
             </button>
           </form>
           <ul></ul>
         </div>
+
       </div>
       <Footer />
     </>
