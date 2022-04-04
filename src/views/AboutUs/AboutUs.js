@@ -9,44 +9,47 @@ import { Link } from "react-router-dom";
 import { BsLinkedin } from 'react-icons/bs';
 import Footer from "../../components/Footer/Footer"
 
+
 const AboutUs = () => {
     return (
         <>
             <Navbar />
 
             <div className="container">
-                <h1 className="title mt-3">Nuestro Equipo</h1>
+                <h1 style={{fontFamily:"fantasy"}} className="title mt-3">Nuestro Equipo</h1>
                 <hr></hr>
                 <div className="row">
                     <div className="col-3 mt-5">
                         <img className="rounded-circle mb-3" src={Nico} />
-                        <h3 className="us">Nicolás Aravena</h3>
-                        <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/thenoa96/">
+                        <h3 style={{fontFamily:"fantasy"}} className="us">Nicolás Aravena</h3>
+                        <Link className="iconlinkedin fs-3" to="https://www.linkedin.com/in/thenoa96/">
                         <BsLinkedin />
-                    </a>
+                    </Link>
                     </div>
                     <div className="col-3 mt-5">
                         <img className="rounded-circle mb-3" src={Vane} />
-                        <h3 className="us">Vanessa Pinchetti</h3>
-                        <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/vanessa-pinchetti-inostroza-a73712160/">
+                        <h3 style={{fontFamily:"fantasy"}} className="us">Vanessa Pinchetti</h3>
+                        <Link className="iconlinkedin fs-3" to="https://www.linkedin.com/in/vanessa-pinchetti-inostroza-a73712160/">
                         <BsLinkedin />
-                    </a>
+                    </Link>
                     </div>
                     <div className="col-3 mt-5">
                         <img className="rounded-circle mb-3" src={Monica} />
-                        <h3 className="us">Mónica Calle</h3>
-                        <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/m%C3%B3nica-calle-47b199227/">
+                        <h3 style={{fontFamily:"fantasy"}} className="us">Mónica Calle</h3>
+                        <Link className="iconlinkedin fs-3" to="https://www.linkedin.com/in/m%C3%B3nica-calle-47b199227/">
                         <BsLinkedin />
-                    </a>
+                    </Link>
                     </div>
 
                       <div className="col-3 mt-5">
                         <img className="rounded-circle mb-3" src={Julio} />
-                        <h3 className="us">Julio Maldonado</h3>
-                        <a className="iconlinkedin fs-3" href="">
+                        <h3 style={{fontFamily:"fantasy"}} className="us">Julio Maldonado</h3>
+                        <Link className="iconlinkedin fs-3" to="">
                         <BsLinkedin />
-                    </a>
+                    </Link>
                     </div> 
+
+                    
                 </div>
             </div>
             <Footer />

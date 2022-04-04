@@ -11,124 +11,109 @@ const UserProfile = (props) => {
   useEffect(() => {
     actions.getProducts();
   }, []);
-  console.log(store);
+  console.log(store)
+
+  function MouseOver(event) {
+    event.target.style.color = "#d0bdd8";
+    event.target.style.background = "#8a708a";
+  }
+
+  function MouseOut(event) {
+    event.target.style.color = "";
+  }
   return (
     <>
       {" "}
       <ProfileNavbar />
-      <section className="h-100 gradient-custom-2">
-        <div className="container py-5 h-100">
-          <div className="row d-flex justify-content-center align-items-center h-100">
+      <section className="gradient-custom-2" style={{ height: "100%" }}>
+        <div className="container py-5" style={{ height: "100%" }}>
+          <div className="row d-flex justify-content-center align-items-center"
+            style={{ height: "100%" }}>
             <div className="col col-lg-9 col-xl-7">
               <div className="card">
                 <div
                   className="rounded-top text-white d-flex flex-row"
-                  style={{ background: "#000", height: "200px" }}
-                >
-                  <div
-                    className="ms-4 mt-5 d-flex flex-column"
-                    style={{ width: "150px" }}
-                  >
+                  style={{ background: "#000", height: "200px", width: "100%" }}>
+                  <div className="ms-4 mt-5 d-flex flex-column"
+                    style={{ width: "150px" }}>
                     <img
                       src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                       alt="Generic placeholder image"
                       className="img-fluid img-thumbnail mt-4 mb-2"
                       style={{ width: "150px" }}
                     />
-                    <Link
-                      to="/miperfil/editdata/"
-                      type="button"
-                      className="btn btn-outline-light gradient-custom-1 "
-                      data-mdb-ripple-color="dark"
+                  </div>
 
-                      style={{ zIndex: "1" }}
-                    >
-                      Editar o Eliminar Perfil
-
-                    </Link>
-                  </div>
-                  <ul
-                    className="nav nav-pills mb-3"
-                    id="pills-tab"
-                    role="tablist"
-                  ></ul>
-                  <div className="historybootom">
-                    <div
-                      className="ms-4 mt-1 d-flex flex-column"
-                      style={{ width: "150px" }}
-                    >
-                      <Link
-                        to=""
-                        type="button"
-                        className="btn btn-outline-light gradient-custom-1"
-                        data-mdb-ripple-color="dark"
-                        style={{ zIndex: "1" }}
-                      >
-                        Mis Libros
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="historybootom">
-                    <div
-                      className="ms-4 mt-1 d-flex flex-column"
-                      style={{ width: "160px" }}
-                    >
-                      <Link
-                        to="/userprofile/pendingmatch"
-                        type="button"
-                        className="btn btn-outline-light gradient-custom-1"
-                        data-mdb-ripple-color="dark"
-                        style={{ zIndex: "1" }}
-                      >
-                        Match Pendientes
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="historybootom">
-                    <div
-                      className="ms-4 mt-1 d-flex flex-column"
-                      style={{ width: "150px" }}
-                    >
-                      <Link
-                        to="/userprofile/aceptedmatch"
-                        type="button"
-                        className="btn btn-outline-light gradient-custom-1 matchaceptados"
-                        data-mdb-ripple-color="dark"
-                        style={{ zIndex: "1" }}
-                      >
-                        Match Aceptados
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="ms-3">
-                    <h5>{props.name}</h5>
-                    <p>{props.city}</p>
+                  <div className="m-auto mx-5 text">
+                    <h4 style={{fontFamily:"fantasy"}}>Bienvenido a BookMatch</h4>
                   </div>
                 </div>
-                <div
-                  className="p-4 text-black"
-                  style={{ backgroundColor: "#f8f9fa" }}
-                ></div>
-                <div className="card-body p-4 text-black">
-                  <div className="row g-2 pt-4">
-                    {store.products &&
-                      store.products.map((p, i) => (
-                        <div
-                          key={i}
-                          className="col-md-4 d-flex justify-content-center align-items-start"
-                        >
-                          <Card3
-                            title={p.title}
-                            autor={p.autor}
-                            editorial={p.editorial}
-                          />
-                        </div>
-                      ))}
-                  </div>
+                <div className=" p-5 text-center ">
+                  <Link
+                    to="/miperfil/editdata/"
+                    type="button"
+                    className="button-profile btn btn-outline-dark btn-md me-3"
+                    onMouseOver={MouseOver}
+                    onMouseOut={MouseOut}
+                  >
+                    Editar Perfil
+                  </Link>
+                  <Link
+                    to="/userprofile/mislibros"
+                    type="button"
+                    className="button-profile btn btn-outline-dark btn-md me-3"
+                    onMouseOver={MouseOver}
+                    onMouseOut={MouseOut}
+                  >
+                    Mis Libros
+                  </Link>
+                  <Link
+                    to="/userprofile/aceptedmatch"
+                    type="button"
+                    className="button-profile btn btn-outline-dark btn-md me-3"
+                    onMouseOver={MouseOver}
+                    onMouseOut={MouseOut}
+                  >
+                    Match Aceptados
+                  </Link>
+
+                  <Link
+                    to="/userprofile/pendingmatch"
+                    type="button"
+                    className="button-profile btn btn-outline-dark btn-md me-3"
+                    onMouseOver={MouseOver}
+                    onMouseOut={MouseOut}
+                  >
+                    Match Pendientes
+                  </Link>
+
+                </div>
+                <p className="lead mb-0 fs-4" style={{fontFamily:"fantasy"}}>Mis Libros Publicados</p>
+                <div className="ms-3">
+                  <h5>{props.name}</h5>
+                  <p>{props.city}</p>
+                </div>
+              </div>
+              <div
+                className="p-4 text-black"
+                style={{ backgroundColor: "#f8f9fa" }}
+              >
+              </div>
+              <div className="card-body p-4 text-black">
+                <div className="row g-2">
+                  {store.products && store.products.map((p, i) => (
+                    <div
+                      key={i}
+                      className="col-md-4 d-flex justify-content-center align-items-center"
+                    >
+                      <Card3 title={p.title} autor={p.autor} editorial={p.editorial} />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
       <Footer2 />
