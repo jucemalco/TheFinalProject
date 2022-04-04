@@ -1,6 +1,8 @@
 const getState = ({ getStore, setStore, getActions }) => {
   return {
     store: {
+      pendingmatch: [],
+      filterbyid: [],
       user: null,
       users: [],
       favorito: [],
@@ -53,6 +55,7 @@ const getState = ({ getStore, setStore, getActions }) => {
           },
         });
       },
+
       addFav: (favorito) => {
         const state = getState();
         if (state.lista_favorito.includes(favorito)) {
@@ -61,6 +64,7 @@ const getState = ({ getStore, setStore, getActions }) => {
         setStore({ lista_favorito: [...state.lista_favorito, favorito] });
         return console.log(state.lista_favorito);
       },
+
       deleteFav: (index) => {
         const store = getStore();
         store.lista_favorito.splice(index, 1);
@@ -149,13 +153,7 @@ const getState = ({ getStore, setStore, getActions }) => {
           },
         });
       },
-
-
-      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
-      pendingMatch: (state, evento, navegate) => {
-        console.log("flux, state");
-        fetch("http://localhost:5000/pendingmatch", {
-
+     
       //PARA ELIMINAR USUARIO
       deleteUser: (userinfo) => {
         console.log(userinfo);
@@ -166,8 +164,7 @@ const getState = ({ getStore, setStore, getActions }) => {
             "Content-Type": "application/json",
           },
         })
-        },
-      
+      },
       //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
       sendMatching: (state) => {
         console.log(state);
@@ -198,7 +195,26 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((res) => res.json())
           .then((state) => console.log(state));
       },
-
+      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
+      pendingMatch: (userinfo) => {
+        fetch("http://localhost:5000/pendingmatch", {
+          method: "GET",
+          body: JSON.stringify(),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log("Success:", response);
+            const filterpending = response.filter(allobject => allobject.status == "pending")
+            console.log(filterpending)
+            const filterbyid = filterpending.filter(allobject => Number(allobject.user_id) == userinfo.user.id)
+            console.log(filterbyid)
+            setStore({ pendingmatch: filterbyid });            
+          })
+           .catch((error) => console.error("Error:", error));     
+      },
       //SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
       // acceptedmatches: () => {
       //},
@@ -224,8 +240,8 @@ const getState = ({ getStore, setStore, getActions }) => {
       //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
       // rejectrequest: () => {}
       //CRUD PARA EDITAR USUARIO
-    },
-  };
-};
+    }
+  }
+}
 
 export default getState;
