@@ -51,3 +51,11 @@
   background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
   font-family: fantasy;
 }
+
+
+.button-profile{
+  border: 2px solid #d0bdd8;
+  font-family: sans-serif;
+}
+
+

@@ -40,8 +40,8 @@ const Login = () => {
         <div className="image">
           <img src={BookMatch_Logo} style={{ width: "50%", heigth: "30%" }} />
         </div>
-        <h3 className="text-center ms-5">Somos el Team BookMatch</h3>
-        <h6 className="text-center ms-5">Por favor iniciar sesion</h6>
+        <h3 style={{fontFamily:"fantasy"}} className="text-center ms-5">Somos el Team BookMatch</h3>
+        <h6 style={{fontFamily:"fantasy"}} className="text-center ms-5">Por favor iniciar sesion</h6>
         <div className="row justify-content-center">
           <form
             onSubmit={(evento) => {
@@ -91,13 +91,14 @@ const Login = () => {
             </div>
             <div className="button text-center ms-5">
               <button
-                className="btn btn-outline-light gradient-custom-1 mt-3"
+                className="btn btn-outline-light gradient-custom mt-3"
                 type="submit" // onClick={() => { navegate("/src/UserProfile/UserProfile") }}//
+                style={{borderRadius: "25px", width: "25%"}}
               >
                 Iniciar Sesion
               </button>
               <br></br>
-              <div className="button btn btn-outline-secondary my-3 gradient-custom-1 mt-3">
+              <div className="button btn btn-outline-secondary my-3 gradient-custom mt-3">
                 <GoogleLogin
                   clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
                   buttonText="Login"
@@ -107,14 +108,15 @@ const Login = () => {
                 />
               </div>
             </div>
-            <h6 className="text-center mt-3  ms-5">¿Recuperar contraseña?</h6>
+            <h6 style={{fontFamily:"fantasy"}} className="text-center mt-3  ms-5">¿Recuperar contraseña?</h6>
 
-            <h6 className="text-center mt-4  ms-5">
+            <h6 style={{fontFamily:"fantasy"}} className="text-center mt-4  ms-5">
               ¿Aún no tienes una cuenta?{" "}
               <div>
                 <Link
                   to="/login/newaccount"
-                  className="btn btn-outline-light gradient-custom-1 mt-3"
+                  className="btn btn-outline-light gradient-custom mt-3"
+                  style={{borderRadius: "25px", width: "25%"}}
                 >
                   Resgistrate
                 </Link>
