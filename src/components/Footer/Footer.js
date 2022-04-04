@@ -23,7 +23,7 @@ const Footer = () => {
         <li className="ms-3">
           <a
             className="text-muted"
-            href="#"
+            href="https://www.instagram.com/bookmatch2022/"
             target="_blank"
             rel="noopener noreferrer"
           >

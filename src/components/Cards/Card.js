@@ -1,6 +1,8 @@
+import { text } from "@fortawesome/fontawesome-svg-core";
 import React, { useEffect, useContext } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import "./Card.css"
 
 
 const Card = (props) => {
@@ -31,10 +33,10 @@ const Card = (props) => {
           </dl>
         </p> 
         <Link to="/login/">
-          <i className="btn btn-primary">Quiero ver más</i>
+          <i className="btn btn" style={{background:"#4c3b80", color:"white"}}>Quiero ver más</i>
         </Link >
         &nbsp;
-        <Link to="/login/" className={`btn btn-outline-danger`} onClick="">
+        <Link to="/login/" className={`btn btn-outline`} style={{background:"#4c3b80", color:"white", borderRadius:"25px"}} onClick="">
           <AiOutlineHeart />
         </Link>
       </div>
