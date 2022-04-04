@@ -12,8 +12,11 @@ const PendingMatch = (props) => {
   //SOLICITUD DE MOSTRAR MATCH PENDIENTES
 
   const { store, actions } = useContext(Context);
+  let userinfo = localStorage.getItem("userinfo");
+  userinfo = JSON.parse(userinfo);
+  console.log(userinfo.user.id);
   useEffect(() => {
-    actions.pendingMatch();
+    actions.pendingMatch(userinfo);
   }, []);
 
   console.log(store.pendingmatch);
@@ -117,21 +120,21 @@ const PendingMatch = (props) => {
                 ></div>
                 <h1>Pendientes</h1>
                 <div className="card-body pending p-4 text-black">
-                  {store.pendingmatch &&
-                    store.pendingmatch.map((p, i) => (
-                      <div className="row g-2">
+                  <div className="row g-2">
+                    {store.pendingmatch &&
+                      store.pendingmatch.map((p, i) => (
                         <div
                           key={i}
-                          className="col-md-3 d-flex justify-content-center align-items-center"
+                          className="col-md-4 d-flex justify-content-center align-items-center"
                         >
                           <Card3
-                            title={p.title}
+                            title={p.book}
                             autor={p.autor}
                             editorial={p.editorial}
                           />
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                  </div>
                 </div>
               </div>
             </div>
