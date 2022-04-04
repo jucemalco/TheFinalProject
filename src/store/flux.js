@@ -151,13 +151,6 @@ const getState = ({ getStore, setStore, getActions }) => {
           },
         });
       },
-
-
-      //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
-      pendingMatch: (state, evento, navegate) => {
-        console.log("flux, state");
-        fetch("http://localhost:5000/pendingmatch", {
-
       //PARA ELIMINAR USUARIO
       deleteUser: (userinfo) => {
         console.log(userinfo);
@@ -168,8 +161,7 @@ const getState = ({ getStore, setStore, getActions }) => {
             "Content-Type": "application/json",
           },
         })
-        },
-      
+      },
       //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
       sendMatching: (state) => {
         console.log(state);
@@ -216,11 +208,9 @@ const getState = ({ getStore, setStore, getActions }) => {
             console.log(filterpending)
             const filterbyid = filterpending.filter(allobject => Number(allobject.user_id) == userinfo.user.id)
             console.log(filterbyid)
-
-
             setStore({ pendingmatch: filterbyid });            
-            })
-          .catch((error) => console.error("Error:", error));
+          })
+           .catch((error) => console.error("Error:", error));     
       },
       //SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
       // acceptedmatches: () => {
