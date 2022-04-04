@@ -153,7 +153,6 @@ const getState = ({ getStore, setStore, getActions }) => {
           },
         });
       },
-     
       //PARA ELIMINAR USUARIO
       deleteUser: (userinfo) => {
         console.log(userinfo);
