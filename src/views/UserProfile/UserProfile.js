@@ -11,7 +11,11 @@ const UserProfile = (props) => {
   useEffect(() => {
     actions.getProducts();
   }, []);
-  console.log(store);
+  console.log(store.user);
+
+  let userinfo = localStorage.getItem("userinfo");
+  userinfo = JSON.parse(userinfo);
+
   return (
     <>
       {" "}
@@ -40,11 +44,9 @@ const UserProfile = (props) => {
                       type="button"
                       className="btn btn-outline-light gradient-custom-1 "
                       data-mdb-ripple-color="dark"
-
                       style={{ zIndex: "1" }}
                     >
-                      Editar o Eliminar Perfil
-
+                      Editar/Eliminar Perfil
                     </Link>
                   </div>
                   <ul
@@ -54,7 +56,7 @@ const UserProfile = (props) => {
                   ></ul>
                   <div className="historybootom">
                     <div
-                      className="ms-4 mt-1 d-flex flex-column"
+                      className="ms-4 mt-10 d-flex flex-column"
                       style={{ width: "150px" }}
                     >
                       <Link
@@ -110,12 +112,12 @@ const UserProfile = (props) => {
                   style={{ backgroundColor: "#f8f9fa" }}
                 ></div>
                 <div className="card-body p-4 text-black">
-                  <div className="row g-2 pt-4">
+                  <div className="row g-2">
                     {store.products &&
                       store.products.map((p, i) => (
                         <div
                           key={i}
-                          className="col-md-4 d-flex justify-content-center align-items-start"
+                          className="col-md-4 d-flex justify-content-center align-items-center"
                         >
                           <Card3
                             title={p.title}
