@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./UserProfile.css";
 import Card3 from "../../components/Card3/Card3";
 import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
-import Footer2 from "../../components/FotterLogueado/Footer2"
+import Footer2 from "../../components/FotterLogueado/Footer2";
 
 const UserProfile = (props) => {
   const { store, actions } = useContext(Context);

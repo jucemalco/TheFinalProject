@@ -98,10 +98,10 @@ const Login = () => {
                 Iniciar Sesion
               </button>
               <br></br>
-              <div className="button btn btn-outline-secondary my-3 gradient-custom mt-3">
+              <div className="button my-3">
                 <GoogleLogin
                   clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-                  buttonText="Login"
+                  buttonText="iniciar sesion con google"
                   onSuccess={responseGoogle}
                   onFailure={responseGoogle}
                   cookiePolicy={"single_host_origin"}

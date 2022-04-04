@@ -10,7 +10,7 @@ import { Modal, Button } from "react-bootstrap";
 const Details = (props) => {
   const { store, actions } = useContext(Context);
   const [show, setShow] = useState(false);
-  const handleClose = () =>  setShow(false);
+  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestmatch
@@ -23,19 +23,19 @@ const Details = (props) => {
   let userinfo = localStorage.getItem("userinfo");
   userinfo = JSON.parse(userinfo);
   console.log(userinfo.user.id);
-  const booktitle = store.product?.title
+  const booktitle = store.product?.title;
   //requestMatching
   const [state, setState] = useState({
-    book: store.product?.title,
+    book: booktitle || store.product?.title,
     interested: userinfo.user.name,
     user_id: userinfo.user.id,
     status: "pending",
   });
-  
-  console.log(state)
+
+  console.log(state);
   const matching = () => {
-    actions.sendMatching(state)
-    setShow(false)
+    actions.requestMatching(state);
+    setShow(false);
   };
 
   return (
@@ -60,7 +60,7 @@ const Details = (props) => {
             <div className="col">
               <h1 className="titledetails">{store.product?.title}</h1>
               <h4 className="titledetails2">{store.product?.editorial}</h4>
-              {/* <h5 className="">{store.product?.review}</h5> */}
+              <h5 className="">{store.product?.review}</h5>
               <p>
                 Ea nisi ea aliquip occaecat excepteur veniam nisi. Aute officia
                 cupidatat occaecat cupidatat duis nostrud dolore eiusmod
@@ -103,11 +103,9 @@ const Details = (props) => {
                 <Modal.Header closeButton>
                   <Modal.Title>MatchBook</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                  Seguro de hacer Match?
-                </Modal.Body>
+                <Modal.Body>Seguro de hacer Match?</Modal.Body>
                 <Modal.Footer>
-                  <Button variant="secondary" onClick={() =>matching()}>
+                  <Button variant="secondary" onClick={() => matching()}>
                     Sí
                   </Button>
                   <Button variant="primary" onClick={handleClose}>

@@ -17,14 +17,13 @@
   );
 }
 .nav-link.active.btn.btn-outline-dark {
-  
   color: white;
   border: 1px solid black;
 }
-.editperfil {
+/* .editperfil {
   margin-top: -25px;
   margin-bottom: 200px;
-}
+} */
 .mislibros {
   margin-top: 4px;
   margin-bottom: 200px;
@@ -44,7 +43,6 @@
 .historybootom2 {
   margin-top: 30px;
 }
-
 
 .gradient-custom-1 {
   /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
