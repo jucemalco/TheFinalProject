@@ -42,7 +42,7 @@ const UserProfile = (props) => {
                     <Link
                       to="/miperfil/editdata/"
                       type="button"
-                      className="btn btn-outline-dark editperfil"
+                      className="btn btn-outline-light gradient-custom-1 "
                       data-mdb-ripple-color="dark"
                       style={{ zIndex: "1" }}
                     >
@@ -62,7 +62,7 @@ const UserProfile = (props) => {
                       <Link
                         to=""
                         type="button"
-                        className="btn btn-outline-dark active mislibros"
+                        className="btn btn-outline-light gradient-custom-1"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >
@@ -78,7 +78,7 @@ const UserProfile = (props) => {
                       <Link
                         to="/userprofile/pendingmatch"
                         type="button"
-                        className="btn btn-outline-dark matchpendientes"
+                        className="btn btn-outline-light gradient-custom-1"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >
@@ -94,7 +94,7 @@ const UserProfile = (props) => {
                       <Link
                         to="/userprofile/aceptedmatch"
                         type="button"
-                        className="btn btn-outline-dark matchaceptados"
+                        className="btn btn-outline-light gradient-custom-1 matchaceptados"
                         data-mdb-ripple-color="dark"
                         style={{ zIndex: "1" }}
                       >

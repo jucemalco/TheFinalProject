@@ -1,8 +1,14 @@
 import React from "react"
 import "./index.css";
+<<<<<<< HEAD
 import Foto1 from "../../images/Foto1.jpeg"
 import Foto2 from "../../images/Foto2.jpeg"
 import Foto3 from "../../images/Foto3.jpeg"
+=======
+import Foto1 from "../../images/Foto1.png"
+import Foto2 from "../../images/Foto2.png"
+import Foto3 from "../../images/Foto3.png"
+>>>>>>> 7314956bf43a0e69dac40fa5b6281ea9c3185e9a
 
 const Carousel = () => {
     return <div className="container-fluid mt-3">
