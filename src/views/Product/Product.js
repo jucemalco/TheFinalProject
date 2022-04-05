@@ -4,22 +4,22 @@ import ProfileNavbar from "../../components/ProfileNavbar/ProfileNavbar";
 import Footer2 from "../../components/FotterLogueado/Footer2.js"
 import "./Product.css"
 //FALTA AGREGAR EL CAMPO USER_ID PARA CREAR LIBRO CON USER QUE ESTA LOGGEADO
+
 const Product = () => {
-    
-    let userinfo = localStorage.getItem('userinfo');
-    userinfo = JSON.parse(userinfo)
-    console.log(userinfo.user.id) 
-    
+
+    // let userinfo = localStorage.getItem('userinfo');
+    // userinfo = JSON.parse(userinfo)
+    // console.log(userinfo.user.id) 
+
     const { store, actions } = useContext(Context)
     const [state, setState] = useState({
         title: "",
         autor: "",
         editorial: "",
         review: "",
-        user_id: userinfo.user.id
-        
+        // user_id: userinfo.user.id
     })
-        
+
     const onChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value })
     }
@@ -32,15 +32,15 @@ const Product = () => {
     return (
         <>
             <ProfileNavbar />
-            <div className="container ">
+            <div className="container mt-5" style={{ background: "#ebebee", maxWidth: "780px", borderRadius: "25px" }}>
                 <div className="row">
                     <div className="col-12">
                         <h1 className="titleproduct">Publica tu Libro</h1>
                     </div>
                 </div>
-                <form onSubmit={(e) => onSubmit(e)}>
-                    <div className="mb-3 row formproduct">
-                        <label htmlFor="title" className="col-sm-2 col-form-label">Titulo</label>
+                <form className="formsize" onSubmit={(e) => onSubmit(e)}>
+                    <div className="mb-3 row formproduct" style= {{ textAlign: "left"}}>
+                        <label htmlFor="title" className="me-6 col-sm-2 col-form-label">Titulo</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
@@ -52,7 +52,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                        <label htmlFor="autor" className="col-sm-2 col-form-label">Autor</label>
+                        <label htmlFor="autor" className="col-sm-2 col-form-label" style= {{ textAlign: "left"}}>Autor</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
@@ -64,7 +64,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                        <label htmlFor="editorial" className="col-sm-2 col-form-label">Editorial</label>
+                        <label htmlFor="editorial" className="col-sm-2 col-form-label" style= {{ textAlign: "left"}}>Editorial</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
@@ -76,7 +76,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                        <label htmlFor="category" className="col-sm-2 col-form-label">Categoría</label>
+                        <label htmlFor="category" className="col-sm-2 col-form-label" style= {{ textAlign: "left"}}>Categoría</label>
                         <div className="col-sm-10">
                             <select className="form-select" aria-label="Default select example">
                                 <option defaultValue>Escoge una categoria</option>
@@ -89,35 +89,36 @@ const Product = () => {
                             </select>
                         </div>
                     </div>
-                    <div className="mb-3 row formproductreview">
-                        <label htmlFor="review" className="col-sm-2 col-form-label">Reseña</label>
-                        <div className="col-sm-10">
-                            <input
-                                aria-label="With textarea"
+                    <div className="mb-3 row ">
+                        <label htmlFor="review" className="col-sm-2 col-form-label review2">Reseña</label>
+                        <div className="mb-3 formproductreview3">
+                            <textarea
                                 className="form-control"
                                 id="review"
                                 onChange={(e) => onChange(e)}
                                 name="review"
-                                placeholder="Reseña" />
+                                placeholder="Reseña">
+                            </textarea>
                         </div>
+
                     </div>
-                    <div className="mb-3 formproduct">
+                    <div className="mb-3 formproduct3">
                         <label htmlFor="" className="col col-form-label"></label>
                         <input type="file" className="form-control" id="inputGroupFile01" />
                     </div>
                     <div className="text-center">
-                        <button className="btn btn-primary" type="submit">
+                        <button className="btn btn" style={{ background: "#4c3b80", color: "white", borderRadius: "25px", marginTop: "10px", marginBottom: "20px" }} type="submit">
                             Publicar
                         </button>
                     </div>
                     <div>
-                            <input type="hidden"></input>
+                        <input type="hidden"></input>
                     </div>
                 </form>
             </div>
             <Footer2 />
         </>
     )
-}
+};
 
 export default Product; 

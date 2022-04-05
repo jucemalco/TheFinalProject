@@ -1,7 +1,8 @@
+import { toast } from "react-toastify";
 const getState = ({ getStore, setStore, getActions }) => {
   return {
     store: {
-      pendingmatch: [],
+      pendingreceive: [],
       filterbyid: [],
       user: null,
       users: [],
@@ -17,12 +18,22 @@ const getState = ({ getStore, setStore, getActions }) => {
       },
     },
     actions: {
+      // MUESTRA TODOS LOS LIBROS EN EL HOME, FLUX DESDE COMPONENTE HOME
       getProducts: () => {
         fetch("http://localhost:5000/products")
           .then((res) => res.json())
           .then((state) => setStore({ products: state }))
           .catch((error) => console.log(error));
       },
+      
+      //  MUESTRA SOLO MIS LIBROS PUBLICADOS POR EL USUARIO, FILTRADO POR ID quien inició sesión, COMPONENTE USERPROFILE
+      userProducts: (userinfo) => {
+        fetch("http://localhost:5000/userproducts/" + userinfo.user.id)
+          .then((res) => res.json())
+          .then((state) => setStore({ products: state }))
+          .catch((error) => console.log(error));
+      },
+      // MUESTRA EL LIBRO POR DETALLE EN EL HOME, DESDE SU COMPONENTE DETAILS
       getProduct: (id) => {
         fetch("http://localhost:5000/product/" + id)
           .then((res) => res.json())
@@ -55,6 +66,7 @@ const getState = ({ getStore, setStore, getActions }) => {
           },
         });
       },
+
       addFav: (favorito) => {
         const state = getState();
         if (state.lista_favorito.includes(favorito)) {
@@ -63,6 +75,7 @@ const getState = ({ getStore, setStore, getActions }) => {
         setStore({ lista_favorito: [...state.lista_favorito, favorito] });
         return console.log(state.lista_favorito);
       },
+
       deleteFav: (index) => {
         const store = getStore();
         store.lista_favorito.splice(index, 1);
@@ -124,10 +137,11 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((res) => res.json())
           .then((response) => {
             if (response.success) {
+              toast.success(response.msg)
               navegate("/login");
             }
+            console.log(response)
           })
-          .then((response) => console.log("Success:", response))
           .catch((error) => console.error("Error:", error));
       },
       //PARA EDITAR USUARIOS
@@ -193,8 +207,8 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((state) => console.log(state));
       },
       //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
-      pendingMatch: (userinfo) => {
-        fetch("http://localhost:5000/pendingmatch", {
+      pendingReceive: (userinfo) => {
+        fetch("http://localhost:5000/pendingreceive", {
           method: "GET",
           body: JSON.stringify(),
           headers: {
@@ -208,7 +222,7 @@ const getState = ({ getStore, setStore, getActions }) => {
             console.log(filterpending)
             const filterbyid = filterpending.filter(allobject => Number(allobject.user_id) == userinfo.user.id)
             console.log(filterbyid)
-            setStore({ pendingmatch: filterbyid });            
+            setStore({ pendingreceive: filterbyid });            
           })
            .catch((error) => console.error("Error:", error));     
       },
