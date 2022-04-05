@@ -23,7 +23,7 @@ const Footer = () => {
         <li className="ms-3">
           <a
             className="text-muted"
-            href="#"
+            href="https://www.instagram.com/bookmatch2022/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -37,7 +37,7 @@ const Footer = () => {
         <li className="ms-3">
           <a
             className="text-muted"
-            href="#"
+            href="https://twitter.com/Bookmatchcl"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -51,7 +51,7 @@ const Footer = () => {
         <li className="ms-3">
           <a
             className="text-muted"
-            href="#"
+            href="https://www.facebook.com/BookMatch-103136199036045"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -39,11 +39,11 @@ const ProfileNavbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link className="nav-link text-white" to="/logueado/">
-                <i className="fa fa-home p-2">Inicio</i>
+              <i className="fa fa-home p-2"><span className="p-2">Inicio</span></i>
               </Link>
             </li>
 
-            <li className="nav-item dropdown ms-2" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+            <li className="nav-item dropdown ms-2 me-2" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link
                 className="nav-link dropdown-toggle text-white" 
                 to="#"
@@ -82,7 +82,7 @@ const ProfileNavbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown ms-1" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+            <li className="nav-item dropdown ms-1 me-1" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link
                 className="nav-link dropdown-toggle text-white" 
                 to="myaccount"
@@ -114,17 +114,12 @@ const ProfileNavbar = () => {
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/userprofile/aceptedmatch/">
-                     Mis Match
+                     Mis Match Enviados
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/userprofile/pendingmatch/">
-                     Mis Match Pendientes
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="">
-                     Mis Favoritos
+                     Mis Match Recibidos
                   </Link>
                 </li>
                 <li>
@@ -134,7 +129,7 @@ const ProfileNavbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown ms-1 me-3" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+            <li className="nav-item dropdown ms-1 me-4" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link
                 className="nav-link dropdown-toggle text-white"
                 to="myaccount"
@@ -163,7 +158,7 @@ const ProfileNavbar = () => {
               
               </ul>
             </li>
-            <li className="nav-item mt-1 me-5" >
+            <li className="nav-item mt-1 ms-2" >
               <Link className="nav-link text-white" to="/aboutuslog/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <span className>Nosotros</span>
               </Link>

@@ -4,16 +4,16 @@
   /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204);
   background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
   border: 2px solid #bdbdbd;
-  border-radius: 4px;
+  border-radius: 15px;
   width: 700px;
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
   margin-top: 5%;
 }
 
 .gradient-custom-1 {
     /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
-    background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
+    background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #222222);
     font-family: fantasy;
 }
 
