@@ -12,13 +12,13 @@ const PendingReceive = (props) => {
   //SOLICITUD DE MOSTRAR MATCH PENDIENTES
 
   const { store, actions } = useContext(Context);
-  // let userinfo = localStorage.getItem("userinfo");
-  // userinfo = JSON.parse(userinfo);
-  // console.log(userinfo.user.id);
+  let userinfo = localStorage.getItem("userinfo");
+  userinfo = JSON.parse(userinfo);
+  console.log(userinfo.user.id);
 
-  // useEffect(() => {
-  //   actions.pendingReceive(userinfo);
-  // }, []);
+  useEffect(() => {
+  actions.pendingReceive(userinfo);
+  }, []);
 
   console.log(store.pendingreceive);
   function MouseOver(event) {
