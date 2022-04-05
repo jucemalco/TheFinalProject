@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import "./Form.css";
 import { useNavigate } from "react-router-dom";
+import BookMatch_Logo from "../../images/BookMatch_Logo.png"
 
 /* FORMULARIO PARA REGISTRARSE*/
 const Form = () => {
@@ -26,13 +27,15 @@ const Form = () => {
     <>
       {" "}
       <Navbar />
-      <div className="container">
-        <div className="form">
+      <div className="container col-6 form">
+      <div className="image2">
+          <img src={BookMatch_Logo} style={{ width: "50%", heigth: "-30px", marginTop: "5px", marginBottom: "-17px" }} />
+        </div>
           <legend>
             {" "}
-            <h1 style={{fontFamily:"fantasy"}} className="form-title text-white">Crear una nueva cuenta</h1>
+            <h3 style={{fontFamily:"fantasy",  marginTop: "-20px", marginBottom: "-10px"}} className="form-title text-center">Crear una nueva cuenta</h3>
           </legend>
-          <h2 style={{fontFamily:"fantasy"}} className="form-subtitle text-white">Información Personal</h2>
+          <h6 style={{fontFamily:"fantasy",  marginTop: "0px", marginBottom: "-10px" }} className="form-title text-center">Información Personal</h6>
           <br></br>
 
           <form onSubmit={(evento) => onSubmit(evento)}>
@@ -133,22 +136,19 @@ const Form = () => {
             <div className="asterisk d-flex ms-4">
               <i 
                 className="fa fa-asterisk"
-                style={{ fontSize: 6, color: "#fd4444" }}
+                style={{ fontSize: 10, color: "#fd4444" }}
               >  Campos Obligatorios</i>
             </div>
 
             <button
               className="btn btn-outline-light gradient-custom mt-3" 
-              style={{borderRadius: "25px", width: "20%"}}
+              style={{borderRadius: "25px", width: "30%", marginBottom: "20px"}}
               type="submit"
             >
-              
               Crear una cuenta
             </button>
           </form>
           <ul></ul>
-        </div>
-
       </div>
       <Footer />
     </>

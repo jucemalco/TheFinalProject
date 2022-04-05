@@ -16,7 +16,7 @@ const Logueado = () => {
         <Carousel />
       {""}
       <div className="container">
-        <div className="mt-3 mb-4">
+        <div className="mt-3 mb-5">
           <h1 className="title1">Novedades</h1>
         </div>
         <div className="row">

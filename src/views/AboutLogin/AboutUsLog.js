@@ -22,7 +22,6 @@ const AboutUsLog = () => {
                         <h3 style={{fontFamily:"fantasy"}} className="us">Nicolás Aravena</h3>
                         <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/thenoa96/">
                         <BsLinkedin />
-                    
                     </a>
                     </div>
                     <div className="col-3 mt-5">

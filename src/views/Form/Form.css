@@ -5,13 +5,18 @@ body{
 .form {
     background-color: #f5eeea; 
     border: 2px solid #bdbdbd;
-    width: 800px;
+    width: 550px;
     height: 90%;
-    margin: 0 auto;
+    margin-top: 60px;
     border-radius: 15px;
     background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
     background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
 } 
+
+div.image2 {
+    padding: 30px;
+    text-align: center;
+  }
 
 .asterisk {
     color: #fd4444;

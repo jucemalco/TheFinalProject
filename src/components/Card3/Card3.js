@@ -31,7 +31,7 @@ const Card3 = (props) => {
           </dl>
         </p> 
         <Link to="/detailsmybooks">
-          <i className="btn btn-primary">Quiero ver más</i>
+          <i className="btn btn" style={{background:"#4c3b80", color:"white", borderRadius:"25px"}}>Quiero ver más</i>
         </Link>
         &nbsp;
       </div>

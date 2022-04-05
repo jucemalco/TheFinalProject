@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore, getActions }) => {
   return {
     store: {
-      pendingmatch: [],
+      pendingreceive: [],
       filterbyid: [],
       user: null,
       users: [],
@@ -55,6 +55,7 @@ const getState = ({ getStore, setStore, getActions }) => {
           },
         });
       },
+
       addFav: (favorito) => {
         const state = getState();
         if (state.lista_favorito.includes(favorito)) {
@@ -63,6 +64,7 @@ const getState = ({ getStore, setStore, getActions }) => {
         setStore({ lista_favorito: [...state.lista_favorito, favorito] });
         return console.log(state.lista_favorito);
       },
+
       deleteFav: (index) => {
         const store = getStore();
         store.lista_favorito.splice(index, 1);
@@ -193,8 +195,8 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((state) => console.log(state));
       },
       //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
-      pendingMatch: (userinfo) => {
-        fetch("http://localhost:5000/pendingmatch", {
+      pendingReceive: (userinfo) => {
+        fetch("http://localhost:5000/pendingreceive", {
           method: "GET",
           body: JSON.stringify(),
           headers: {
@@ -208,7 +210,7 @@ const getState = ({ getStore, setStore, getActions }) => {
             console.log(filterpending)
             const filterbyid = filterpending.filter(allobject => Number(allobject.user_id) == userinfo.user.id)
             console.log(filterbyid)
-            setStore({ pendingmatch: filterbyid });            
+            setStore({ pendingreceive: filterbyid });            
           })
            .catch((error) => console.error("Error:", error));     
       },
