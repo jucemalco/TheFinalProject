@@ -18,13 +18,22 @@ const getState = ({ getStore, setStore, getActions }) => {
       },
     },
     actions: {
-      getProducts: (userinfo) => {
+      // MUESTRA TODOS LOS LIBROS EN EL HOME, FLUX DESDE COMPONENTE HOME
+      getProducts: () => {
         fetch("http://localhost:5000/products")
           .then((res) => res.json())
           .then((state) => setStore({ products: state }))
           .catch((error) => console.log(error));
-                    
       },
+      
+      //  MUESTRA SOLO MIS LIBROS PUBLICADOS POR EL USUARIO, FILTRADO POR ID quien inició sesión, COMPONENTE USERPROFILE
+      userProducts: (userinfo) => {
+        fetch("http://localhost:5000/userproducts/" + userinfo.user.id)
+          .then((res) => res.json())
+          .then((state) => setStore({ products: state }))
+          .catch((error) => console.log(error));
+      },
+      // MUESTRA EL LIBRO POR DETALLE EN EL HOME, DESDE SU COMPONENTE DETAILS
       getProduct: (id) => {
         fetch("http://localhost:5000/product/" + id)
           .then((res) => res.json())

@@ -11,7 +11,7 @@ const UserProfile = (props) => {
   let userinfo = localStorage.getItem("userinfo");
   userinfo = JSON.parse(userinfo);
   useEffect(() => {
-    actions.getProducts(userinfo);
+    actions.userProducts(userinfo);
   }, []);
   console.log(store)
 
