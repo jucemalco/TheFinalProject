@@ -26,7 +26,7 @@ const Details = (props) => {
   const booktitle = store.product?.title;
   //requestMatching
   const [state, setState] = useState({
-    book: booktitle || store.product?.title,
+    book: store.product?.title,
     interested: userinfo.user.name,
     user_id: userinfo.user.id,
     status: "pending",

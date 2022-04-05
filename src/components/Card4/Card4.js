@@ -31,10 +31,10 @@ console.log(props)
           </dl>
         </p> 
         <Link to={"/details/" + props.id}>
-          <i className="btn btn-primary">Quiero ver más</i>
+          <i className="btn btn"  style={{background:"#4c3b80", color:"white", borderRadius:"25px"}}>Quiero ver más</i>
         </Link >
         &nbsp;
-        <buttons to="" className={`btn btn-outline-danger`} onClick="">
+        <buttons to="" className={`btn btn-outline`} style={{background:"#4c3b80", color:"white", borderRadius:"25px"}} onClick="">
           <AiOutlineHeart />
         </buttons>
       </div>

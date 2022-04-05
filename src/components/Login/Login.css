@@ -2,13 +2,15 @@
   background-color: #f5eeea;
   /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204);
   background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
-  border: 2px solid #bdbdbd;
-  border-radius: 15px;
-  width: 800px;
+ 
+  border-radius: 20px;
+  width: 550px;
   height: 90%;
-  margin: 0 auto;
+
+
   background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
   background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
+  margin-top: 70px;
 }
 
 div.image {

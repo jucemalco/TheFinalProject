@@ -20,10 +20,12 @@ const AboutUsLog = () => {
                     <div className="col-3 mt-5">
                         <img className="rounded-circle mb-3" src={Nico} />
                         <h3 style={{fontFamily:"fantasy"}} className="us">Nicolás Aravena</h3>
+
                         <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/thenoa96//" target="_blank"
                             rel="noopener noreferrer">
                             <BsLinkedin />
                         </a>
+
                     </div>
                     <div className="col-3 mt-5">
                         <img className="rounded-circle mb-3" src={Vane} />
