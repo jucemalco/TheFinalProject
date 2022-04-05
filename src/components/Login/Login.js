@@ -38,10 +38,10 @@ const Login = () => {
       <Navbar />
       <div className="container login col-6">
         <div className="image">
-          <img src={BookMatch_Logo} style={{ width: "50%", heigth: "30%" }} />
+          <img src={BookMatch_Logo} style={{ width: "50%", heigth: "30%", marginTop: "5px", marginBottom: "-17px" }} />
         </div>
-        <h3 style={{fontFamily:"fantasy"}} className="text-center ms-5">Somos el Team BookMatch</h3>
-        <h6 style={{fontFamily:"fantasy"}} className="text-center ms-5">Por favor iniciar sesion</h6>
+        <h3 style={{ fontFamily: "fantasy" }} className="text-center  mb-3">Somos el Team BookMatch</h3>
+        <h6 style={{ fontFamily: "fantasy", marginTop: "-11px", marginBottom: "12px" }} className="text-center">Por favor iniciar sesion</h6>
         <div className="row justify-content-center">
           <form
             onSubmit={(evento) => {
@@ -49,10 +49,10 @@ const Login = () => {
             }}
           >
             <div className="row justify-content-center">
-              <label className="col-md-auto text-white" htmlFor="email">
+              <label className="col-auto text-white" htmlFor="email">
                 <i
-                  className="fa fa-user fa-2x ms-2"
-                  style={{ color: "#d0bdd8" }}
+                  className="fa fa-user fa-2x"
+                  style={{ color: "#d0bdd8", marginLeft: "-40px" }}
                 ></i>
               </label>
               <div className="col-4">
@@ -60,6 +60,7 @@ const Login = () => {
                   type="email"
                   placeholder="Escribe tu email"
                   className="form-control mb-3"
+                  style={{ width: "130%", marginLeft: "-20px" }}
                   id="email"
                   value={state.email}
                   name="email"
@@ -72,8 +73,8 @@ const Login = () => {
             <div className="row justify-content-center">
               <label className="col-md-auto text-white" htmlFor="password">
                 <i
-                  className="fa fa-unlock-alt fa-2x ms-2"
-                  style={{ color: "#d0bdd8" }}
+                  className="fa fa-unlock-alt fa-2x"
+                  style={{ color: "#d0bdd8", marginLeft: "-40px" }}
                 ></i>
               </label>
               <div className="col-4">
@@ -81,6 +82,7 @@ const Login = () => {
                   type="password"
                   placeholder="Escribe tu contraseña"
                   className="form-control mb-3"
+                  style={{ width: "130%", marginLeft: "-20px" }}
                   id="password"
                   value={state.password}
                   name="password"
@@ -89,15 +91,15 @@ const Login = () => {
                 />
               </div>
             </div>
-            <div className="button text-center ms-5">
+            <div className="button text-center">
               <button
                 className="btn btn-outline-light gradient-custom mt-3"
                 type="submit" // onClick={() => { navegate("/src/UserProfile/UserProfile") }}//
-                style={{borderRadius: "25px", width: "25%"}}
+                style={{ borderRadius: "25px", width: "25%", marginBottom: "10px" }}
               >
                 Iniciar Sesion
               </button>
-              <br></br>
+              
               <div className="button my-3">
                 <GoogleLogin
                   clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
@@ -108,20 +110,19 @@ const Login = () => {
                 />
               </div>
             </div>
-            <h6 style={{fontFamily:"fantasy"}} className="text-center mt-3  ms-5">¿Recuperar contraseña?</h6>
-
-            <h6 style={{fontFamily:"fantasy"}} className="text-center mt-4  ms-5">
+            <h6 style={{ fontFamily: "fantasy" }} className="text-center mt-3">¿Recuperar contraseña?</h6>
+            <h6 style={{ fontFamily: "fantasy" }} className="text-center mt-3">
               ¿Aún no tienes una cuenta?{" "}
+              </h6>
               <div>
                 <Link
                   to="/login/newaccount"
-                  className="btn btn-outline-light gradient-custom mt-3"
-                  style={{borderRadius: "25px", width: "25%"}}
-                >
+                  className="btn btn-outline-light gradient-custom mt-2 mb-5"
+                  style={{ borderRadius: "25px", width: "25%" }}
+                  >
                   Resgistrate
                 </Link>
               </div>
-            </h6>
           </form>
         </div>
       </div>
