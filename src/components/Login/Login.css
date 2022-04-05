@@ -6,9 +6,11 @@
   border-radius: 20px;
   width: 550px;
   height: 90%;
+
+
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
+  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
   margin-top: 70px;
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #050204);
 }
 
 div.image {

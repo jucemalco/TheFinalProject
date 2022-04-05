@@ -1,13 +1,14 @@
 import React from "react";
 import "./TheMostRead.css";
+import Navbar from "../Navbar/Navbar";
 import Footer2 from "../FotterLogueado/Footer2";
 
 
 const TheMostRead = () => {
 
     return <>
-
-    <div className="container theMostRead">
+    <Navbar />
+<div className="container theMostRead">
         <div className="title-most-read mt-3 p-4">
             <h1>Los Más Leídos</h1>
             <hr></hr>

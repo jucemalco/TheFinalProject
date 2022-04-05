@@ -35,12 +35,12 @@ const EditData = () => {
             <ProfileNavbar />
             <div className="container edit">
 
-                <h2 className="form-title text-white text-center mt-4">Editar Mis Datos</h2>
+                <h2 className="form-title text-white text-center mt-4"style={{fontFamily:"fantasy"}}>Editar Mis Datos</h2>
 
                 <form onSubmit={(evento) => onSubmit(evento)} >
                     
                     <div className=" col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                        <label htmlFor="formGroupExampleInput" className="form-label d-flex">Nombres</label>
+                        <label htmlFor="formGroupExampleInput" className="form-label d-flex"style={{fontFamily:"fantasy"}}>Nombres</label>
                         <input
                             name="name"
                             type="text"
@@ -55,7 +55,7 @@ const EditData = () => {
 
 
                     <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                        <label htmlFor="formGroupExampleInput2" className="form-label d-flex">Apellidos</label>
+                        <label htmlFor="formGroupExampleInput2" className="form-label d-flex"style={{fontFamily:"fantasy"}}>Apellidos</label>
                         <input
                             name="surname"
                             type="text"
@@ -68,7 +68,7 @@ const EditData = () => {
 
 
                     <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                        <label htmlFor="inputEmail4" className="form-label d-flex">Password</label>
+                        <label htmlFor="inputEmail4" className="form-label d-flex"style={{fontFamily:"fantasy"}}>Password</label>
                         <input
                             name="password"
                             type="password"
@@ -80,9 +80,9 @@ const EditData = () => {
 
 
                     <div className=" col-12 p-4 mb-2 text-center mt-3">
-                        <button type="submit" className="btn btn-outline-light gradient-custom-1 px-4">Guardar</button>
+                        <button type="submit" className="btn btn-outline-light gradient-custom-1 px-4"style={{borderRadius: "25px", width: "25%"}}>Guardar</button>
                         
-                        <button className="btn btn-outline-light gradient-custom-1 px-4 mt-3" onClick={() =>deleteUser()}>Eliminar Perfil</button>
+                        <button className="btn btn-outline-light gradient-custom-1 px-4 mt-3" onClick={() =>deleteUser()}style={{borderRadius: "25px", width: "25%"}}>Eliminar Perfil</button>
                     </div>
                 </form>
             </div>

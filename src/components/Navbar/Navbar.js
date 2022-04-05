@@ -37,10 +37,9 @@ export const Navbar = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
-                  <i className="fa fa-home p-2">Inicio</i>
+                <i className="fa fa-home p-2"><span className="p-2">Inicio</span></i>
                 </Link>
               </li>
-
               <li className="nav-item dropdown" onMouseOver={MouseOver} onMouseOut={MouseOut}>
                 <Link
                   className="nav-link dropdown-toggle text-white"
@@ -51,9 +50,8 @@ export const Navbar = () => {
                   aria-expanded="false"
                 >
                   <i className="fa fa-book p-2"></i>
-                  <span>Libros</span>
+                  <span> Libros</span>
                 </Link>
-
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown" >
                   <li>
                     <Link className="dropdown-item" to="losmasleidos">
@@ -82,11 +80,10 @@ export const Navbar = () => {
               </li>
               <li className="nav-item dropdown" >
                 <Link className="nav-link dropdown-toggle text-white" to="/login/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
-                  <i className="fa fa-heart-o p-2" style={{ color: "#fa5d5d" }}></i>
-                  <span>Mis Favoritos</span>
+                   <i className="fa fa-heart-o p-2" style={{ color: "#fa5d5d" }}></i> 
+                  <span>Mis Favoritos</span> 
                 </Link>
               </li>
-
               <li id="nav-item">
                 <Link className="nav-link text-white"  to="/about/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
                   <span>Nosotros</span>

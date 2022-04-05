@@ -57,9 +57,16 @@ h5{
 }
 
 .details{
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
       rgb(116, 91, 109),
       rgba(166, 193, 238, 1)
-    );
+    ); */
+    background: #ebebee;
+    width: 600px;
+}
+
+
+.text-details{
+    text-align: justify;  
 }
