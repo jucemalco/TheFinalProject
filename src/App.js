@@ -4,7 +4,6 @@ import Home from "./views/Home/Home";
 import Login from "./components/Login/Login";
 import Form from "./views/Form/Form";
 import EditData from "./components/Editdata/EditData";
-// import Favorites from "./views/Favorites/Favorites";
 import injectContext from "./store/appContext";
 import Product from "./views/Product/Product";
 import MatchStatus from "./views/MatchStatus/MatchStatus";
@@ -35,7 +34,6 @@ function App() {
           <Route path="/userprofile" element={<UserProfile />} />
           <Route path="/userprofile/pendingreceive" element={<PendingReceive />} />
           <Route path="/userprofile/pendingsend" element={<PendingSend />} />
-          {/* <Route path="/miperfil/misfavoritos" element={<Favorites />} /> */}
           <Route path="/match-status" element={<MatchStatus />} />
           <Route path="/admin/product" element={<Product />} />
           <Route path="/details/:id" element={<Details />} />
