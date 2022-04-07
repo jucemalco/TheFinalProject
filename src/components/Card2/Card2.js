@@ -7,16 +7,16 @@ const Card2 = (props) => {
 
   return (
     <div className="card">
-      <div className="card-body">
+      <div className="card-body ">
         <img
           src={logouser}
           className="card-img-top photouser"
           alt="..."
         />
-        <p className="card-text">
+        <p className="card-text mt-3">
           <dl>
-            <dt>Usuario</dt>
-            <dt>Libros registrados</dt>
+            <dt>Libro Publicado por:</dt>
+            <dt>XXXX</dt>
           </dl>
         </p>
       </div>
