@@ -4,11 +4,11 @@
   /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204);
   background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
   border: 2px solid #bdbdbd;
-  border-radius: 15px;
-  width: 700px;
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
-  margin-top: 5%;
+  border-radius: 50px;
+  width: 550px;
+  background: linear-gradient(to left,#583f58, #8b6685,#aa7cbe );
+  background: linear-gradient(to left, #583f58, #8b6685, #aa7cbe);
+ margin-top: 5%;
 }
 
 .gradient-custom-1 {
@@ -17,6 +17,16 @@
     font-family: fantasy;
 }
 
+.edittitle {
+  margin-top: -25px;
+  margin-bottom: 0.5rem;
+}
 
+.titleform1 {
+  margin-left: 11%;
+  padding-left: 5%;
+  padding-top: 3%;
+  width: 75%;
+}
 
 
