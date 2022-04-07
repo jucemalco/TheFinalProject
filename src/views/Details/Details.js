@@ -31,13 +31,13 @@ const Details = (props) => {
   //   user_id: userinfo.user.id,
   //   status: "pending",
   // });
-  // console.log("primera cosa", booktitle);
+  console.log("primera cosa", store.product);
   // console.log("presente", store.product.title);
     const matching = () => {
     actions.requestMatching({
       book: store.product?.title,
       interested: userinfo.user.name,
-      user_id: userinfo.user.id,
+      user_id: store.product.user_id,
       status: "pending",
     });
     setShow(false);
@@ -48,8 +48,7 @@ const Details = (props) => {
       {" "}
       <ProfileNavbar />
       <div className="container">
-        <div className="container">
-          <div className="row align-items-start">
+        <div className="row align-items-start">
             <div className="col photobook">
               <img
                 src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
@@ -64,18 +63,18 @@ const Details = (props) => {
             </div>
             <div className="col">
               <h1 className="titledetails">{store.product?.title}</h1>
-              <h4 className="titledetails2">{store.product?.editorial}</h4>
-              <h5 className="">{store.product?.review}</h5>
-              <p>
+              <h4 className="titledetails2 mt-2">Editorial: {store.product?.editorial}</h4>
+              <h4 className="mt-2">{store.product?.review}</h4>
+              {/* <p>
                 Ea nisi ea aliquip occaecat excepteur veniam nisi. Aute officia
                 cupidatat occaecat cupidatat duis nostrud dolore eiusmod
                 voluptate est. Qui mollit aliquip enim duis quis. Labore
                 adipisicing magna magna ipsum mollit elit non veniam excepteur
                 ipsum.
-              </p>
-              <button to="#" className="btn btn-primary">
+              </p> */}
+              {/* <button to="#" className="btn btn-primary">
                 Añadir Favoritos
-              </button>{" "}
+              </button>{" "} */}
               {/* <button
                 type="button"
                 className="btn btn-primary"
@@ -101,7 +100,7 @@ const Details = (props) => {
                   </div>
                 </div>
               </div> */}
-              <Button variant="primary" onClick={handleShow}>
+              <Button className= "btn-md btn-outline-light" style={{ borderRadius: "25px", width: "50%" }} variant="primary mt-2" onClick={handleShow}>
                 Hacer Match
               </Button>
               <Modal show={show} onHide={handleClose}>
@@ -119,8 +118,8 @@ const Details = (props) => {
                 </Modal.Footer>
               </Modal>
             </div>
-            <div className="col">
-              <h1 className="titledetails">Usuario</h1>
+            <div className="col mt-5">
+              {/* <h1 className="titledetails">Usuario</h1> */}
               <Card2 />
             </div>
           </div>
@@ -143,7 +142,6 @@ const Details = (props) => {
             alt="..."
           />
         </div>
-      </div>
       <Footer2 />
     </>
   );
