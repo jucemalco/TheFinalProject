@@ -34,7 +34,7 @@ console.log(props)
           <i className="btn btn"  style={{background:"#4c3b80", color:"white", borderRadius:"25px"}}>Quiero ver más</i>
         </Link >
         &nbsp;
-        <buttons to="" className={`btn btn-outline`} style={{background:"#4c3b80", color:"white", borderRadius:"25px"}} onClick="">
+        <buttons to="" className={`btn btn-outline`} style={{background:"#4c3b80", color:"white", borderRadius:"25px"}}>
           <AiOutlineHeart />
         </buttons>
       </div>

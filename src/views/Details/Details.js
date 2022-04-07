@@ -25,16 +25,21 @@ const Details = (props) => {
   console.log(userinfo.user.id);
   const booktitle = store.product?.title;
   //requestMatching
-  const [state, setState] = useState({
-    book: store.product?.title,
-    interested: userinfo.user.name,
-    user_id: userinfo.user.id,
-    status: "pending",
-  });
-
-  console.log(state);
-  const matching = () => {
-    actions.requestMatching(state);
+  // const [state, setState] = useState({
+  //   book: store.product?.title,
+  //   interested: userinfo.user.name,
+  //   user_id: userinfo.user.id,
+  //   status: "pending",
+  // });
+  // console.log("primera cosa", booktitle);
+  // console.log("presente", store.product.title);
+    const matching = () => {
+    actions.requestMatching({
+      book: store.product?.title,
+      interested: userinfo.user.name,
+      user_id: userinfo.user.id,
+      status: "pending",
+    });
     setShow(false);
   };
 
@@ -91,7 +96,7 @@ const Details = (props) => {
                     </div>
                     <div className="modal-footer">
                       <button onCLick={matching} >Aceptar</button>
-                      <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>                      
+                      <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                   </div>
                 </div>
