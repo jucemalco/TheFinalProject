@@ -23,7 +23,7 @@ import {ToastContainer} from "react-toastify"
 
 function App() {
   return (
-    <div className="App">
+    <div className="App gradient-custom-2">
       <Router>
         <ToastContainer/>
         <Routes>

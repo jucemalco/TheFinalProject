@@ -28,127 +28,127 @@ const Form = () => {
       {" "}
       <Navbar />
       <div className="container col-6 form">
-      <div className="image2">
+        <div className="image2">
           <img src={BookMatch_Logo} style={{ width: "50%", heigth: "-30px", marginTop: "5px", marginBottom: "-17px" }} />
         </div>
-          <legend>
-            {" "}
-            <h3 style={{fontFamily:"fantasy",  marginTop: "-20px", marginBottom: "-10px"}} className="form-title text-center">Crear una nueva cuenta</h3>
-          </legend>
-          <h6 style={{fontFamily:"fantasy",  marginTop: "0px", marginBottom: "-10px" }} className="form-title text-center">Información Personal</h6>
-          <br></br>
+        <legend>
+          {" "}
+          <h3 style={{ fontFamily: "fantasy", marginTop: "-20px", marginBottom: "-10px" }} className="form-title text-center">Crear una nueva cuenta</h3>
+        </legend>
+        <h6 style={{ fontFamily: "fantasy", marginTop: "0px", marginBottom: "-10px" }} className="form-title text-center">Información Personal</h6>
+        <br></br>
 
-          <form onSubmit={(evento) => onSubmit(evento)}>
-            <div className="mb-3 ms-4 me-4">
-              <label
-                for="exampleInputNombre"
-                className="form-label d-flex text-white"
-              >
-                Nombre{" "}
-                <i
-                  className="fa fa-asterisk fa-xs "
-                  style={{ fontSize: 6, color: "#fd4444" }}
-                ></i>
-              </label>
-              <input
-                name="name"
-                type="text"
-                class="form-control"
-                id="exampleInputNombre"
-                aria-describedby="nombreHelp"
-                value={state.name}
-                required
-                onChange={(evento) => onChange(evento)}
-              />
-            </div>
-            <div className="mb-3 ms-4 me-4">
-              <label
-                for="exampleInputApellido"
-                className="form-label d-flex text-white"
-              >
-                Apellidos{" "}
-                <i
-                  class="fa fa-asterisk fa-xs "
-                  style={{ fontSize: 6, color: "#fd4444" }}
-                ></i>
-              </label>
-              <input
-                name="surname"
-                type="text"
-                class="form-control"
-                id="exampleInputApellido"
-                aria-describedby="apellidoHelp"
-                required
-                onChange={(evento) => onChange(evento)}
-              />
-            </div>
-            <div className="mb-3 ms-4 me-4">
-              <label
-                for="exampleInputEmail"
-                className="form-label d-flex text-white"
-              >
-                Correo Electrónico{" "}
-                <i
-                  className="fa fa-asterisk fa-xs"
-                  style={{ fontSize: 6, color: "#fd4444" }}
-                ></i>
-              </label>
-              <input
-                name="email"
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                required
-                onChange={(evento) => onChange(evento)}
-              />
-              <div id="emailHelp" className="form-text d-flex text-white">
-                Nunca debes compartir tu correo con nadie
-              </div>
-            </div>
-            <div className="mb-3 ms-4 me-4">
-              <label
-                for="exampleInputPassword1"
-                class="form-label d-flex text-white"
-              >
-                Contraseña{" "}
-                <i
-                  className="fa fa-asterisk fa-xs"
-                  style={{ fontSize: 6, color: "#fd4444" }}
-                ></i>
-              </label>
-              <input
-                name="password"
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-                required
-                onChange={(evento) => onChange(evento)}
-              />
-              <div
-                id="passwordHelpBlock"
-                className="form-text d-flex text-white"
-              >
-                Tu contraseña debe contener: 8 o más carácteres, letras
-                mayúsculas y minúsculas, al menos un número.
-              </div>
-            </div>
-            <div className="asterisk d-flex ms-4">
-              <i 
-                className="fa fa-asterisk"
-                style={{ fontSize: 10, color: "#fd4444" }}
-              >  Campos Obligatorios</i>
-            </div>
-
-            <button
-              className="btn btn-outline-light gradient-custom mt-3" 
-              style={{borderRadius: "25px", width: "30%", marginBottom: "20px"}}
-              type="submit"
+        <form onSubmit={(evento) => onSubmit(evento)}>
+          <div className="mb-3 ms-4 me-4">
+            <label
+              for="exampleInputNombre"
+              className="form-label d-flex text"
             >
-              Crear una cuenta
-            </button>
-          </form>
-          <ul></ul>
+              Nombre{" "}
+              <i
+                className="fa fa-asterisk fa-xs "
+                style={{ fontSize: 6, color: "#fd4444" }}
+              ></i>
+            </label>
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              id="exampleInputNombre"
+              aria-describedby="nombreHelp"
+              value={state.name}
+              required
+              onChange={(evento) => onChange(evento)}
+            />
+          </div>
+          <div className="mb-3 ms-4 me-4">
+            <label
+              for="exampleInputApellido"
+              className="form-label d-flex text"
+            >
+              Apellidos{" "}
+              <i
+                class="fa fa-asterisk fa-xs "
+                style={{ fontSize: 6, color: "#fd4444" }}
+              ></i>
+            </label>
+            <input
+              name="surname"
+              type="text"
+              class="form-control"
+              id="exampleInputApellido"
+              aria-describedby="apellidoHelp"
+              required
+              onChange={(evento) => onChange(evento)}
+            />
+          </div>
+          <div className="mb-3 ms-4 me-4">
+            <label
+              for="exampleInputEmail"
+              className="form-label d-flex text"
+            >
+              Correo Electrónico{" "}
+              <i
+                className="fa fa-asterisk fa-xs"
+                style={{ fontSize: 6, color: "#fd4444" }}
+              ></i>
+            </label>
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              required
+              onChange={(evento) => onChange(evento)}
+            />
+            <div id="emailHelp" className="form-text d-flex text-white">
+              Nunca debes compartir tu correo con nadie
+            </div>
+          </div>
+          <div className="mb-3 ms-4 me-4">
+            <label
+              for="exampleInputPassword1"
+              class="form-label d-flex text"
+            >
+              Contraseña{" "}
+              <i
+                className="fa fa-asterisk fa-xs"
+                style={{ fontSize: 6, color: "#fd4444" }}
+              ></i>
+            </label>
+            <input
+              name="password"
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              required
+              onChange={(evento) => onChange(evento)}
+            />
+            <div
+              id="passwordHelpBlock"
+              className="form-text d-flex text-white"
+            >
+              Tu contraseña debe contener: 8 o más carácteres, letras
+              mayúsculas y minúsculas, al menos un número.
+            </div>
+          </div>
+          <div className="asterisk d-flex ms-4">
+            <i
+              className="fa fa-asterisk"
+              style={{ fontSize: 10, color: "#fd4444" }}
+            >  Campos Obligatorios</i>
+          </div>
+
+          <button
+            className="btn btn-outline-light gradient-custom mt-3"
+            style={{ borderRadius: "25px", width: "30%", marginBottom: "20px" }}
+            type="submit"
+          >
+            Crear una cuenta
+          </button>
+        </form>
+        <ul></ul>
       </div>
       <Footer />
     </>

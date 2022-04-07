@@ -32,15 +32,15 @@ const Product = () => {
     return (
         <>
             <ProfileNavbar />
-            <div className="container mt-5" style={{ background: "#ebebee", maxWidth: "780px", borderRadius: "25px" }}>
+            <div className="container mt-5 product1" style={{ maxWidth: "780px", borderRadius: "25px" }}>
                 <div className="row">
                     <div className="col-12">
-                        <h1 className="titleproduct">Publica tu Libro</h1>
+                        <h1 className="titleproduct" style={{color:"black"}}>Publica tu Libro</h1>
                     </div>
                 </div>
                 <form className="formsize" onSubmit={(e) => onSubmit(e)}>
                     <div className="mb-3 row formproduct" style= {{ textAlign: "left"}}>
-                        <label htmlFor="title" className="me-6 col-sm-2 col-form-label">Titulo</label>
+                        <label htmlFor="title" className="me-6 col-sm-2 col-form-label" style={{fontWeight:"bold"}}>Titulo</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
@@ -52,7 +52,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                        <label htmlFor="autor" className="col-sm-2 col-form-label" style= {{ textAlign: "left"}}>Autor</label>
+                        <label htmlFor="autor" className="col-sm-2 col-form-label" style= {{ textAlign: "left", fontWeight:"bold"}}>Autor</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
@@ -64,7 +64,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                        <label htmlFor="editorial" className="col-sm-2 col-form-label" style= {{ textAlign: "left"}}>Editorial</label>
+                        <label htmlFor="editorial" className="col-sm-2 col-form-label" style= {{ textAlign: "left", fontWeight:"bold"}}>Editorial</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
@@ -76,7 +76,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                        <label htmlFor="category" className="col-sm-2 col-form-label" style= {{ textAlign: "left"}}>Categoría</label>
+                        <label htmlFor="category" className="col-sm-2 col-form-label" style= {{ textAlign: "left", fontWeight:"bold"}}>Categoría</label>
                         <div className="col-sm-10">
                             <select className="form-select" aria-label="Default select example">
                                 <option defaultValue>Escoge una categoria</option>
@@ -90,7 +90,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row ">
-                        <label htmlFor="review" className="col-sm-2 col-form-label review2">Reseña</label>
+                        <label htmlFor="review" className="col-sm-2 col-form-label review2" style={{fontWeight:"bold"}}>Reseña</label>
                         <div className="mb-3 formproductreview3">
                             <textarea
                                 className="form-control"

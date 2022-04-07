@@ -1,26 +1,27 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../../store/appContext";
 import ProfileNavbar from "../ProfileNavbar/ProfileNavbar";
-import Footer2 from "../FotterLogueado/Footer2"
+import Footer2 from "../FotterLogueado/Footer2";
 import "./EditData.css";
+import BookMatch_Logo from "../../images/BookMatch_Logo.png";
 
 const EditData = () => {
-    
-     // LOCAL STORAGE DONDE ESTÁN GUARDADO ID DEL INICIO DE SESIÓN
-     let userinfo = localStorage.getItem('userinfo');
-     userinfo = JSON.parse(userinfo)
-     console.log(userinfo.user.id)    
+
+    // LOCAL STORAGE DONDE ESTÁN GUARDADO ID DEL INICIO DE SESIÓN
+    let userinfo = localStorage.getItem('userinfo');
+    userinfo = JSON.parse(userinfo)
+    console.log(userinfo.user.id)
 
     const { store, actions } = useContext(Context)
     const [state, setState] = useState({
         name: "",
         surname: "",
-        password: ""        
+        password: ""
     });
-        
+
     const onChange = (evento) => {
         setState({ ...state, [evento.target.name]: evento.target.value })
-    }    
+    }
     const onSubmit = (evento) => {
         evento.preventDefault()
         actions.editUser(state, evento, userinfo.user.id)
@@ -34,13 +35,13 @@ const EditData = () => {
         <>
             <ProfileNavbar />
             <div className="container edit">
-
-                <h2 className="form-title text-white text-center mt-4"style={{fontFamily:"fantasy"}}>Editar Mis Datos</h2>
-
+                <div className="image2">
+                    <img src={BookMatch_Logo} style={{ width: "50%", marginTop: "0px" }} />
+                </div>
+                <h3 className="form-title text text-center edittitle" style={{ fontFamily: "fantasy" }}>Editar Mis Datos</h3>
                 <form onSubmit={(evento) => onSubmit(evento)} >
-                    
-                    <div className=" col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                        <label htmlFor="formGroupExampleInput" className="form-label d-flex"style={{fontFamily:"fantasy"}}>Nombres</label>
+                    <div className=" col-6 titleform1">
+                        <label htmlFor="formGroupExampleInput" className="form-label d-flex" style={{ fontFamily: "fantasy" }}>Nombres</label>
                         <input
                             name="name"
                             type="text"
@@ -52,10 +53,8 @@ const EditData = () => {
                             onChange={(evento) => onChange(evento)} />
                     </div>
 
-
-
-                    <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                        <label htmlFor="formGroupExampleInput2" className="form-label d-flex"style={{fontFamily:"fantasy"}}>Apellidos</label>
+                    <div className=" col-6 titleform1">
+                        <label htmlFor="formGroupExampleInput2" className="form-label d-flex" style={{ fontFamily: "fantasy" }}>Apellidos</label>
                         <input
                             name="surname"
                             type="text"
@@ -67,8 +66,8 @@ const EditData = () => {
                     </div>
 
 
-                    <div className="col-6 text-white pe-5 ps-5 mx-auto mt-4">
-                        <label htmlFor="inputEmail4" className="form-label d-flex"style={{fontFamily:"fantasy"}}>Password</label>
+                    <div className=" col-6 titleform1">
+                        <label htmlFor="inputEmail4" className="form-label d-flex" style={{ fontFamily: "fantasy" }}>Password</label>
                         <input
                             name="password"
                             type="password"
@@ -79,10 +78,11 @@ const EditData = () => {
                     </div>
 
 
-                    <div className=" col-12 p-4 mb-2 text-center mt-3">
-                        <button type="submit" className="btn btn-outline-light gradient-custom-1 px-4"style={{borderRadius: "25px", width: "25%"}}>Guardar</button>
-                        
-                        <button className="btn btn-outline-light gradient-custom-1 px-4 mt-3" onClick={() =>deleteUser()}style={{borderRadius: "25px", width: "25%"}}>Eliminar Perfil</button>
+                    <div className="col-12 mb-4 text-center mt-3">
+                        <button type="submit" className="btn btn-outline-light gradient-custom-1 px-4" style={{ borderRadius: "25px", width: "25%" }}>Guardar</button>
+                    </div>
+                    <div className="col-12 mb-4 text-center mt-3">
+                        <button className="btn btn-outline-light gradient-custom-1 px-4" onClick={() => deleteUser()} style={{ borderRadius: "25px", width: "30%" }}>Eliminar Perfil</button>
                     </div>
                 </form>
             </div>
