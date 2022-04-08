@@ -45,9 +45,11 @@ const UserProfile = (props) => {
                     />
                   </div>
 
+                  
                   <div className="m-auto mx-5 text">
-                    <h4 style={{fontFamily:"fantasy"}}>Bienvenido a BookMatch</h4>
-                    <h4 style={{fontFamily:"fantasy"}}>{userinfo.user.name}</h4>
+                    <h4>Bienvenid@ a BookMatch</h4>
+                    <h3>{userinfo.user.name}</h3>
+                  
 
                   </div>
                 </div>
