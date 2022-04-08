@@ -3,18 +3,17 @@
     margin-left: 10%;
     margin-right: 5%;
   }
-  #nav-item{
+
+#nav-item{
     padding-top: 5px;
     margin-left: 10%;
   }
+
 .underline:visited {
   color: white;
 }
-  
-/* mouse over link */
-/* .underline:hover {
-  color: red;
-} */
+
 .navbar.navbar-expand-lg.navbar-light.btn-dark {
   width: 100%;
 }
+

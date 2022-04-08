@@ -27,7 +27,7 @@ const Form = () => {
     <>
       {" "}
       <Navbar />
-      <div className="container col-6 form">
+      <div className="container col-xs col-sm col-md col-lg form">
         <div className="image2">
           <img src={BookMatch_Logo} style={{ width: "50%", heigth: "-30px", marginTop: "5px", marginBottom: "-17px" }} />
         </div>
@@ -127,7 +127,7 @@ const Form = () => {
             />
             <div
               id="passwordHelpBlock"
-              className="form-text d-flex text-white"
+              className="form-text d-flex text-white text-start"
             >
               Tu contraseña debe contener: 8 o más carácteres, letras
               mayúsculas y minúsculas, al menos un número.
