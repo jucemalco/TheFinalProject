@@ -25,7 +25,7 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((state) => setStore({ products: state }))
           .catch((error) => console.log(error));
       },
-      
+
       //  MUESTRA SOLO MIS LIBROS PUBLICADOS POR EL USUARIO, FILTRADO POR ID quien inició sesión, COMPONENTE USERPROFILE
       userProducts: (userinfo) => {
         fetch("http://localhost:5000/userproducts/" + userinfo.user.id)
@@ -137,10 +137,10 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((res) => res.json())
           .then((response) => {
             if (response.success) {
-              toast.success(response.msg)
+              toast.success(response.msg);
               navegate("/login");
             }
-            console.log(response)
+            console.log(response);
           })
           .catch((error) => console.error("Error:", error));
       },
@@ -174,11 +174,29 @@ const getState = ({ getStore, setStore, getActions }) => {
           headers: {
             "Content-Type": "application/json",
           },
-        })
+        });
       },
       //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
-      sendMatching: (state) => {
-        console.log(state);
+      // sendMatching: (state) => {
+      //   console.log(state);
+      //   fetch("http://localhost:5000/bookmatch", {
+      //     method: "POST",
+      //     body: JSON.stringify(state),
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //   })
+      //     .then((res) => res.json())
+      //     .then((response) => {
+      //       if (response.success) {
+      //         toast.success(response.msg);
+      //         setStore({ user: response });
+      //       }
+      //     });
+      // },
+      //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
+      requestMatching: (state) => {
+        const { product } = getStore();
         fetch("http://localhost:5000/bookmatch", {
           method: "POST",
           body: JSON.stringify(state),
@@ -188,24 +206,19 @@ const getState = ({ getStore, setStore, getActions }) => {
         })
           .then((res) => res.json())
           .then((response) => {
-            console.log("Success:", response);
-            setStore({ user: response });
+            if (response) {
+              toast.success(response.msg);
+              setStore({ user: response });
+            }
+
+            console.log(response);
           })
           .catch((error) => console.error("Error:", error));
       },
-      //HACER DESDE AQUI SOLICITUD PARA ENVIAR ESTADO DE PENDIENTE EN STATUS #requestMatching
-      requestMatching: (state) => {
-        const { product } = getStore();
-        fetch("http://localhost:5000/bookmatch", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(state),
-        })
-          .then((res) => res.json())
-          .then((state) => console.log(state));
-      },
+
+      //     .then((res) => res.json())
+      //     .then((state) => console.log(state));
+      // },
       //FETCH PARA CONSULTAR LOS MATCH PENDIENTES QUE TENGO COMO SOLICITUD
       pendingReceive: (userinfo) => {
         fetch("http://localhost:5000/pendingreceive", {
@@ -218,13 +231,17 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((res) => res.json())
           .then((response) => {
             console.log("Success:", response);
-            const filterpending = response.filter(allobject => allobject.status == "pending")
-            console.log(filterpending)
-            const filterbyid = filterpending.filter(allobject => Number(allobject.user_id) == userinfo.user.id)
-            console.log(filterbyid)
-            setStore({ pendingreceive: filterbyid });            
+            const filterpending = response.filter(
+              (allobject) => allobject.status == "pending"
+            );
+            console.log(filterpending);
+            const filterbyid = filterpending.filter(
+              (allobject) => Number(allobject.user_id) == userinfo.user.id
+            );
+            console.log(filterbyid);
+            setStore({ pendingreceive: filterbyid });
           })
-           .catch((error) => console.error("Error:", error));     
+          .catch((error) => console.error("Error:", error));
       },
       //SOLICITUD PARA CONSULTAR TODOS LOS STATUS ACCEPTED EN LA TABLA BASE DE DATOS #acceptedmatches
       // acceptedmatches: () => {
@@ -251,8 +268,8 @@ const getState = ({ getStore, setStore, getActions }) => {
       //FETCH PARA CAMBIO DE ESTADO A RECHAZADO
       // rejectrequest: () => {}
       //CRUD PARA EDITAR USUARIO
-    }
-  }
-}
+    },
+  };
+};
 
 export default getState;
