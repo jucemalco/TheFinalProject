@@ -53,8 +53,8 @@ const PendingReceive = (props) => {
                   </div>
 
                   <div className="m-auto mx-5 text">
-                    <h4 style={{ fontFamily: "fantasy" }}>Bienvenido a BookMatch</h4>
-                    {/* <h3>{userinfo.user.name}</h3> */}
+                    <h4>Bienvenido a BookMatch</h4>
+                    <h3>{userinfo.user.name}</h3>
                   </div>
                 </div>
                 <div className="mt-3 mb-2 text-center ">

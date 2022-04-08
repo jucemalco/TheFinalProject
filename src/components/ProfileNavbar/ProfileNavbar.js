@@ -113,13 +113,13 @@ const ProfileNavbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/userprofile/aceptedmatch/">
-                     Mis Match Enviados
+                  <Link className="dropdown-item" to="/userprofile/pendingreceive/">
+                     Recibidos Pendientes
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/userprofile/pendingmatch/">
-                     Mis Match Recibidos
+                  <Link className="dropdown-item" to="/userprofile/pendingsend/">
+                     Enviados Pendientes
                   </Link>
                 </li>
                 <li>
