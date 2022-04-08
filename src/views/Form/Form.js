@@ -33,16 +33,16 @@ const Form = () => {
         </div>
         <legend>
           {" "}
-          <h3 style={{ fontFamily: "fantasy", marginTop: "-20px", marginBottom: "-10px" }} className="form-title text-center">Crear una nueva cuenta</h3>
+          <h3 style={{ fontFamily: "sans-serif", color:"#ddd5dd", marginTop: "-20px", marginBottom: "-10px" }} className="form-title text-center">Crear una nueva cuenta</h3>
         </legend>
-        <h6 style={{ fontFamily: "fantasy", marginTop: "0px", marginBottom: "-10px" }} className="form-title text-center">Información Personal</h6>
+        <h6 style={{ fontFamily: "sans-serif", color:"#ddd5dd", marginTop: "0px", marginBottom: "-10px" }} className="form-title text-center">Información Personal</h6>
         <br></br>
-
+        
         <form onSubmit={(evento) => onSubmit(evento)}>
           <div className="mb-3 ms-4 me-4">
             <label
               for="exampleInputNombre"
-              className="form-label d-flex text"
+              className="form-label d-flex text" style={{fontFamily: "sans-serif", color:"#ddd5dd"}}
             >
               Nombre{" "}
               <i
@@ -64,7 +64,7 @@ const Form = () => {
           <div className="mb-3 ms-4 me-4">
             <label
               for="exampleInputApellido"
-              className="form-label d-flex text"
+              className="form-label d-flex text" style={{fontFamily: "sans-serif", color:"#ddd5dd"}}
             >
               Apellidos{" "}
               <i
@@ -85,7 +85,7 @@ const Form = () => {
           <div className="mb-3 ms-4 me-4">
             <label
               for="exampleInputEmail"
-              className="form-label d-flex text"
+              className="form-label d-flex text" style={{fontFamily: "sans-serif", color:"#ddd5dd"}}
             >
               Correo Electrónico{" "}
               <i
@@ -102,14 +102,14 @@ const Form = () => {
               required
               onChange={(evento) => onChange(evento)}
             />
-            <div id="emailHelp" className="form-text d-flex text-white">
+            <div id="emailHelp" className="form-text d-flex" style={{color: "#ababab"}} >
               Nunca debes compartir tu correo con nadie
             </div>
           </div>
           <div className="mb-3 ms-4 me-4">
             <label
               for="exampleInputPassword1"
-              class="form-label d-flex text"
+              class="form-label d-flex text" style={{fontFamily: "sans-serif", color:"#ddd5dd"}}
             >
               Contraseña{" "}
               <i
@@ -127,7 +127,7 @@ const Form = () => {
             />
             <div
               id="passwordHelpBlock"
-              className="form-text d-flex text-white text-start"
+              className="form-text d-flex text-start" style={{color: "#ababab"}}
             >
               Tu contraseña debe contener: 8 o más carácteres, letras
               mayúsculas y minúsculas, al menos un número.

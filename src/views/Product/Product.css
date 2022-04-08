@@ -1,9 +1,9 @@
 .product1 {
-    background: linear-gradient(to left,#583f58, #8b6685,#aa7cbe );
-    background: linear-gradient(to left, #583f58, #8b6685, #aa7cbe);
-    margin-top: 5%;
+    background: #522352;
     border: 2px solid #bdbdbd;
-  }
+    border-radius: 25px; 
+    margin-top: 5%;  
+}
 
 .titleproduct {
     margin-top: 25px;
@@ -44,3 +44,8 @@
     padding-right: 500px;
     margin-top: 10px;
 } 
+
+
+.gradient-custom {
+    background: linear-gradient(to right, #d0bdd8, #8b6685, #583f58, #222222);
+}

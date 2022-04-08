@@ -1,16 +1,11 @@
-body{
-    background: linear-gradient(rgb(223, 220, 222), rgb(237, 224, 232));
-}
  
 .form {
-    background-color: #f5eeea; 
+    background: #522352;
+    border-radius: 25px;  
     border: 2px solid #bdbdbd;
     max-width: 550px;
     height: 90%;
-    margin-top: 30px;
-    border-radius: 15px;
-    background: linear-gradient(to right, #d0bdd8, #8b6685, #5a455a, #433e41);
-    background: linear-gradient(to right, #d0bdd8, #8b6685, #5a455a, #433e41);
+    margin-top: 15px;
 } 
 
 div.image2 {
@@ -38,16 +33,9 @@ div.image2 {
     font-style: italic;
 }
    
-/* .d-grid {
-    font-family: fantasy;
-} */
-    
-.form-label{
-  font-family: fantasy;
-}
 
 .gradient-custom {
     /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
     background: linear-gradient(to right, #d0bdd8, #8b6685, #583f58, #222222);
-    font-family: fantasy;
+    font-family: sans-serif;
 }

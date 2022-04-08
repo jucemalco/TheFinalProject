@@ -1,50 +1,38 @@
-.gradient-custom-2 {
-    /* fallback for old browsers */
-    background: #fbc2eb;
-  
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(
-      to right,
-      rgba(251, 194, 235, 1),
-      rgba(166, 193, 238, 1)
-    );
-  
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(
-      to right,
-      rgba(251, 194, 235, 1),
-      rgba(166, 193, 238, 1)
-    );
-  }
-  .nav-link.active.btn.btn-outline-dark {
-    
-    color: white;
-    border: 1px solid black;
-  }
-  .editperfil {
-    margin-top: -25px;
-    margin-bottom: 200px;
-  }
-  .mislibros {
-    margin-top: 4px;
-    margin-bottom: 200px;
-  }
-  .mismatchpendientes {
-    margin-top: 4px;
-    margin-bottom: 200px;
-  }
-  .mislibros {
-    margin-top: 4px;
-    margin-bottom: 200px;
-  }
-  
-  .historybootom {
-    margin-top: 200px;
-  }
-  .historybootom2 {
-    margin-top: 30px;
-  }
-  .pending {
-    margin-top: 4px;
-    
-  }
+.nav-link.active.btn.btn-outline-dark {
+
+  color: white;
+  border: 1px solid black;
+}
+
+.editperfil {
+  margin-top: -25px;
+  margin-bottom: 200px;
+}
+
+.mislibros {
+  margin-top: 4px;
+  margin-bottom: 200px;
+}
+
+.mismatchpendientes {
+  margin-top: 4px;
+  margin-bottom: 200px;
+}
+
+.mislibros {
+  margin-top: 4px;
+  margin-bottom: 200px;
+}
+
+.historybootom {
+  margin-top: 200px;
+}
+
+.historybootom2 {
+  margin-top: 30px;
+}
+
+.pending {
+  margin-top: 4px;
+
+}

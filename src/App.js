@@ -31,10 +31,7 @@ function App() {
           <Route path="/login/newaccount" element={<Form />} />
           <Route path="/miperfil/editdata" element={<EditData />} />
           <Route path="/userprofile" element={<UserProfile />} />
-          <Route
-            path="/userprofile/pendingreceive"
-            element={<PendingReceive />}
-          />
+          <Route path="/userprofile/pendingreceive" element={<PendingReceive />} />
           <Route path="/userprofile/pendingsend" element={<PendingSend />} />
           <Route path="/match-status" element={<MatchStatus />} />
           <Route path="/admin/product" element={<Product />} />

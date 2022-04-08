@@ -14,10 +14,10 @@ const Details = (props) => {
       <div className="container details p-4 mt-4" >
         <div className="row align-items-start">
           <div className="col">
-            <h3 className="titledetails">{props.title}Título</h3>
-            <h4 style={{fontFamily: "fantasy"}} className="titledetails2">{props.autor}Autor</h4>
-            <h4 style={{fontFamily: "fantasy"}} className="">Reseña</h4>
-            <p className="text-details ms-5 me-4">
+            <h4 style={{fontFamily: "sans-serif", color:"#ddd5dd"}} className="titledetails mt-3">{props.title}Título</h4>
+            <h4 style={{fontFamily: "sans-serif", color:"#ddd5dd"}} className="titledetails2 mb-4">{props.autor}Autor</h4>
+            <h4 style={{fontFamily: "sans-serif", color:"#ddd5dd"}} className="mb-3">Reseña</h4>
+            <p style={{fontFamily: "sans-serif", color:"#ddd5dd"}} className="text-details ms-5 me-4">
             {props.review}
             Ea nisi ea aliquip occaecat excepteur veniam nisi. Aute officia
             cupidatat occaecat cupidatat duis nostrud dolore eiusmod voluptate
@@ -30,36 +30,26 @@ const Details = (props) => {
           </div>
         </div>
           <div className="row mt-2">
-            <div className="col">
+            <div className="col-xs col-sm col-md col-lg">
               <img
                 src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
-                className="rounded-3 ms-3 ms-5 mb-3"
+                className="rounded-3"
+                style={{ width: "200px", height: "200px"}}
+                alt="..."
+              />
+            </div>
+            <div className="col-xs col-sm col-md col-lg">
+              <img
+                src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
+                className="rounded-3"
                 style={{ width: "200px", height: "200px" }}
                 alt="..."
               />
             </div>
-            <div className="col">
+            <div className="col-xs col-sm col-md col-lg">
               <img
                 src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
-                className="rounded-3 ms-3 me-3 ms-5"
-                style={{ width: "200px", height: "200px" }}
-                alt="..."
-              />
-            </div>
-            <div className="col">
-              <img
-                src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
-                className="rounded-3 ms-3 me-3 ms-5"
-                style={{ width: "200px", height: "200px" }}
-                alt="..."
-              />
-              
-            </div>
-
-            <div className="col">
-              <img
-                src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
-                className="rounded-3 ms-3 me-3 ms-5"
+                className="rounded-3"
                 style={{ width: "200px", height: "200px" }}
                 alt="..."
               />

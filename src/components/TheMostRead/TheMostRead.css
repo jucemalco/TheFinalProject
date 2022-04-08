@@ -1,5 +1,5 @@
 .theMostRead{
-    background: linear-gradient(to left, rgb(116, 91, 109), rgba(166, 193, 238, 1));
+    background: #522352;
     border-radius: 25px;
     max-width: 900px;
     margin-top: 20px;
@@ -12,12 +12,10 @@
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 20px;
+    font-family: sans-serif;
+    color: #ddd5dd;
 }
 
-
-.title-most-read{
-    font-family: fantasy;
-}
 
 .books{
    border: 2px #5c425c solid;

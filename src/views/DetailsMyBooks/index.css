@@ -1,3 +1,11 @@
+.details{
+    background: #522352;
+    border: 2px solid #bdbdbd;
+    border-radius: 25px;
+    max-width: 700px;
+}
+
+
 .photobook {
     margin-bottom: 20px;
     margin-top: 70px;
@@ -56,17 +64,13 @@ h5{
     font-family: fantasy;
 }
 
-.details{
-    /* background: linear-gradient(
-      to right,
-      rgb(116, 91, 109),
-      rgba(166, 193, 238, 1)
-    ); */
-    background: #ebebee;
-    width: 600px;
-}
-
-
 .text-details{
     text-align: justify;  
+}
+
+.rounded-3{
+    margin: 0 auto;
+    border: 2px #5c425c solid;
+    border-radius: 5px;
+    margin-top: 10px;
 }
