@@ -1,16 +1,13 @@
 .login {
-  background-color: #f5eeea;
+  /* background-color: #78726f; */
   /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204);
   background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
- 
   border-radius: 20px;
-  width: 550px;
+  max-width: 550px;
   height: 90%;
-
-
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
-  background: linear-gradient(to left, #d0bdd8, #8b6685, #583f58, #433e41);
-  margin-top: 70px;
+  background: linear-gradient(to right, #d0bdd8, #8b6685, #5a455a, #433e41);
+  background: linear-gradient(to right, #d0bdd8, #8b6685, #5a455a, #433e41);
+  margin-top: 30px; 
 }
 
 div.image {
@@ -18,17 +15,12 @@ div.image {
     text-align: center;
   }
 
-/* h3,
-h6 {
-    font-family: fantasy;
-    
-} */
-  
 .gradient-custom {
   /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
   background: linear-gradient(to right, #d0bdd8, #8b6685, #583f58, #222222);
   font-family: fantasy;
 }
+
 
 
 

@@ -5,12 +5,12 @@ body{
 .form {
     background-color: #f5eeea; 
     border: 2px solid #bdbdbd;
-    width: 550px;
+    max-width: 550px;
     height: 90%;
-    margin-top: 60px;
+    margin-top: 30px;
     border-radius: 15px;
-    background: linear-gradient(to left,#583f58, #8b6685,#aa7cbe );
-    background: linear-gradient(to left, #583f58, #8b6685, #aa7cbe);
+    background: linear-gradient(to right, #d0bdd8, #8b6685, #5a455a, #433e41);
+    background: linear-gradient(to right, #d0bdd8, #8b6685, #5a455a, #433e41);
 } 
 
 div.image2 {
