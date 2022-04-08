@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 // import { Dropdown, DropdownButton } from "react-bootstrap";
 
+
+
 export const Navbar = () => {
   function MouseOver(event) {
     event.target.style.color = '#8b6685';
@@ -17,7 +19,7 @@ export const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-light btn-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            <div className="navbar-image">
+            <div className="navbar-image ms-5 me-5">
               <img src={BookMatch_Logo} style={{ width: "160px" }} />
             </div>
           </Link>
@@ -34,10 +36,10 @@ export const Navbar = () => {
             <span className="navbar-toggler-icon" ></span> 
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className=" buttons navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
-                <i className="fa fa-home p-2"><span className="p-2">Inicio</span></i>
+                  <i className="fa fa-home p-2"><span style={{fontFamily:"sans-serif"}} className="p-2">Inicio</span></i> 
                 </Link>
               </li>
               <li className="nav-item dropdown" onMouseOver={MouseOver} onMouseOut={MouseOut}>
@@ -49,8 +51,9 @@ export const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
+                 
                   <i className="fa fa-book p-2"></i>
-                  <span> Libros</span>
+                  <span style={{fontFamily:"sans-serif"}}> Libros</span>
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown" >
                   <li>
@@ -78,20 +81,20 @@ export const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item dropdown" >
+              {/* <li className="nav-item dropdown" >
                 <Link className="nav-link dropdown-toggle text-white" to="/login/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
                    <i className="fa fa-heart-o p-2" style={{ color: "#fa5d5d" }}></i> 
                   <span>Mis Favoritos</span> 
                 </Link>
-              </li>
+              </li> */}
               <li id="nav-item">
                 <Link className="nav-link text-white"  to="/about/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
-                  <span>Nosotros</span>
+                  <span style={{fontFamily:"sans-serif"}}>Nosotros</span>
                 </Link>
               </li>
             </ul>
 
-            <form className="d-flex">
+            <form className="d-flex me-5">
               <input
                 className="form-control me-3"
                 type="search"

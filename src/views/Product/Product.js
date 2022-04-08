@@ -35,12 +35,12 @@ const Product = () => {
             <div className="container mt-5 product1" style={{ maxWidth: "780px", borderRadius: "25px" }}>
                 <div className="row">
                     <div className="col-12">
-                        <h1 className="titleproduct" style={{color:"black"}}>Publica tu Libro</h1>
+                        <h1 className="titleproduct" style={{color: "black" }}>Publica tu Libro</h1>
                     </div>
                 </div>
                 <form className="formsize" onSubmit={(e) => onSubmit(e)}>
-                    <div className="mb-3 row formproduct" style= {{ textAlign: "left"}}>
-                        <label htmlFor="title" className="me-6 col-sm-2 col-form-label" style={{fontWeight:"bold"}}>Titulo</label>
+                    <div className="mb-3 row formproduct" style={{ textAlign: "left" }}>
+                        <label htmlFor="title" className="me-6 col-sm-2 col-form-label" style={{ fontWeight: "bold" }}>Titulo</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
@@ -52,7 +52,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                        <label htmlFor="autor" className="col-sm-2 col-form-label" style= {{ textAlign: "left", fontWeight:"bold"}}>Autor</label>
+                        <label htmlFor="autor" className="col-sm-2 col-form-label" style={{ textAlign: "left", fontWeight: "bold" }}>Autor</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
@@ -64,7 +64,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                        <label htmlFor="editorial" className="col-sm-2 col-form-label" style= {{ textAlign: "left", fontWeight:"bold"}}>Editorial</label>
+                        <label htmlFor="editorial" className="col-sm-2 col-form-label" style={{ textAlign: "left", fontWeight: "bold" }}>Editorial</label>
                         <div className="col-sm-10">
                             <input
                                 type="text"
@@ -76,7 +76,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                        <label htmlFor="category" className="col-sm-2 col-form-label" style= {{ textAlign: "left", fontWeight:"bold"}}>Categoría</label>
+                        <label htmlFor="category" className="col-sm-2 col-form-label" style={{ textAlign: "left", fontWeight: "bold" }}>Categoría</label>
                         <div className="col-sm-10">
                             <select className="form-select" aria-label="Default select example">
                                 <option defaultValue>Escoge una categoria</option>
@@ -90,7 +90,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row ">
-                        <label htmlFor="review" className="col-sm-2 col-form-label review2" style={{fontWeight:"bold"}}>Reseña</label>
+                        <label htmlFor="review" className="col-sm-2 col-form-label review2" style={{ fontWeight: "bold" }}>Reseña</label>
                         <div className="mb-3 formproductreview3">
                             <textarea
                                 className="form-control"
@@ -102,10 +102,19 @@ const Product = () => {
                         </div>
 
                     </div>
-                    <div className="mb-3 formproduct3">
+                    {/* <div className="mb-3 formproduct3">
                         <label htmlFor="" className="col col-form-label"></label>
                         <input type="file" className="form-control" id="inputGroupFile01" />
+                    </div>  */}
+
+
+                    <div className="input-group mb-3 formproduct4">
+                        <span className="input-group-text" style={{fontSize:"70%"}}  id="basic-addon3">https://ediotorialplaneta/libros/</span>
+                        <input type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" />
                     </div>
+
+
+
                     <div className="text-center">
                         <button className="btn btn" style={{ background: "#4c3b80", color: "white", borderRadius: "25px", marginTop: "10px", marginBottom: "20px" }} type="submit">
                             Publicar

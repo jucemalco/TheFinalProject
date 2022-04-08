@@ -19,7 +19,7 @@ const ProfileNavbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light btn-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/logueado/">
-          <div className="navbar-image">
+          <div className="navbar-image me-5 ms-5">
             <img src={BookMatch_Logo} style={{ width: "160px" }} alt="logo"/>
           </div>
         </Link>
@@ -39,7 +39,7 @@ const ProfileNavbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link className="nav-link text-white" to="/logueado/">
-              <i className="fa fa-home p-2"><span className="p-2">Inicio</span></i>
+              <i className="fa fa-home p-2"><span style={{fontFamily:"sans-serif"}} className="p-2">Inicio</span></i> 
               </Link>
             </li>
 
@@ -53,7 +53,7 @@ const ProfileNavbar = () => {
                 aria-expanded="false"
               >
                 <i className="fa fa-book p-2"></i>
-               <span>Libros</span>
+               <span style={{fontFamily:"sans-serif"}}>Libros</span>
               </Link>
 
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown" >
@@ -93,7 +93,7 @@ const ProfileNavbar = () => {
                 
               >
                 <i className="fa fa-user p-2"></i>
-                <span>Mi Perfil</span>
+                <span style={{fontFamily:"sans-serif"}}>Mi Perfil</span>
               </Link>
 
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown" onMouseOver={MouseOver} onMouseOut={MouseOut}>
@@ -129,7 +129,7 @@ const ProfileNavbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown ms-1 me-4" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+            {/* <li className="nav-item dropdown ms-1 me-4" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <Link
                 className="nav-link dropdown-toggle text-white"
                 to="myaccount"
@@ -157,19 +157,19 @@ const ProfileNavbar = () => {
 
               
               </ul>
-            </li>
-            <li className="nav-item mt-1 ms-2" >
-              <Link className="nav-link text-white" to="/aboutuslog/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
-              <span className>Nosotros</span>
+            </li> */}
+            <li className="nav-item mt-1" >
+              <Link className="nav-link text-white me-1" to="/aboutuslog/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+              <span style={{fontFamily:"sans-serif"}}>Nosotros</span>
               </Link>
             </li>
           </ul>
             
               <Link className="nav-link text-white" to="/admin/product" onMouseOver={MouseOver} onMouseOut={MouseOut}>
-              <span className>Publica tu Libro</span>
+              <span style={{fontFamily:"sans-serif"}}>Publica tu Libro</span>
               </Link>
            
-          <form className="d-flex">
+          <form className="d-flex me-5 ms-3">
             <input
               className="form-control me-3"
               type="search"
@@ -181,7 +181,7 @@ const ProfileNavbar = () => {
             </button>
           </form>
 
-            <Link className="nav-link text-white" to="/login/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+            <Link className="nav-link text-white me-5" to="/login/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
               <i className>Cerrar Sesión</i>
             </Link>
         </div>

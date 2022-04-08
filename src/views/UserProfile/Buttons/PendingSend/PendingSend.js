@@ -7,6 +7,7 @@ import Footer2 from "../../../../components/FotterLogueado/Footer2"
 
 const PendingSend = (props) => {
 
+
   // console.log(store.pendingsend);
   function MouseOver(event) {
     event.target.style.color = "#d0bdd8";
