@@ -40,8 +40,8 @@ const PendingSend = (props) => {
                   </div>
 
                   <div className="m-auto mx-5 text">
-                    <h4 style={{ fontFamily: "fantasy" }}>Bienvenido a BookMatch</h4>
-                    {/* <h3>{userinfo.user.name}</h3> */}
+                  <h4 style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Bienvenido a BookMatch</h4>
+                  {/* <h3 style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>{userinfo.user.name}</h3> */}
                   </div>
                 </div>
                 <div className="mt-3 mb-2 text-center ">
@@ -85,7 +85,7 @@ const PendingSend = (props) => {
                 </div>
 
                 <div>
-                  <p className="mt-3 fs-4" style={{ fontFamily: "fantasy" }}>Pendientes</p>
+                  <p className="mt-3 fs-4" style={{fontFamily:"sans-serif", color:"#222121"}}>Pendientes</p>
                   <div className="card-body p-4 text-black">
                     {/* <div className="row g-2">
                       {store.pendingsend &&

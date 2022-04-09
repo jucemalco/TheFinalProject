@@ -11,12 +11,12 @@ const TheMostRead = () => {
     <Navbar />
 <div className="container theMostRead ">
         <div className="title-most-read mt-3 p-4">
-            <h1>Los Más Leídos</h1>
-            <hr></hr>
+            <h1 style={{fontFamily:"sans-serif", color:"#ddd5dd"}} >Los Más Leídos</h1>
+            <hr style={{color:"#ddd5dd"}}></hr>
         </div>
 
         <div className="text">
-            <h5 className="card-title">¿Cuáles son los libros más leídos actualmente?</h5>
+            <h5 style={{fontFamily:"sans-serif", color:"#ddd5dd"}} className="card-title">¿Cuáles son los libros más leídos actualmente?</h5>
             <p id="card-text" >Si te gusta estar al tanto de los últimos best sellers y la actualidad literaria o si quieres regalar un libro e ir a lo seguro, lo que necesitas es conocer cuáles son los libros más leídos. En <strong>BookMatch</strong>  encuentra los libros más populares, esos de los que todo el mundo está hablando, los libros más recomendados entre lectores, los más valorados por la crítica, premiados con diferentes galardones y los best sellers internacionales y déjate inspirar por el panorama de la actualidad literaria para encontrar tus próximas lecturas o los mejores libros. Solo tienes que hacer <strong>Match.</strong></p>
         </div>
        
@@ -27,16 +27,16 @@ const TheMostRead = () => {
                         src=" https://images.cdn1.buscalibre.com/fit-in/360x360/41/c6/41c6728c29427d4465d6e2ea92bad627.jpg"
                         alt="..."
                         style={{ width: "10rem"}}/>
-                    <h3 className="title mt-3 fw-bold fs-6">La Razón de estar contigo</h3>
-                    <h6 className="subtitle fs-6">W. Bruce Cameron</h6>
+                    <h3 className="title mt-3 fw-bold fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>La Razón de estar contigo</h3>
+                    <h6 className="subtitle fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>W. Bruce Cameron</h6>
                 </div>
                 <div className="col-sm col-md col-lg mt-4">
                     <img className="books"
                         src="https://images.cdn1.buscalibre.com/fit-in/180x180/04/9f/049f77440748c7cf8f56367d18878040.jpg"
                         alt="..."
                         style={{ width: "10rem"}}/>
-                    <h3 className="title mt-3 fw-bold fs-6">Violeta</h3>
-                    <h6 className="subtitle fs-6">Isabel Allende</h6>
+                    <h3 className="title mt-3 fw-bold fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Violeta</h3>
+                    <h6 className="subtitle fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Isabel Allende</h6>
                 </div>
 
                 <div className="col-sm col-md col-lg mt-4" >
@@ -44,8 +44,8 @@ const TheMostRead = () => {
                         src=" https://images.cdn1.buscalibre.com/fit-in/360x360/dc/e6/dce635d842eee09468be8f5d457078e1.jpg"
                         alt="..."
                         style={{ width: "10rem"}}/>
-                    <h3 className="title mt-3 fw-bold fs-6">El Duque y Yo</h3>
-                    <h6 className="subtitle fs-6">Julia Quinn</h6>
+                    <h3 className="title mt-3 fw-bold fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>El Duque y Yo</h3>
+                    <h6 className="subtitle fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Julia Quinn</h6>
                 </div> 
                 <div className="col-sm col-md col-lg mt-4">
 
@@ -54,8 +54,8 @@ const TheMostRead = () => {
                         style={{ width: "10rem" }}
                         alt="..."
                     />
-                    <h3 className="title mt-3 fw-bold fs-6">Fleur Mi Desesperada Decisión</h3>
-                    <h6 className="subtitle fs-6">Ariana Godoy</h6>
+                    <h3 className="title mt-3 fw-bold fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Fleur Mi Desesperada Decisión</h3>
+                    <h6 className="subtitle fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Ariana Godoy</h6>
                 </div>
                 <div className="col-sm col-md col-lg mt-4">
                     <img className="books"
@@ -63,8 +63,8 @@ const TheMostRead = () => {
                         style={{ width: "10rem" }}
                         alt="..."
                     />
-                    <h3 className="title mt-3 fw-bold fs-6">Boulevard</h3>
-                    <h6 className="subtitle fs-6">Flor M. Salvador</h6>
+                    <h3 className="title mt-3 fw-bold fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Boulevard</h3>
+                    <h6 className="subtitle fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Flor M. Salvador</h6>
                 </div>
 
                 <div className="col-sm col-md col-lg mt-4">
@@ -73,8 +73,8 @@ const TheMostRead = () => {
                         style={{ width: "10rem" }}
                         alt="..."
                     />
-                    <h3 className="title mt-3 fw-bold fs-6">Todo Lo Que Nunca Fuimos</h3>
-                    <h6 className="subtitle fs-6">Alice Kellen</h6>
+                    <h3 className="title mt-3 fw-bold fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Todo Lo Que Nunca Fuimos</h3>
+                    <h6 className="subtitle fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Alice Kellen</h6>
                 </div>
 
                 <div className="col-sm col-md col-lg mt-4">
@@ -83,8 +83,8 @@ const TheMostRead = () => {
                         style={{ width: "10rem" }}
                         alt="..."
                     />
-                    <h3 className="title mt-3 fw-bold fs-6">Todo Lo Que Somos Juntos</h3>
-                    <h6 className="subtitle fs-6">Alice Kellen</h6>
+                    <h3 className="title mt-3 fw-bold fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Todo Lo Que Somos Juntos</h3>
+                    <h6 className="subtitle fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Alice Kellen</h6>
                 </div>
 
                 <div className="col-sm col-md col-lg mt-4"> 
@@ -93,8 +93,8 @@ const TheMostRead = () => {
                         style={{ width: "10rem" }}
                         alt="..."
                     />
-                    <h3 className="title mt-3 fw-bold fs-6">Joana Marcús</h3>
-                    <h6 className="subtitle fs-6">Trilogía Fuego #1 Cidudades de Humo</h6>
+                    <h3 className="title mt-3 fw-bold fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Joana Marcús</h3>
+                    <h6 className="subtitle fs-6" style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Trilogía Fuego #1 Cidudades de Humo</h6>
                 </div>
 
                 
