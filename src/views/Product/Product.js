@@ -29,20 +29,22 @@ const Product = () => {
         console.log(state)
     }
 
+
     return (
         <>
             <ProfileNavbar />
-            <div className="container mt-5 product1" style={{ maxWidth: "780px", borderRadius: "25px" }}>
+            <div className="container mt-5 product1" style={{ maxWidth: "780px" }}>
                 <div className="row">
                     <div className="col-12">
-                        <h1 className="titleproduct" style={{color: "black" }}>Publica tu Libro</h1>
+                        <h1 className="titleproduct" style={{ fontFamily: "sans-serif", color: "#ddd5dd" }}>Publica tu Libro</h1>
+
                     </div>
                 </div>
                 <form className="formsize" onSubmit={(e) => onSubmit(e)}>
 
 
-                    <div className="mb-3 row formproduct" style= {{ textAlign: "left"}}>
-                        <label htmlFor="title" className="me-6 col-sm-2 col-form-label" style={{fontWeight:"bold",fontFamily: "sans-serif"}}>Titulo</label>
+                    <div className="mb-3 row formproduct" style={{ textAlign: "left" }}>
+                        <label htmlFor="title" className="me-6 col-sm-2 col-form-label" style={{ fontFamily: "sans-serif", color: "#ddd5dd" }}>Titulo</label>
 
                         <div className="col-sm-10">
                             <input
@@ -56,9 +58,9 @@ const Product = () => {
                     </div>
                     <div className="mb-3 row formproduct">
 
-                        
 
-                        <label htmlFor="autor" className="col-sm-2 col-form-label" style= {{ textAlign: "left", fontWeight:"bold",fontFamily: "sans-serif"}}>Autor</label>
+
+                        <label htmlFor="autor" className="col-sm-2 col-form-label" style={{ textAlign: "left", fontFamily: "sans-serif", color: "#ddd5dd" }}>Autor</label>
 
                         <div className="col-sm-10">
                             <input
@@ -71,8 +73,8 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-                      
-                        <label htmlFor="editorial" className="col-sm-2 col-form-label" style= {{ textAlign: "left", fontWeight:"bold",fontFamily: "sans-serif"}}>Editorial</label>
+
+                        <label htmlFor="editorial" className="col-sm-2 col-form-label" style={{ textAlign: "left", fontFamily: "sans-serif", color: "#ddd5dd" }}>Editorial</label>
 
                         <div className="col-sm-10">
                             <input
@@ -85,14 +87,11 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="mb-3 row formproduct">
-
-
-                        <label htmlFor="category" className="col-sm-2 col-form-label" style= {{ textAlign: "left", fontWeight:"bold",fontFamily: "sans-serif"}}>Categoría</label>
-
+                        <label htmlFor="category" className="col-sm-2 col-form-label" style={{ textAlign: "left", fontFamily: "sans-serif", color: "#ddd5dd" }}>Categoría</label>
                         <div className="col-sm-10">
-                            <select className="form-select" aria-label="Default select example">
+                            <select className="form-select" aria-label="Default select example" >
                                 <option defaultValue>Escoge una categoria</option>
-                                <option value="1">Ficción</option>
+                                <option value="1">Ficción</option >
                                 <option value="2">Romance</option>
                                 <option value="3">Historico</option>
                                 <option value="3">Misterios y Suspenso</option>
@@ -101,10 +100,9 @@ const Product = () => {
                             </select>
                         </div>
                     </div>
+
                     <div className="mb-3 row ">
-
-                        <label htmlFor="review" className="col-sm-2 col-form-label review2" style={{fontWeight:"bold",fontFamily: "sans-serif"}}>Reseña</label>
-
+                        <label htmlFor="review" className="col-sm-2 col-form-label review2" style={{ fontFamily: "sans-serif", color: "#ddd5dd" }}>Reseña</label>
                         <div className="mb-3 formproductreview3">
                             <textarea
                                 className="form-control"
@@ -114,7 +112,6 @@ const Product = () => {
                                 placeholder="Reseña">
                             </textarea>
                         </div>
-
                     </div>
                     {/* <div className="mb-3 formproduct3">
                         <label htmlFor="" className="col col-form-label"></label>
@@ -123,14 +120,14 @@ const Product = () => {
 
 
                     <div className="input-group mb-3 formproduct4">
-                        <span className="input-group-text" style={{fontSize:"70%"}}  id="basic-addon3">https://ediotorialplaneta/libros/</span>
+                        <span className="input-group-text" style={{ fontSize: "70%" }} id="basic-addon3">https://ediotorialplaneta/libros/</span>
                         <input type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" />
                     </div>
 
 
 
                     <div className="text-center">
-                        <button className="btn btn" style={{ background: "#4c3b80", color: "white", borderRadius: "25px", marginTop: "10px", marginBottom: "20px" }} type="submit">
+                        <button className="btn btn-outline-light gradient-custom" style={{ fontFamily: "sans-serif", color: "white", borderRadius: "25px", marginTop: "10px", marginBottom: "20px" }} type="submit">
                             Publicar
                         </button>
                     </div>
@@ -139,6 +136,10 @@ const Product = () => {
                     </div>
                 </form>
             </div>
+
+
+
+            
             <Footer2 />
         </>
     )

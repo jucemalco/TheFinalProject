@@ -40,8 +40,8 @@ const Login = () => {
         <div className="image">
           <img src={BookMatch_Logo} style={{ width: "50%", heigth: "30%", marginTop: "5px", marginBottom: "-17px" }} />
         </div>
-        <h3 style={{ fontFamily: "sans-serif" }} className="text-center  mb-3">Somos el Team BookMatch</h3>
-        <h6 style={{ fontFamily: "sans-serif", marginTop: "-11px", marginBottom: "12px" }} className="text-center">Por favor inicia tu sesión</h6>
+        <h3 style={{ fontFamily: "sans-serif", color:"#ddd5dd" }} className="text-center mb-3">Somos el Team BookMatch</h3>
+        <h6 style={{ fontFamily: "sans-serif",color:"#ddd5dd", marginTop: "-11px", marginBottom: "12px" }} className="text-center mt-1 mb-3">Por favor inicia tu sesión</h6>
         <div className="row justify-content-center">
           <form
             onSubmit={(evento) => {
@@ -110,15 +110,15 @@ const Login = () => {
                 />
               </div>
             </div>
-            <h6 style={{ fontFamily: "sans-serif" }} className="text-center mt-3">¿Recuperar contraseña?</h6>
-            <h6 style={{ fontFamily: "sans-serif" }} className="text-center mt-3">
+            <h6 style={{ fontFamily: "sans-serif", color:"#ddd5dd" }} className="text-center mt-3">¿Recuperar contraseña?</h6>
+            <h6 style={{ fontFamily: "sans-serif", color:"#ddd5dd" }} className="text-center mt-3">
               ¿Aún no tienes una cuenta?{" "}
               </h6>
               <div>
                 <Link
                   to="/login/newaccount"
-                  className="btn btn-outline-light gradient-custom mt-2 mb-5"
-                  style={{ borderRadius: "25px", width: "25%", fontFamily: "sans-serif" }}
+                  className="btn btn-outline-light gradient-custom mt-2 mb-4"
+                  style={{ borderRadius: "25px", width: "25%", fontFamily: "sans-serif", color:"#ddd5dd" }}
                   >
                   Regístrate
                 </Link>

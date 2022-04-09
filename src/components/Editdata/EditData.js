@@ -38,10 +38,10 @@ const EditData = () => {
                 <div className="image2">
                     <img src={BookMatch_Logo} style={{ width: "50%", marginTop: "0px" }} />
                 </div>
-                <h3 className="form-title text text-center edittitle" style={{ fontFamily: "sans-serif" }}>Editar Mis Datos</h3>
+                <h3 className="form-title text text-center edittitle" style={{ fontFamily: "sans-serif", color: "#ddd5dd" }}>Editar Mis Datos</h3>
                 <form onSubmit={(evento) => onSubmit(evento)} >
                     <div className=" col-6 titleform1">
-                        <label htmlFor="formGroupExampleInput" className="form-label d-flex" style={{ fontFamily: "sans-serif" }}>Nombres</label>
+                        <label htmlFor="formGroupExampleInput" className="form-label d-flex" style={{ fontFamily: "sans-serif", color: "#ddd5dd" }}>Nombres</label>
                         <input
                             name="name"
                             type="text"
@@ -54,7 +54,7 @@ const EditData = () => {
                     </div>
 
                     <div className=" col-6 titleform1">
-                        <label htmlFor="formGroupExampleInput2" className="form-label d-flex" style={{fontFamily: "sans-serif" }}>Apellidos</label>
+                        <label htmlFor="formGroupExampleInput2" className="form-label d-flex" style={{ fontFamily: "sans-serif", color: "#ddd5dd" }}>Apellidos</label>
                         <input
                             name="surname"
                             type="text"
@@ -67,7 +67,7 @@ const EditData = () => {
 
 
                     <div className=" col-6 titleform1">
-                        <label htmlFor="inputEmail4" className="form-label d-flex" style={{ fontFamily: "sans-serif" }}>Password</label>
+                        <label htmlFor="inputEmail4" className="form-label d-flex" style={{ fontFamily: "sans-serif", color: "#ddd5dd" }}>Password</label>
                         <input
                             name="password"
                             type="password"
@@ -79,10 +79,10 @@ const EditData = () => {
 
 
                     <div className="col-12 mb-4 text-center mt-3">
-                        <button type="submit" className="btn btn-outline-light gradient-custom-1 px-4" style={{ borderRadius: "25px", width: "25%", fontFamily: "sans-serif" }}>Guardar</button>
+                        <button type="submit" className="btn btn-outline-light gradient-custom px-4" style={{ borderRadius: "25px", width: "25%", fontFamily: "sans-serif" }}>Guardar</button>
                     </div>
                     <div className="col-12 mb-4 text-center mt-3">
-                        <button className="btn btn-outline-light gradient-custom-1 px-4" onClick={() => deleteUser()} style={{ borderRadius: "25px", width: "30%", fontFamily: "sans-serif" }}>Eliminar Perfil</button>
+                        <button className="btn btn-outline-light gradient-custom px-4" onClick={() => deleteUser()} style={{ borderRadius: "25px", width: "30%", fontFamily: "sans-serif" }}>Eliminar Perfil</button>
                     </div>
                 </form>
             </div>

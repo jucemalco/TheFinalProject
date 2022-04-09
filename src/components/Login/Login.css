@@ -1,27 +1,22 @@
+body {
+  background: #e6dee2;
+}
+
 .login {
-  /* background-color: #78726f; */
-  /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204);
-  background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
-  border-radius: 20px;
+  background: #522352;
+  border: 2px solid #bdbdbd;
+  border-radius: 25px;
   max-width: 550px;
   height: 90%;
-  background: linear-gradient(to right, #d0bdd8, #8b6685, #5a455a, #433e41);
-  background: linear-gradient(to right, #d0bdd8, #8b6685, #5a455a, #433e41);
-  margin-top: 30px; 
+  margin-top: 15px;
 }
 
 div.image {
-    padding: 30px;
-    text-align: center;
-  }
+  padding: 30px;
+  text-align: center;
+}
 
 .gradient-custom {
   /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
   background: linear-gradient(to right, #d0bdd8, #8b6685, #583f58, #222222);
-  font-family: fantasy;
 }
-
-
-
-
-
