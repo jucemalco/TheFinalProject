@@ -36,7 +36,7 @@ const Login = () => {
     <>
       {" "}
       <Navbar />
-      <div className="container login col-6">
+      <div className="container login col-xs col-sm col-md col-lg">
         <div className="image">
           <img src={BookMatch_Logo} style={{ width: "50%", heigth: "30%", marginTop: "5px", marginBottom: "-17px" }} />
         </div>

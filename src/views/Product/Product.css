@@ -1,7 +1,8 @@
 .product1 {
     background: linear-gradient(to left,#583f58, #8b6685,#aa7cbe );
     background: linear-gradient(to left, #583f58, #8b6685, #aa7cbe);
-   margin-top: 5%;
+    margin-top: 5%;
+    border: 2px solid #bdbdbd;
   }
 
 .titleproduct {
@@ -19,11 +20,11 @@
     padding-bottom: 30%;
 }
 
-.formproduct3 {
+/* .formproduct3 {
     margin-left: 20%;
     margin-right: 272px;
     margin-top: -24px;
-}
+}  */
 
 .formproductreview3 {
     margin-left: 130px;
@@ -36,3 +37,10 @@
     margin-left: 160px;
     margin-right: -160px;
 }
+
+.formproduct4 {
+    margin-left: 21%;
+    padding-left: 90px;
+    padding-right: 500px;
+    margin-top: 10px;
+} 
