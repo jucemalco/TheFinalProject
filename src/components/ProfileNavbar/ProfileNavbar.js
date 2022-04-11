@@ -169,19 +169,19 @@ const ProfileNavbar = () => {
               <span style={{fontFamily:"sans-serif"}}>Publica tu Libro</span>
               </Link>
            
-          <form className="d-flex me-5 ms-3">
+          <form className="d-flex me-5 ms-3"> 
             <input
               className="form-control me-3"
               type="search"
               placeholder="Título, Autor"
               aria-label="Search"
             />
-            <button className="btn btn-light" type="submit" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+            <button className="btn btn-light " type="submit" onMouseOver={MouseOver} onMouseOut={MouseOut} >
               Búsqueda
             </button>
           </form>
 
-            <Link className="nav-link text-white me-5" to="/login/" onMouseOver={MouseOver} onMouseOut={MouseOut}>
+            <Link className="nav-link text-white me-5" to="/login/" onMouseOver={MouseOver} onMouseOut={MouseOut} style={{paddingLeft: "15px"}}  >
               <i className>Cerrar Sesión</i>
             </Link>
         </div>

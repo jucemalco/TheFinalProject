@@ -6,6 +6,7 @@ import facebook from "../../images/facebook.png";
 import "./footer.css";
 import { Link } from "react-router-dom";
 
+
 const Footer = () => {
   return (
     <footer className="d-flex flex-wrap justify-content-between align-items-center bg-dark row footer--container">
@@ -14,11 +15,13 @@ const Footer = () => {
           <img src={logo} alt="Logo" className="footer--logo footer--img" />
         </Link>
       </div>
-      <div className="copyrights d-flex align-items-center col-md-4 justify-content-center responsive-align">
+      <div className="copyrights d-flex align-items-center col-md-4 justify-content-center responsive-align dark">
         <Link to="/" className=" text-muted text-decoration-none lh-1"></Link>
         <span className="text-muted">© 2022 Company, Inc</span>
       </div>
+      
 
+      
       <ul className="nav justify-content-end list-unstyled d-flex py-1 px-5 col-md-4 responsive-align">
         <li className="ms-3">
           <a
