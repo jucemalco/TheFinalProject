@@ -6,8 +6,14 @@
 .card {
     border: none;
     margin-top: -23px;
+    background-color: #bdbdbd
 }
 
 .card-text {
     margin-top: 20px;
 } 
+
+.card-body {
+    padding: 2rem;
+    padding-top: 2rem;
+}

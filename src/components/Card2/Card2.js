@@ -1,22 +1,29 @@
 import React, { useEffect, useContext } from "react";
+import { Context } from "../../store/appContext";
 import { Link } from "react-router-dom";
 import "./Card2.css"
-import logouser from "../../images/logouser.png"
+import logouser4 from "../../images/logouser4.png"
 
 const Card2 = (props) => {
+  const { store, actions } = useContext(Context);
+  let userinfo = localStorage.getItem("userinfo");
+  userinfo = JSON.parse(userinfo);
+  useEffect(() => {
+    actions.userProducts(userinfo);
+  }, []);
+  console.log(store)
 
   return (
-    <div className="card">
-      <div className="card-body ">
+    <div className="" style={{}}>
+      <div className="card-body">
         <img
-          src={logouser}
+          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
           className="card-img-top photouser"
           alt="..."
         />
         <p className="card-text mt-3">
           <dl>
-            <dt>Libro Publicado por:</dt>
-            <dt>XXXX</dt>
+            <dt>Usuario:{""}@{userinfo.user.name}</dt>
           </dl>
         </p>
       </div>

@@ -21,7 +21,7 @@ const AboutUsLog = () => {
                         <img className="rounded-circle mb-3" src={Nico} />
                         <h3 style={{fontFamily:"sans-serif"}} className="us">Nicolás Aravena</h3>
 
-                        <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/thenoa96//" target="_blank"
+                        <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/thenoa96/" target="_blank"
                             rel="noopener noreferrer">
                             <BsLinkedin />
                         </a>
@@ -47,7 +47,7 @@ const AboutUsLog = () => {
                       <div className="col-ms col-md col-lg mt-4">
                         <img className="rounded-circle mb-2" src={Julio} />
                         <h3 style={{fontFamily:"sans-serif"}} className="us">Julio Maldonado</h3>
-                        <a className="iconlinkedin fs-3" href="" target="_blank"
+                        <a className="iconlinkedin fs-3" href="https://www.linkedin.com/in/julio-maldonado-3136241a7/" target="_blank"
                             rel="noopener noreferrer">
                             <BsLinkedin />
                         </a>
