@@ -38,6 +38,8 @@
 
 
 .button-profile {
-  border: 2px solid #d0bdd8;
+  border: 2px solid #080808;
   font-family: sans-serif;
+  background-color: #050204;
+  color: white;
 }
