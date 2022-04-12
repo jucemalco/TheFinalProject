@@ -129,7 +129,7 @@ const Product = () => {
                     <div className="text-center">
                         <button className="btn btn-outline-light gradient-custom" style={{ fontFamily: "sans-serif", color: "white", borderRadius: "25px", marginTop: "10px", marginBottom: "20px" }} type="submit">
                             Publicar
-                        </button>
+                        </button>   
                     </div>
                     <div>
                         <input type="hidden"></input>
@@ -139,7 +139,7 @@ const Product = () => {
 
 
 
-            
+
             <Footer2 />
         </>
     )

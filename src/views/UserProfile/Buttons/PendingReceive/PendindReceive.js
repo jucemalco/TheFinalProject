@@ -21,13 +21,7 @@ const PendingReceive = (props) => {
   }, []);
 
   console.log(store.pendingreceive);
-  function MouseOver(event) {
-    event.target.style.color = "#d0bdd8";
-  }
-
-  function MouseOut(event) {
-    event.target.style.color = "";
-  }
+  
 
   return (
     <>
@@ -61,27 +55,24 @@ const PendingReceive = (props) => {
                   <Link
                     to="/miperfil/editdata/"
                     type="button"
-                    className="button-profile btn btn-outline-dark btn-md me-3"
-                    onMouseOver={MouseOver}
-                    onMouseOut={MouseOut}
+                    className="button-profile btn btn-outline-dark btn-md me-3" style={{background:"#272727", color:"#d0bdd8"}}
+                    
                   >
                     Editar Perfil
                   </Link>
                   <Link
                     to="/userprofile/"
                     type="button"
-                    className="button-profile btn btn-outline-dark btn-md me-3"
-                    onMouseOver={MouseOver}
-                    onMouseOut={MouseOut}
+                    className="button-profile btn btn-outline-dark btn-md me-3" style={{background:"#272727", color:"#d0bdd8"}}
+                    
                   >
                     Mis Libros
                   </Link>
                   <Link
                     to="/userprofile/pendingreceive/"
                     type="button"
-                    className="button-profile btn btn-outline-dark btn-md me-3"
-                    onMouseOver={MouseOver}
-                    onMouseOut={MouseOut}
+                    className="button-profile btn btn-outline-dark btn-md me-3" style={{background:"#272727", color:"#d0bdd8"}}
+                   
                   >
                     Recibidos Pendientes
                   </Link>
@@ -89,9 +80,8 @@ const PendingReceive = (props) => {
                   <Link
                     to="/userprofile/pendingsend/"
                     type="button"
-                    className="button-profile btn btn-outline-dark btn-md me-3"
-                    onMouseOver={MouseOver}
-                    onMouseOut={MouseOut}
+                    className="button-profile btn btn-outline-dark btn-md me-3" style={{background:"#272727", color:"#d0bdd8"}}
+                   
                   >
                     Enviados Pendientes
                   </Link>
