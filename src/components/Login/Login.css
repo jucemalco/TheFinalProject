@@ -9,7 +9,7 @@ body {
   max-width: 550px;
   height: 90%;
   margin-top: 15px;
-}
+} 
 
 div.image {
   padding: 30px;
@@ -20,3 +20,4 @@ div.image {
   /* background: linear-gradient(to right, #a78bb4, #743669, #522352, #050204); */
   background: linear-gradient(to right, #d0bdd8, #8b6685, #583f58, #222222);
 }
+

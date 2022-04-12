@@ -1,23 +1,18 @@
-
-.dropdown{
+.dropdown {
   margin-left: 10%;
   margin-right: 5%;
 }
+
+.underline:visited {
+  color: white;
+}
+
+.text1 {
+  font-size: 30px;
+}
+
 /* #nav-item{
   padding-top: 5px;
   margin-left: 10%;
  
 } */
-
-/* visited link */
-.underline:visited {
-  color: white;
-}
-
-/* mouse over link */
-/* .underline:hover {
-  color: red;
-} */
-.text1 {
-  font-size: 30px;
-}
