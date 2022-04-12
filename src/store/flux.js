@@ -46,7 +46,7 @@ const getState = ({ getStore, setStore, getActions }) => {
       },
       saveProduct: (state, e) => {
         console.log("flux", e);
-        const { product } = getStore();
+        const { products } = getStore();
         fetch("http://localhost:5000/product", {
           method: "POST",
           headers: {
@@ -138,11 +138,14 @@ const getState = ({ getStore, setStore, getActions }) => {
           .then((response) => {
             if (response.success) {
               toast.success(response.msg);
+
               navegate("/login");
+            } else {
+              toast.error(response.msg);
             }
             console.log(response);
           })
-          .catch((error) => console.error("Error:", error));
+          .catch((error) => toast.error(error.msg));
       },
       //PARA EDITAR USUARIOS
       editUser: (state, evento) => {
