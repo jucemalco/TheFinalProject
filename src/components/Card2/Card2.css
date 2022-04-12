@@ -12,3 +12,8 @@
 .card-text {
     margin-top: 20px;
 } 
+
+.card-body {
+    padding: 2rem;
+    padding-top: 2rem;
+}

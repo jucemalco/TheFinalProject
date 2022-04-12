@@ -33,7 +33,7 @@ const Details = (props) => {
   // });
   console.log("primera cosa", store.product);
   // console.log("presente", store.product.title);
-    const matching = () => {
+  const matching = () => {
     actions.requestMatching({
       book: store.product?.title,
       interested: userinfo.user.name,
@@ -47,61 +47,16 @@ const Details = (props) => {
     <>
       {" "}
       <ProfileNavbar />
-      <div className="container">
-        <div className="row align-items-start">
-            <div className="col photobook">
-              <img
-                src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
-                className="img-thumbnail"
-                style={{
-                  width: "350px",
-                  height: "300px",
-                  display: "inline-block",
-                }}
-                alt="..."
-              ></img>
-            </div>
-            <div className="col">
-              <h1 className="titledetails">{store.product?.title}</h1>
-              <h4 className="titledetails2">{store.product?.autor}</h4>
-              <h4 className="titledetails2 mt-2">Editorial: {store.product?.editorial}</h4>
-              <p className="mt-2">{store.product?.review}</p>
-              {/* <p>
-                Ea nisi ea aliquip occaecat excepteur veniam nisi. Aute officia
-                cupidatat occaecat cupidatat duis nostrud dolore eiusmod
-                voluptate est. Qui mollit aliquip enim duis quis. Labore
-                adipisicing magna magna ipsum mollit elit non veniam excepteur
-                ipsum.
-              </p> */}
-              {/* <button to="#" className="btn btn-primary">
-                Añadir Favoritos
-              </button>{" "} */}
-              {/* <button
-                type="button"
-                className="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Hacer Match
-              </button> */}
-              {/* <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <h5 className="modal-title" id="exampleModalLabel">Match</h5>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
-                      <p className="card-text fw-light" >El libro que deseas intercambiar debe estar en muy buen estado, es decir, no debe: tener hojas sueltas, tapas y lomo despegado, haber estado mojado, estar manchado o contar con rayones en su portada o en el interior que dificulten su lectura.</p>
-                    </div>
-                    <div className="modal-footer">
-                      <button onCLick={matching} >Aceptar</button>
-                      <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              <Button className= "btn-md btn-outline-light" style={{ borderRadius: "25px", width: "50%" }} variant="primary mt-2" onClick={handleShow}>
+      <div className="container mt-4">
+        <div className="container background1">
+          <div className="row align-items-start">
+            <div className="col titledetails0">
+              <h2 className="titledetails" style={{fontSize:"30px"}}>Titulo: {store.product?.title}</h2>
+              <h4 className="titledetails2"style={{fontSize:"20px"}}>Autor: {store.product?.autor}</h4>
+              <h4 className="titledetails2 mt-2"style={{fontSize:"20px"}}>Editorial: {store.product?.editorial}</h4>
+              <h4 className="titledetails2 mt-2"style={{fontSize:"20px"}}>Reseña:</h4>
+              <p className="mt-2" style={{textAlign:"justify"}}>{store.product?.review}</p>
+              <Button className="btn-md btn-outline-light" style={{ background: "#4c3b80", color: "white", borderRadius: "25px", width: "25%" }} variant="primary mt-2" onClick={handleShow}>
                 Hacer Match
               </Button>
               <Modal show={show} onHide={handleClose}>
@@ -120,29 +75,49 @@ const Details = (props) => {
               </Modal>
             </div>
             <div className="col mt-5">
-              {/* <h1 className="titledetails">Usuario</h1> */}
               <Card2 />
             </div>
           </div>
-          <img
-            src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
-            className="img-thumbnail"
-            style={{ width: "350px", height: "300px" }}
-            alt="..."
-          />
-          <img
-            src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
-            className="img-thumbnail"
-            style={{ width: "350px", height: "300px" }}
-            alt="..."
-          />
-          <img
-            src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
-            className="img-thumbnail"
-            style={{ width: "350px", height: "300px" }}
-            alt="..."
-          />
+          <div className="imageposition">
+            <img
+              src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
+              className="img-thumbnail"
+              style={{ width: "350px", height: "300px" }}
+              alt="..."
+            />
+            <img
+              src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
+              className="img-thumbnail"
+              style={{ width: "350px", height: "300px" }}
+              alt="..."
+            />
+            <img
+              src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
+              className="img-thumbnail"
+              style={{ width: "350px", height: "300px" }}
+              alt="..."
+            />
+            <img
+              src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
+              className="img-thumbnail"
+              style={{ width: "350px", height: "300px" }}
+              alt="..."
+            />
+            <img
+              src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
+              className="img-thumbnail"
+              style={{ width: "350px", height: "300px" }}
+              alt="..."
+            />
+            <img
+              src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg"
+              className="img-thumbnail"
+              style={{ width: "350px", height: "300px" }}
+              alt="..."
+            />
+          </div>
         </div>
+      </div>
       <Footer2 />
     </>
   );

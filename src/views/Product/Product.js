@@ -179,7 +179,7 @@ const Product = () => {
           </div>
 
           <div className="text-center">
-            <button
+            {/* <button
               className="btn btn-outline-light gradient-custom"
               style={{
                 fontFamily: "sans-serif",
@@ -191,7 +191,38 @@ const Product = () => {
               type="submit"
             >
               Publicar
+            </button> */}
+
+        
+            <button type="button" className="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{
+                fontFamily: "sans-serif",
+                color: "white",
+                borderRadius: "25px",
+                marginTop: "10px",
+                marginBottom: "25px",
+                background:"#4c3b80"
+              }}>
+            Publicar
             </button>
+
+            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="exampleModalLabel">BookMatch</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body">
+                  ¿Seguro que quieres publicar tu libro?
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" className="btn btn-success">Publicar Libro</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div>
             <input type="hidden"></input>

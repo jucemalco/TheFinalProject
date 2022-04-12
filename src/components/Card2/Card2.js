@@ -14,8 +14,8 @@ const Card2 = (props) => {
   console.log(store)
 
   return (
-    <div>
-      <div className="card-body ">
+    <div className="" style={{}}>
+      <div className="card-body">
         <img
           src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
           className="card-img-top photouser"
@@ -23,8 +23,7 @@ const Card2 = (props) => {
         />
         <p className="card-text mt-3">
           <dl>
-            <dt>Libro Publicado por:</dt>
-            <dt>{userinfo.user.name}</dt>
+            <dt>Usuario:{""}@{userinfo.user.name}</dt>
           </dl>
         </p>
       </div>
