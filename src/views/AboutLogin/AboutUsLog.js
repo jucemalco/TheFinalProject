@@ -14,7 +14,7 @@ const AboutUsLog = () => {
         <>
            <ProfileNavbar />
            <div className="container">
-                <h1 style={{fontFamily:"sans-serif"}} className="title mt-3">Nuestro Equipo</h1>
+                <h1 style={{fontFamily:"sans-serif"}} className="title mt-5">Nuestro Equipo</h1>
                 <hr></hr>
                 <div className="row">
                     <div className="col-ms col-md col-lg mt-4">

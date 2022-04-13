@@ -17,7 +17,7 @@ const Home = () => {
       <Carousel />
       <div className="container">
         <div className="mt-3 mb-5">
-          <h1 className="title1">Novedades</h1>
+          <h1 className="title1">Novedades</h1> 
         </div>
         <div className="row">
           {store.products && store.products.map((p, i) => (
