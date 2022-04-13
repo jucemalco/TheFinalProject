@@ -32,3 +32,18 @@
     margin-right: 260px;
     margin-bottom: 260px;
 }
+
+.titledetails0 {
+    padding-bottom: 3%;
+    padding-top: 0%;
+    margin-left: 13%;
+    margin-right: -8%;
+}
+.background1 {
+    background-color: #c7c5c5;
+    padding-top: 0%;
+    padding-bottom: 4%;
+    border-radius: 5%;
+    max-width: 90%;
+    padding-left: 0%;
+}

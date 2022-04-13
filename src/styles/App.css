@@ -2,7 +2,8 @@
   text-align: center;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 105px !important;
+  padding-bottom: 7rem !important;
+
 }
 
 .App-logo {
@@ -15,7 +16,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

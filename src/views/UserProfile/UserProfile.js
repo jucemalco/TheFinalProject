@@ -39,13 +39,11 @@ const UserProfile = (props) => {
                     />
                   </div>
 
-                  
-                  <div className="m-auto mx-5 text">
+                  <div className="titleprofile">
                     <h4>Bienvenid@ a BookMatch</h4>
-                    <h3>{userinfo.user.name}</h3>
-                  
-
+                    <h4>{userinfo.user.name}</h4>
                   </div>
+
                 </div>
                 <div className="mt-3 mb-2 text-center ">
                   <Link

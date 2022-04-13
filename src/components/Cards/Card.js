@@ -2,7 +2,6 @@ import { text } from "@fortawesome/fontawesome-svg-core";
 import React, { useEffect, useContext } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import "./Card.css"
 
 
 const Card = (props) => {

@@ -46,12 +46,13 @@ const PendingReceive = (props) => {
                     />
                   </div>
 
-                  <div className="m-auto mx-5 text">
-                    <h4 style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>Bienvenido a BookMatch</h4>
-                    <h3 style={{fontFamily:"sans-serif", color:"#ddd5dd"}}>{userinfo.user.name}</h3>
+                  <div className="titleprofile">
+                    <h4>Bienvenid@ a BookMatch</h4>
+                    <h4>{userinfo.user.name}</h4>
                   </div>
+
                 </div>
-                <div className="mt-3 mb-2 text-center ">
+                <div className="mt-3 mb-2 text-center">
                   <Link
                     to="/miperfil/editdata/"
                     type="button"
@@ -88,6 +89,7 @@ const PendingReceive = (props) => {
                 </div>
 
                 <div>
+
                   <p className="mt-3 fs-4" style={{fontFamily:"sans-serif", color:"#222121"}}>Pendientes</p>
                   <hr style={{color:"#baa6c2"}} className="ms-4 me-4"></hr>
                   <div className="card-body p-4 text-black">
