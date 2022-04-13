@@ -85,6 +85,7 @@ const UserProfile = (props) => {
                 </div>
                 <div>
                   <p className="mt-3 fs-4" style={{ fontFamily: "fantasy" }}>Mis Libros Publicados</p>
+                  <hr style={{color:"#baa6c2"}} className="ms-4 me-4"></hr>
                   <div className="card-body p-4 text-black">
                     <div className="row g-2">
                       {store.products && store.products.map((p, i) => (
